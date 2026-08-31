@@ -1,0 +1,88 @@
+<div id="kotakHeader" class="relative
+bg-[linear-gradient(45deg,var(--color-accent)_35%,color-mix(in_srgb,var(--color-base-100)_70%,transparent)_35%)]
+backdrop-blur-sm
+z-20 border-0">
+ <div class="navbar mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+    <!-- LOGO -->
+    <div class="navbar-start">
+        <a href="#home" class="flex items-center gap-2 text-lg font-bold text-primary-content">
+            <div class="flex w-20 items-centertext-primary-content">
+                <img src="assets\img\logo\Logo EGA.webp" alt="Logo Ega">
+            </div>
+            <div class="flex flex-col">
+                <span class="hidden md:inline font-extrabold tracking-tight text-accent-content text-lg leading-none">EGA TEKELINDO</span>
+                <span class="hidden md:inline text-[10px] tracking-widest text-primary font-mono">PRIMA • EST. 1985</span>
+            </div>
+        </a>
+    </div>
+
+    <!-- DESKTOP NAVIGATION -->
+    <nav class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal gap-1">
+            <li><a href="#tentang" class="text-base-content" ind="Tentang" en="About Us"></a></li>
+            <li><a href="#layanan" class="text-base-content" ind="Layanan" en="Service"></a></li>
+            <li><a href="#produk" class="text-base-content" ind="Produk" en="Product"></a></li>
+            <li><a href="#kontak"class="text-base-content"ind="Kontak"en="Contact"></a></li>
+        </ul>
+    </nav>
+
+    <!-- RIGHT SIDE -->
+    <div class="navbar-end gap-2">
+
+        <!-- LANGUAGE -->
+        <details class="dropdown dropdown-end">
+            <summary class="btn btn-ghost btn-sm gap-1 p-0 list-none">
+                <i class="bi bi-globe"></i>
+                <span ind="Bahasa" en="Language" class="hidden sm:inline"></span>
+                <svg class="chevron h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/>
+                </svg>
+            </summary>
+            <ul class="menu dropdown-content mt-3 w-40 rounded-box border border-base-300 bg-base-100 p-2 shadow-lg">
+                <li><button bahasa value="id">🇮🇩 Indonesia</button></li>
+                <li><button bahasa value="en">🇬🇧 English</button></li>
+            </ul>
+        </details>
+
+        <!-- THEME -->
+        <details class="dropdown dropdown-end">
+            <summary class="btn btn-ghost btn-sm gap-1 p-0 list-none">
+                <i class="bi bi-brightness-high"></i>
+                <span ind="Tema" en="Themes" class="hidden sm:inline">
+                </span>
+                <svg class="chevron h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/>
+                </svg>
+            </summary>
+            <ul class="menu dropdown-content mt-3 w-40 rounded-box border border-base-300 bg-base-100 p-2 shadow-lg">
+                <li><button pilihTema value="Gelap" ind="Gelap" en="Dark"></button></li>
+                <li><button pilihTema value="Terang" ind="Terang" en="Light"></button></li>
+            </ul>
+        </details>
+
+        <!-- MOBILE MENU BUTTON -->
+        <button id="btnMobileMenu" class="btn btn-ghost btn-square lg:hidden" aria-label="Open menu">
+            <svg class="hamburger-icon h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+
+            <path class="line line-1" d="M4 6h16"/>
+            <path class="line line-2" d="M4 12h16"/>
+            <path class="line line-3" d="M4 18h16"/>
+
+        </svg>
+        </button>
+
+    </div>
+</div>
+</div>
+
+<div id="mobileMenu" class="z-10 bg-base-100/80 lg:hidden absolute w-full backdrop-blur-3xl">
+    <nav class="mx-auto max-w-7xl px-4 py-3 sm:px-6">
+        <ul class="menu w-full">
+            <li><a href="#tentang" class="text-base-content" ind="Tentang" en="About Us"></a></li>
+            <li><a href="#layanan" class="text-base-content" ind="Layanan" en="Service"></a></li>
+            <li><a href="#produk" class="text-base-content" ind="Produk" en="Product"></a></li>
+            <li><a href="#kontak"class="text-base-content"ind="Kontak"en="Contact"></a></li>
+        </ul>
+    </nav>
+</div>

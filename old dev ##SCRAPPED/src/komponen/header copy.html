@@ -1,0 +1,56 @@
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-primary text-primary-content flex items-center justify-center font-bold text-xl shadow-lg shadow-primary/20 group-hover:scale-105 transition-transform">
+          E
+        </div>
+        <div class="flex flex-col">
+          <span class="font-extrabold tracking-tight text-base-content text-lg leading-none">EGA TEKELINDO</span>
+          <span class="text-[10px] tracking-widest text-primary font-mono mt-1 uppercase">PRIMA • EST. 1985</span>
+        </div>
+      </a>
+
+      <!-- Nav Links -->
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-base-content/70">
+        <a data-id="Produk & Panel" data-en="Products & Panels" href="#produk" class="hover:text-base-content transition-colors"></a>
+        <a data-id="Integrasi IoT" data-en="IOT Integration" href="#teknologi" class="hover:text-base-content transition-colors"></a>
+        <a data-id="Standar & Mutu" data-en="Quality Standard" href="#sertifikasi" class="hover:text-base-content transition-colors"></a>
+        <a data-id="Tentang Kami" data-en="About Us" href="#profil" class="hover:text-base-content transition-colors"></a>
+      </nav>
+
+      <!-- Action Button & Theme Selector -->
+      <div class="flex items-center gap-3">
+        <button class="btn sm:hidden" popovertarget="my-megamenu-1">Menu</button>
+        <div class="megamenu max-sm:megamenu-vertical p-2 gap-1 border border-base-300" id="my-megamenu-1" popover>
+          <span class="megamenu-active"></span>
+
+          <button class="lg:hidden" popovertarget="nav">EGA TEKELINDO</button>
+          <div id="nav" popover>
+            <ul class="menu">
+              <li><a data-id="Produk & Panel" data-en="Products & Panels" href="#produk" class="hover:text-base-content transition-colors"></a></li>
+              <li><a data-id="Integrasi IoT" data-en="IOT Integration" href="#teknologi" class="hover:text-base-content transition-colors"></a></li>
+              <li><a data-id="Standar & Mutu" data-en="Quality Standard" href="#sertifikasi" class="hover:text-base-content transition-colors"></a></li>
+              <li><a data-id="Tentang Kami" data-en="About Us" href="#profil" class="hover:text-base-content transition-colors"></a></li>
+            </ul>
+          </div>
+
+          <button data-id="Tema" data-en="Themes" popovertarget="tema">Tema</button>
+          <div id="tema" popover>
+            <ul class="menu" id="container-tema">
+              <li><button pilihTema value="Gelap" data-id="Gelap" data-en="Dark">Gelap</button></li>
+              <li><button pilihTema value="light" data-id="Terang" data-en="Light">Terang</button></li>
+            </ul>
+          </div>
+
+          <button data-id="Bahasa" data-en="Language" popovertarget="bahasa"></button>
+          <div id="bahasa" popover>
+            <ul class="menu">
+              <li><button id="tombolId">Indonesia</button></li>
+              <li><button id="tombolEn">English</button></li>
+            </ul>
+          </div>
+        </div>
+
+
+      </div>
+</div>
