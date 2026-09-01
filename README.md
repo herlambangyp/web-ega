@@ -11,3 +11,6 @@ Repository baru berisi source-code front end pengembangan web PT Ega Tekelindo P
 * Bootstrap 5
 * CSS3
 * JavaScript
+
+## Preview Halaman
+[https://herlambangyp.github.io/web-ega/](https://herlambangyp.github.io/web-ega/)
