@@ -1,0 +1,23 @@
+
+// Query Bahasa
+Data penulisan bahasa menggunakan tag element 
+"ind" untuk bahasa indonesia, "en" untuk bahasa inggris
+
+cek assets/js/bahasa.js di fungsi bahasa() untuk lebih detilnya
+
+------------------------------------------------------------------------------
+Standardnya memang harus dibuat json sendiri untuk file bahasa...
+Cara diatas aku pakai untuk memeprcepat pengembangan inline-code di front-end
+(atau jika ingin preview data)
+------------------------------------------------------------------------------
+
+Implementasi translate JSON pernah aku lakukan 
+
+bisa dilihat di file: 
+SCRAPPED_Translate_JSON_index.html
+
+Dengan JSON (js sintaks json) di:
+assets/JSON/"lang".js
+
+Mengimplementasikan cara ini di front-end sangatlah "time consuming"
+Pengembangan backend, bisa dengan memindahkan isi tag ke file json sendiri 
