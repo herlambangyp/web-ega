@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -25,7 +25,6 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-  <link href="assets/css/nonBS.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Scout
@@ -37,7 +36,6 @@
 </head>
 
 <body class="index-page">
-  <div class="position-absolute inset-0 glow-bg pointer-events-none z-0"></div>
 
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
@@ -45,27 +43,23 @@
       <a href="index.html" class="logo d-flex align-items-center me-auto">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <img src="assets/img/logo EGA.webp" alt=""> 
-        <div class="mobile-hidden d-flex text-body flex-column">
-          <span class="fs-4 fw-bolder">EGA TEKELINDO</span>
-          <span class="fs-6">PRIMA • EST. 1985</span>
-        </div>
        <!-- <h1 class="sitename">Scout</h1> -->
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a en="Home" ind="Beranda" href="#hero" class="active"></a></li>
-          <li><a en="About" ind="Tentang" href="#about"></a></li>
-          <li><a en="Services" ind="Layanan" href="#services"></a></li>
-          <li><a en="Team" ind="Tim" href="#team"></a></li>
-          <li class="dropdown"><a href="#"><span en="Product" ind="Produk" >Product</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#team">Team</a></li>
+          <li class="dropdown"><a href="#"><span>Product</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="#">Metal Closed Switchgear</a></li>
               <li class="dropdown"><a href="#"><span>Metal Enclosed Switchgear</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
                   <li><a href="#">Air Insulated Switchgear - Type Test</a></li>
                   <li><a href="#">Air Insulated Switchgear - Non Type Test</a></li>
-				  <li><a href="#" ind="Switchgear terinsulasi" en="Fully Insulated Switchgear - Type Test"></a></li>
+				  <li><a href="#">Fully Insulated Switchgear - Type Test</a></li>
                   <li><a href="#">Fully Insulated Switchgear - Non Type Test</a></li>
                 </ul>
               </li>
@@ -74,16 +68,12 @@
               <li><a href="#">kWh Meter</a></li>
             </ul>
           </li>
-          <li><a en="Contact" ind="Kontak" href="#contact"></a></li>
-          <li><button pilihTema value="dark" ind="Gelap" en="Dark"></button></li>
-          <li><button pilihTema value="T" ind="Terang" en="Light"></button></li>
-          <li><button bahasa value="id">Indonesia</button></li>
-          <li><button bahasa value="en">English</button></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <!-- <a class="btn-getstarted" href="index.html#about">Get Started</a> -->
+      <a class="btn-getstarted" href="index.html#about">Get Started</a>
 
     </div>
   </header>
@@ -100,15 +90,10 @@
                 <i class="bi bi-lightning"></i>
                 <span>PT Ega Tekelindo Prima</span>
               </div>
-              <h1>
-                <span en="Connecting " ind="Menyatukan Dunia Dengan"></span>
-                <span en="The World" ind="Listrik yang Menyala" class="highlight"></span>
-                <span en="with Electricity"></span>
-              </h1>
-              <p class="lead"
-              en="Our engineering team delivers reliable medium-voltage power solutions to keep industries and utilities running efficiently."
-              ind="Tim engineer kmi selalu memastikan untuk mampu memberikan solusi energi yang bisa diandalkan, dalam lingkungan industri yang efisien"
-              ></p>
+              <h1>Connecting
+			  <span class="highlight">The World</span>
+			  with Electricity</h1>
+              <p class="lead">Our engineering team delivers reliable medium-voltage power solutions to keep industries and utilities running efficiently.</p>
               <ul class="hero-features">
                 <li><i class="bi bi-check-circle"></i> Certified and type-tested switchgear systems</li>
                 <li><i class="bi bi-check-circle"></i> Fast project execution & on-site support</li>
@@ -150,17 +135,8 @@
 
         <div class="row justify-content-center mb-5">
           <div class="col-lg-8 text-center" data-aos="fade-up" data-aos-delay="200">
-            <h2 en="Our Vision & Mission" ind="Visi & Misi Kami" class="section-heading"></h2>
-            <p class="lead"
-
-            en="We’re committed to powering industries and communities 
-            through reliable electrical engineering, innovation, and integrity, 
-            creating sustainable growth for Indonesia’s energy future."
-
-            ind="Kami berkomitmen untuk"
-            
-            >
-              </p>
+            <h2 class="section-heading">Our Vision &amp; Mission</h2>
+            <p class="lead">We’re committed to powering industries and communities through reliable electrical engineering, innovation, and integrity, creating sustainable growth for Indonesia’s energy future.</p>
           </div>
         </div>
 
@@ -1375,7 +1351,5 @@ Each number reflects our dedication to engineering excellence, reliability, and 
   <script src="assets/js/main.js"></script>
 
 </body>
-  <script src="assets/js/bahasa.js"></script>
-  <script src="assets/js/tema.js"></script>
 
 </html>
