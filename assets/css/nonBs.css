@@ -1,0 +1,9 @@
+    .bg-resend-grid {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, #fff 1px, transparent 1px),
+        linear-gradient(to bottom, #fff 1px, transparent 1px);
+      background-image: 
+        linear-gradient(to right, color-mix(in srgb, #fff 4%, transparent) 1px, transparent 1px),
+        linear-gradient(to bottom, color-mix(in srgb, #fff 4%, transparent) 1px, transparent 1px);
+    }
