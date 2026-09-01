@@ -12,7 +12,7 @@ function initTheme() {
     document.querySelectorAll('[pilihTema]').forEach(btn => {
         btn.onclick=o=> {
             document.documentElement.setAttribute('data-theme',btn.value||btn.dataset.isi)
-            localStorage.setItem('selected-theme',btn.value)
+            localStorage.setItem('selected-theme',btn.value||btn.dataset.isi)
         }
     })
 }

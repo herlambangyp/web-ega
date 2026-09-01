@@ -4,14 +4,34 @@
 let basaDevice =navigator.language.split("-")[0] 
 
 function bahasa() {
-document.querySelectorAll("[en]").forEach(e => {
-    e.textContent = setBahasa(
-        e.getAttribute("ind"), // argumen text indo
-        e.getAttribute("en")   // argumen text en
+    const language = cekBahasa(),
+    translation = window.translations[language]
+
+    // translate untuk hardcode element. Seperti nama tema, tombol kembali/back, link navigasi, dll yang dianggap bukan konten
+    document.querySelectorAll("[en]").forEach(e => {
+        e.innerHTML = setBahasa(
+            e.getAttribute("ind")||e.getAttribute("en"), // argumen text indo
+            e.getAttribute("en")||e.getAttribute("ind")   // argumen text en
                                // argumen text jpn, dutch, cina dll (perlu ditambahkan di tag html, dan parameter baru di setBahasa<--Cek bawah)
-    )
-})
-document.documentElement.lang = cekBahasa()
+                            )
+    })
+
+    // SCRAPPED!!! 
+    // translate konten web, seperti tentang kami, spesifikasi produk, dll. data text, disimpan di "pra"Json file
+    // pra-json file disimpan di assets/JSON/"lang".js
+    document.querySelectorAll("[data-i18n]").forEach(element => {
+        const key = element.dataset.i18n,
+        elements = document.querySelectorAll(`[data-i18n="${key}"]`),
+        index = [...elements].indexOf(element),
+        text = ambilTranslation(translation, key, index)
+
+        if (text !== undefined) {
+            element.innerHTML = text;
+        }
+
+    })
+
+    document.documentElement.lang = language
 }
 
 function setBahasa(indo='', en=''){
@@ -26,6 +46,17 @@ function setBahasa(indo='', en=''){
 
 }
 
+function ambilTranslation(data, path, index = null) {
+
+    return path
+        .split(".")
+        .reduce((result, key) => {
+            if (Array.isArray(result)) {
+                result = result[index];
+            }
+            return result?.[key];
+        }, data);
+}
 function tombolBahasa() {
     // buat button dengan tag "bahasa" di html, jika ingin menambahkan button bahasa baru
     // actually, ga harus button sih. Element input, option, select, textarea jg bisa 

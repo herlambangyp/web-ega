@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="utf-8">
@@ -25,6 +25,7 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/nonBS.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Scout
@@ -43,37 +44,90 @@
       <a href="index.html" class="logo d-flex align-items-center me-auto">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <img src="assets/img/logo EGA.webp" alt=""> 
+        <div class="mobile-hidden d-flex text-body flex-column">
+          <span class="fs-4 fw-bolder">EGA TEKELINDO</span>
+          <span class="fs-6">PRIMA • EST. 1985</span>
+        </div>
        <!-- <h1 class="sitename">Scout</h1> -->
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#team">Team</a></li>
-          <li class="dropdown"><a href="#"><span>Product</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li><a en="Home" ind="Beranda" href="#hero" class="active"></a></li>
+          <li><a en="About" ind="Tentang" href="#about"></a></li>
+          <li><a en="Services" ind="Layanan" href="#services"></a></li>
+          <li><a en="Team" ind="Tim" href="#team"></a></li>
+          <li class="dropdown"><a href="#"><span en="Product" ind="Produk"></span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="#">Metal Closed Switchgear</a></li>
-              <li class="dropdown"><a href="#"><span>Metal Enclosed Switchgear</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+
+              <li><a en="Metal Closed Switchgear"
+                     ind="Switchgear Penutup Besi" 
+                     href="#"></a></li>
+              <li class="dropdown">
+
+                <a href="#">    
+                 <span en="Metal Enclosed Switchgear "></span><i class="bi bi-chevron-down toggle-dropdown"></i>              
+                </a>
+
                 <ul>
-                  <li><a href="#">Air Insulated Switchgear - Type Test</a></li>
-                  <li><a href="#">Air Insulated Switchgear - Non Type Test</a></li>
-				  <li><a href="#">Fully Insulated Switchgear - Type Test</a></li>
-                  <li><a href="#">Fully Insulated Switchgear - Non Type Test</a></li>
+                  <li><a en="Air Insulated Switchgear - Type Test" 
+                         ind="Switchgear dg Insulasi Udara - Tipe Test" href="#"></a></li>
+                  <li><a en="Air Insulated Switchgear - Non Type Test" 
+                         ind="Switchgear dg Insulasi Udara - Non Tipe Test" href="#"></a></li>
+                  <li><a en="Fully Insulated Switchgear - Type Test" 
+                         ind="Switchgear dg Insulasi Penuh - Tipe Test" href="#"></a></li>
+                  <li><a en="Fully Insulated Switchgear - Non Type Test" 
+                         ind="Switchgear dg Insulasi Penuh - Non Tipe Test" href="#"></a></li>
                 </ul>
+
               </li>
-              <li><a href="#">Current Transformer</a></li>
-              <li><a href="#">Voltage Transformer</a></li>
-              <li><a href="#">kWh Meter</a></li>
+
+              <li><a en='Current Transformer' ind='Trafo Arus' href="#"></a></li>
+              <li><a en='Voltage Transformer' ind='Trafo Tegangan' href="#"></a></li>
+              <li><a en='kWh Meter' ind='kWh Meter' href="#"></a></li>
+              
+            </ul>
+
+          </li>
+          <li><a en="Contact" ind="Kontak" href="#contact"></a></li>
+          
+          <li class="dropdown pointer">
+          <a>
+            <span 
+            en='<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-brightness-high" viewBox="0 0 16 16"><path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/></svg>
+            &nbsp;Themes' 
+            ind='<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-brightness-high" viewBox="0 0 16 16"><path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/></svg>
+            &nbsp;Tema'>
+            </span> 
+            <i class="bi bi-chevron-down toggle-dropdown"></i>
+          </a>
+            <ul>
+              <li><a pilihTema data-isi="dark" ind="Gelap" en="Dark"></a></li>
+              <li><a pilihTema data-isi="light" ind="Terang" en="Light"></a></li>
             </ul>
           </li>
-          <li><a href="#contact">Contact</a></li>
+
+          <li class="dropdown pointer">
+          <a>
+            <span 
+            en='<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855A8 8 0 0 0 5.145 4H7.5zM4.09 4a9.3 9.3 0 0 1 .64-1.539 7 7 0 0 1 .597-.933A7.03 7.03 0 0 0 2.255 4zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a7 7 0 0 0-.656 2.5zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5zM8.5 5v2.5h2.99a12.5 12.5 0 0 0-.337-2.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5zM5.145 12q.208.58.468 1.068c.552 1.035 1.218 1.65 1.887 1.855V12zm.182 2.472a7 7 0 0 1-.597-.933A9.3 9.3 0 0 1 4.09 12H2.255a7 7 0 0 0 3.072 2.472M3.82 11a13.7 13.7 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5zm6.853 3.472A7 7 0 0 0 13.745 12H11.91a9.3 9.3 0 0 1-.64 1.539 7 7 0 0 1-.597.933M8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855q.26-.487.468-1.068zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.7 13.7 0 0 1-.312 2.5m2.802-3.5a7 7 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7 7 0 0 0-3.072-2.472c.218.284.418.598.597.933M10.855 4a8 8 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4z"/></svg>
+            &nbsp;Languages' 
+            ind='<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855A8 8 0 0 0 5.145 4H7.5zM4.09 4a9.3 9.3 0 0 1 .64-1.539 7 7 0 0 1 .597-.933A7.03 7.03 0 0 0 2.255 4zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a7 7 0 0 0-.656 2.5zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5zM8.5 5v2.5h2.99a12.5 12.5 0 0 0-.337-2.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5zM5.145 12q.208.58.468 1.068c.552 1.035 1.218 1.65 1.887 1.855V12zm.182 2.472a7 7 0 0 1-.597-.933A9.3 9.3 0 0 1 4.09 12H2.255a7 7 0 0 0 3.072 2.472M3.82 11a13.7 13.7 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5zm6.853 3.472A7 7 0 0 0 13.745 12H11.91a9.3 9.3 0 0 1-.64 1.539 7 7 0 0 1-.597.933M8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855q.26-.487.468-1.068zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.7 13.7 0 0 1-.312 2.5m2.802-3.5a7 7 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7 7 0 0 0-3.072-2.472c.218.284.418.598.597.933M10.855 4a8 8 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4z"/></svg>
+            &nbsp;Bahasa'
+            >
+            </span> 
+            <i class="bi bi-chevron-down toggle-dropdown"></i>
+          </a>
+            <ul>
+              <li><a bahasa data-isi="id">Indonesia</a></li>
+              <li><a bahasa data-isi="en">English</a></li>
+            </ul>
+          </li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="index.html#about">Get Started</a>
+      <!-- <a class="btn-getstarted" href="index.html#about">Get Started</a> -->
 
     </div>
   </header>
@@ -85,26 +139,39 @@
       <div class="container" data-aos="fade-up">
         <div class="row align-items-center">
           <div class="col-lg-6">
+
             <div class="hero-content" data-aos="fade-up" data-aos-delay="100">
               <div class="hero-tag">
                 <i class="bi bi-lightning"></i>
                 <span>PT Ega Tekelindo Prima</span>
               </div>
-              <h1>Connecting
-			  <span class="highlight">The World</span>
-			  with Electricity</h1>
-              <p class="lead">Our engineering team delivers reliable medium-voltage power solutions to keep industries and utilities running efficiently.</p>
+              
+              <h1 en='Connecting <span class="highlight">The World</span> with Electricity'
+                  ind='Menyatukan Dunia Dengan <span class="highlight">Listrik yang Menyala</span>'></h1>
+
+              <p en="Our engineering team delivers reliable medium-voltage power solutions to keep industries and utilities running efficiently."
+                 ind='Tim engineer kami selalu memastikan untuk mampu memberikan solusi energi yang bisa diandalkan, dalam lingkungan industri yang efisien'
+                 class="lead"></p>
+
               <ul class="hero-features">
-                <li><i class="bi bi-check-circle"></i> Certified and type-tested switchgear systems</li>
-                <li><i class="bi bi-check-circle"></i> Fast project execution & on-site support</li>
-                <li><i class="bi bi-check-circle"></i> Local expertise, global standards</li>
+                <li en='<i class="bi bi-check-circle"></i> Certified and type-tested switchgear systems'
+                    ind='<i class="bi bi-check-circle"></i> Sistem Switchgear yang sudah tersertifikasi'></li>
+
+                <li en='<i class="bi bi-check-circle"></i> Fast project execution & on-site support'
+                    ind='<i class="bi bi-check-circle"></i> Fast project execution & on-site support'></li>
+
+                <li en='<i class="bi bi-check-circle"></i> Local expertise, global standards'
+                    ind='<i class="bi bi-check-circle"></i> Local expertise, global standards'></li>
               </ul>
               <div class="hero-cta">
-                <a href="#services" class="btn btn-primary">Explore Our Products and Services</a>
+                <a en='Explore Our Products and Services' 
+                   ind='Explore Our Products and Services' href="#services" class="btn btn-primary"></a>
+
                 <a href="tel:+62 (21) 600-8082" class="btn btn-link"><i class="bi bi-telephone"></i>(+62)21 6008082</a>
               </div>
             </div>
           </div>
+
           <div class="col-lg-6">
             <div class="hero-image-wrapper" data-aos="fade-up" data-aos-delay="300">
               <img src="assets/img/about/about-square-13.webp" alt="" class="img-fluid hero-image">
@@ -135,54 +202,74 @@
 
         <div class="row justify-content-center mb-5">
           <div class="col-lg-8 text-center" data-aos="fade-up" data-aos-delay="200">
-            <h2 class="section-heading">Our Vision &amp; Mission</h2>
-            <p class="lead">We’re committed to powering industries and communities through reliable electrical engineering, innovation, and integrity, creating sustainable growth for Indonesia’s energy future.</p>
+            <h2 en="Our Vision & Mission" ind="Visi & Misi Kami" class="section-heading"></h2>
+
+            <p en='We’re committed to powering industries and communities through reliable electrical engineering, innovation, and integrity, creating sustainable growth for Indonesia’s energy future.'
+               ind=''
+               class="lead"></p>
+
           </div>
         </div>
 
         <div class="row g-4 mb-5">
-          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-            <div class="feature-box">
-              <div class="icon-container">
-                <i class="bi bi-lightbulb"></i>
-              </div>
-              <h4>Innovation</h4>
-              <p>Designing and manufacturing advanced medium-voltage power systems that redefine reliability, safety, and performance in electrical engineering.</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-            <div class="feature-box">
-              <div class="icon-container">
-                <i class="bi bi-graph-up-arrow"></i>
-              </div>
-              <h4>Growth</h4>
-              <p>Driving sustainable progress by empowering clients with efficient, scalable, and future-ready energy solutions.</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-            <div class="feature-box">
-              <div class="icon-container">
-                <i class="bi bi-shield-check"></i>
-              </div>
-              <h4>Integrity</h4>
-              <p>Operating with transparency, accountability, and strong ethical values in every project, partnership, and decision.</p>
-            </div>
-          </div>
-
+          
           <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
             <div class="feature-box">
               <div class="icon-container">
                 <i class="bi bi-people-fill"></i>
               </div>
-              <h4>Collaboration</h4>
-              <p>Partnering with clients, utilities, and industries to achieve shared success through teamwork, trust, and technical excellence.</p>
+              <h4 en='Innovation'
+                  ind="Inovasi"></h4>
+
+              <p en="Designing and manufacturing advanced medium-voltage power systems that redefine reliability, safety, and performance in electrical engineering."
+                 ind="Designing and manufacturing advanced medium-voltage power systems that redefine reliability, safety, and performance in electrical engineering."></p>
             </div>
-          </div>
+          </div>          
+          
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+            <div class="feature-box">
+              <div class="icon-container">
+                <i class="bi bi-people-fill"></i>
+              </div>
+              <h4 en='Growth'
+                  ind=""></h4>
+
+              <p en="Driving sustainable progress by empowering clients with efficient, scalable, and future-ready energy solutions."
+                 ind="Driving sustainable progress by empowering clients with efficient, scalable, and future-ready energy solutions."></p>
+            </div>
+          </div>          
+          
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+            <div class="feature-box">
+              <div class="icon-container">
+                <i class="bi bi-people-fill"></i>
+              </div>
+              <h4 en='Security'
+                  ind=""></h4>
+
+              <p en="Operating with transparency, accountability, and strong ethical values in every project, partnership, and decision."
+                 ind=""></p>
+            </div>
+          </div>          
+          
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+            <div class="feature-box">
+              <div class="icon-container">
+                <i class="bi bi-people-fill"></i>
+              </div>
+              <h4 en='Collaboration'
+                  ind=""></h4>
+
+              <p en="Partnering with clients, utilities, and industries to achieve shared success through teamwork, trust, and technical excellence."
+                 ind=""></p>
+            </div>
+          </div>          
+
+          
         </div>
 
         <div class="row align-items-center about-showcase">
+
           <div class="col-lg-6 order-lg-2" data-aos="fade-left" data-aos-delay="300">
             <div class="about-image-grid">
               <img src="assets/img/about/about-15.webp" class="img-grid-main" alt="Our company vision">
@@ -194,6 +281,7 @@
               </div>
             </div>
           </div>
+
           <div class="col-lg-6 order-lg-1" data-aos="fade-right" data-aos-delay="200">
             <div class="about-content-box">
               <h3>Electrifying Indonesia since 1985</h3>
@@ -201,7 +289,7 @@
 
               <div class="progress-item">
                 <div class="d-flex justify-content-between">
-                  <span class="progress-title">System Integration & Design</span>
+                  <span en="System Integration & Design" class="progress-title"></span>
                   <span class="progress-percent">94%</span>
                 </div>
                 <div class="progress">
@@ -211,7 +299,7 @@
 
               <div class="progress-item">
                 <div class="d-flex justify-content-between">
-                  <span class="progress-title">Manufacturing Excellence</span>
+                  <span en="Manufacturing Excellence" class="progress-title"></span>
                   <span class="progress-percent">87%</span>
                 </div>
                 <div class="progress">
@@ -221,7 +309,7 @@
 
               <div class="progress-item">
                 <div class="d-flex justify-content-between">
-                  <span class="progress-title">Customer Reliability & Support</span>
+                  <span en="Customer Reliability & Support" class="progress-title"></span>
                   <span class="progress-percent">92%</span>
                 </div>
                 <div class="progress">
@@ -1351,5 +1439,9 @@ Each number reflects our dedication to engineering excellence, reliability, and 
   <script src="assets/js/main.js"></script>
 
 </body>
+  <script src="assets/JSON/id.js"></script>
+  <script src="assets/JSON/en.js"></script>  
+  <script src="assets/js/bahasa.js"></script>
+  <script src="assets/js/tema.js"></script>
 
 </html>
