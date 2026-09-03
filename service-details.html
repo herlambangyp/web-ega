@@ -1,153 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Service Details - Scout Bootstrap Template</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-
-  <!-- Favicons -->
+  <title>Switchgear Products | EGA Tekelindo Prima</title>
+  <meta name="description" content="Medium-voltage switchgear products and engineering support from PT Ega Tekelindo Prima.">
+  <meta name="keywords" content="switchgear, medium voltage, 20 kV, EGA Tekelindo Prima, panel listrik">
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Scout
-  * Template URL: https://bootstrapmade.com/scout-bootstrap-multipurpose-template/
-  * Updated: May 05 2025 with Bootstrap v5.3.5
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
-
 <body class="service-details-page">
 
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
-
       <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.webp" alt=""> -->
-        <h1 class="sitename">Scout</h1>
+        <img src="assets/img/logo EGA.webp" alt="EGA Tekelindo Prima">
+        <div class="mobile-hidden d-flex text-body flex-column">
+          <span class="fs-4 fw-bolder">EGA TEKELINDO</span>
+          <span class="fs-6">PRIMA • EST. 1985</span>
+        </div>
       </a>
-
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#team">Team</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li><a en="Home" ind="Beranda" href="index.html#hero"></a></li>
+          <li><a en="About" ind="Tentang" href="index.html#about"></a></li>
+          <li><a en="Services" ind="Layanan" href="service-details.html"></a></li>
+          <li class="dropdown"><a href="#" class="active"><span en="Product" ind="Produk"></span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
+              <li><a en="Air Insulated Switchgear - Type Test" ind="Switchgear Insulasi Udara - Type Test" href="#ais-type-tested"></a></li>
+              <li><a en="Air Insulated Switchgear - Non Type Test" ind="Switchgear Insulasi Udara - Non Type Test" href="#ais-non-type-tested"></a></li>
+              <li><a en="Fully Insulated Switchgear - Type Test" ind="Switchgear Insulasi Penuh - Type Test" href="#fis-type-tested"></a></li>
+              <li><a en="Fully Insulated Switchgear - Non Type Test" ind="Switchgear Insulasi Penuh - Non Type Test" href="#fis-non-type-tested"></a></li>
             </ul>
           </li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a en="Contact" ind="Kontak" href="index.html#contact"></a></li>
+          <li class="dropdown pointer"><a><span en="Theme" ind="Tema"></span> <i class="bi bi-chevron-down toggle-dropdown"></i></a><ul><li><a pilihTema data-isi="dark" en="Dark" ind="Gelap"></a></li><li><a pilihTema data-isi="light" en="Light" ind="Terang"></a></li></ul></li>
+          <li class="dropdown pointer"><a><span en="Language" ind="Bahasa"></span> <i class="bi bi-chevron-down toggle-dropdown"></i></a><ul><li><a bahasa data-isi="id">Indonesia</a></li><li><a bahasa data-isi="en">English</a></li></ul></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
-      <a class="btn-getstarted" href="index.html#about">Get Started</a>
-
     </div>
   </header>
 
   <main class="main">
-
-    <!-- Page Title -->
     <div class="page-title light-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Service Details</h1>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Service Details</li>
-          </ol>
-        </nav>
+        <h1 class="mb-2 mb-lg-0" en="Aftersales Services" ind="Layanan Purna Jual"></h1>
+        <nav class="breadcrumbs"><ol><li><a href="index.html" en="Home" ind="Beranda"></a></li><li class="current" en="Switchgear Products" ind="Produk Switchgear"></li></ol></nav>
       </div>
-    </div><!-- End Page Title -->
+    </div>
 
-    <!-- Service Details Section -->
-    <section id="service-details" class="service-details section">
-
+    <section id="product-details" class="service-details section">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
         <div class="row gy-5">
-
           <div class="col-lg-5">
             <div class="service-sidebar">
               <div class="service-overview" data-aos="fade-up" data-aos-delay="100">
-                <div class="overview-header">
-                  <i class="bi bi-briefcase-fill"></i>
-                  <h3>Service Overview</h3>
-                </div>
+                <div class="overview-header"><i class="bi bi-lightning-charge-fill"></i><h3 en="Product Overview" ind="Ringkasan Produk"></h3></div>
                 <div class="overview-content">
-                  <h2>Cloud Computing Solutions</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Excepteur sint occaecat cupidatat non proident.</p>
-                  <div class="cta-button">
-                    <a href="#" class="btn-get-started">Request a Quote</a>
-                  </div>
+                  <h2 en="Medium-Voltage Switchgear" ind="Kubikel Tegangan Menengah"></h2>
+                  <p en="EGA designs and manufactures medium-voltage switchgear systems for utilities, infrastructure, commercial buildings, and industrial facilities." ind="EGA mendesain dan memproduksi sistem switchgear tegangan menengah untuk utilitas, infrastruktur, bangunan komersial, dan fasilitas industri."></p>
+                  <div class="cta-button"><a href="index.html#contact" class="btn-get-started" en="Request a Quote" ind="Minta Penawaran"></a></div>
                 </div>
               </div>
 
               <div class="key-benefits" data-aos="fade-up" data-aos-delay="200">
-                <h4>Key Benefits</h4>
+                <h4 en="Key Capabilities" ind="Kapabilitas Utama"></h4>
                 <ul>
-                  <li><i class="bi bi-check-circle-fill"></i> Scalable infrastructure on demand</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Reduced IT operational costs</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Enhanced security protocols</li>
-                  <li><i class="bi bi-check-circle-fill"></i> 24/7 technical support</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Seamless integration with existing systems</li>
+                  <li><i class="bi bi-check-circle-fill"></i> <span en="20 kV medium-voltage applications" ind="Aplikasi tegangan menengah 20 kV"></span></li>
+                  <li><i class="bi bi-check-circle-fill"></i> <span en="Air-insulated and fully insulated systems" ind="Sistem insulasi udara dan insulasi penuh"></span></li>
+                  <li><i class="bi bi-check-circle-fill"></i> <span en="Type-tested and project-specific configurations" ind="Konfigurasi type-tested dan khusus proyek"></span></li>
+                  <li><i class="bi bi-check-circle-fill"></i> <span en="Protection, metering, control, and interlocking integration" ind="Integrasi proteksi, metering, kontrol, dan interlocking"></span></li>
+                  <li><i class="bi bi-check-circle-fill"></i> <span en="Engineering and after-sales support" ind="Dukungan engineering dan purna jual"></span></li>
                 </ul>
               </div>
 
               <div class="contact-card" data-aos="fade-up" data-aos-delay="300">
-                <div class="contact-header">
-                  <i class="bi bi-headset"></i>
-                  <h4>Need Assistance?</h4>
-                </div>
+                <div class="contact-header"><i class="bi bi-headset"></i><h4 en="Need Technical Assistance?" ind="Butuh Bantuan Teknis?"></h4></div>
                 <div class="contact-info">
-                  <div class="info-row">
-                    <i class="bi bi-telephone"></i>
-                    <div>
-                      <span>Call Us</span>
-                      <p>+1 (720) 458-6324</p>
-                    </div>
-                  </div>
-                  <div class="info-row">
-                    <i class="bi bi-envelope"></i>
-                    <div>
-                      <span>Email Us</span>
-                      <p>support@example.com</p>
-                    </div>
-                  </div>
+                  <div class="info-row"><i class="bi bi-telephone"></i><div><span en="Call Us" ind="Hubungi Kami"></span><p>(+62) 21 6008082</p></div></div>
+                  <div class="info-row"><i class="bi bi-geo-alt"></i><div><span en="Head Office" ind="Kantor Pusat"></span><p>Jl. P. Jayakarta 141 Blok E/4, Jakarta Pusat</p></div></div>
                 </div>
               </div>
             </div>
@@ -157,243 +97,66 @@
             <div class="service-content">
               <div class="image-gallery" data-aos="zoom-in" data-aos-delay="100">
                 <div class="service-details-slider swiper init-swiper">
-                  <script type="application/json" class="swiper-config">
-                    {
-                      "loop": true,
-                      "speed": 800,
-                      "autoplay": {
-                        "delay": 5000
-                      },
-                      "slidesPerView": 1,
-                      "effect": "fade",
-                      "navigation": {
-                        "nextEl": ".swiper-button-next",
-                        "prevEl": ".swiper-button-prev"
-                      },
-                      "pagination": {
-                        "el": ".swiper-pagination",
-                        "type": "bullets",
-                        "clickable": true
-                      }
-                    }
-                  </script>
+                  <script type="application/json" class="swiper-config">{"loop":true,"speed":800,"autoplay":{"delay":5000},"slidesPerView":1,"effect":"fade","navigation":{"nextEl":".swiper-button-next","prevEl":".swiper-button-prev"},"pagination":{"el":".swiper-pagination","type":"bullets","clickable":true}}</script>
                   <div class="swiper-wrapper align-items-center">
-                    <div class="swiper-slide">
-                      <img src="assets/img/services/services-5.webp" alt="" class="img-fluid" loading="lazy">
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="assets/img/services/services-6.webp" alt="" class="img-fluid" loading="lazy">
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="assets/img/services/services-8.webp" alt="" class="img-fluid" loading="lazy">
-                    </div>
+                    <div class="swiper-slide"><img src="assets/img/services/services-5.webp" alt="EGA medium-voltage switchgear" class="img-fluid" loading="lazy"></div>
+                    <div class="swiper-slide"><img src="assets/img/services/services-6.webp" alt="Switchgear engineering and manufacturing" class="img-fluid" loading="lazy"></div>
+                    <div class="swiper-slide"><img src="assets/img/services/services-8.webp" alt="Switchgear project support" class="img-fluid" loading="lazy"></div>
                   </div>
-                  <div class="swiper-pagination"></div>
-                  <div class="swiper-button-next"></div>
-                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-pagination"></div><div class="swiper-button-next"></div><div class="swiper-button-prev"></div>
                 </div>
               </div>
 
               <div class="details-content" data-aos="fade-up" data-aos-delay="200">
-                <div class="section-header">
-                  <h3>How Our Cloud Solutions Work</h3>
-                  <div class="divider"></div>
-                </div>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan lacus eget velit volutpat, in fermentum orci congue. Mauris molestie arcu eget massa lobortis feugiat. Nulla facilisi. Integer et metus sit amet nisi efficitur ultricies.
-                </p>
-                <p>
-                  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam feugiat diam ut malesuada mollis. Donec quis tincidunt ipsum. Sed consequat, nulla nec commodo finibus, libero magna congue quam.
-                </p>
+                <div class="section-header"><h3 en="Reliable Power Distribution Solutions" ind="Solusi Distribusi Tenaga yang Andal"></h3><div class="divider"></div></div>
+                <p en="Our switchgear solutions are configured around the project single-line diagram, operating philosophy, protection requirements, metering system, control voltage, and site conditions." ind="Solusi switchgear kami dikonfigurasi berdasarkan single-line diagram proyek, filosofi operasi, kebutuhan proteksi, sistem metering, tegangan kontrol, dan kondisi lokasi."></p>
+                <p en="EGA supports customers from technical review and panel engineering through manufacturing, routine testing, delivery, installation assistance, commissioning, maintenance, and troubleshooting." ind="EGA mendukung pelanggan mulai dari kajian teknis dan engineering panel hingga manufaktur, routine test, pengiriman, pendampingan instalasi, commissioning, pemeliharaan, dan troubleshooting."></p>
               </div>
 
               <div class="service-features" data-aos="fade-up" data-aos-delay="300">
-                <div class="section-header">
-                  <h3>Core Features</h3>
-                  <div class="divider"></div>
-                </div>
+                <div class="section-header"><h3 en="Product Categories" ind="Kategori Produk"></h3><div class="divider"></div></div>
                 <div class="row g-4">
-                  <div class="col-md-6">
-                    <div class="feature-card">
-                      <div class="icon-wrapper">
-                        <i class="bi bi-cloud-arrow-up"></i>
-                      </div>
-                      <h4>Cloud Migration</h4>
-                      <p>Seamlessly transfer your existing infrastructure to our secure cloud platform with minimal downtime.</p>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="feature-card">
-                      <div class="icon-wrapper">
-                        <i class="bi bi-shield-check"></i>
-                      </div>
-                      <h4>Security Management</h4>
-                      <p>Advanced encryption and protection systems to keep your data safe from external threats.</p>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="feature-card">
-                      <div class="icon-wrapper">
-                        <i class="bi bi-hdd-network"></i>
-                      </div>
-                      <h4>Scalable Infrastructure</h4>
-                      <p>Easily scale resources up or down based on your business needs with pay-as-you-go pricing.</p>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="feature-card">
-                      <div class="icon-wrapper">
-                        <i class="bi bi-arrows-angle-expand"></i>
-                      </div>
-                      <h4>Disaster Recovery</h4>
-                      <p>Comprehensive backup solutions ensuring business continuity during unexpected events.</p>
-                    </div>
-                  </div>
+                  <div class="col-md-6" id="ais-type-tested"><div class="feature-card"><div class="icon-wrapper"><i class="bi bi-shield-check"></i></div><h4>AIS — Type-Tested</h4><p en="Standardized air-insulated switchgear for projects requiring verified performance and clear compartmentalization." ind="Switchgear insulasi udara terstandar untuk proyek yang membutuhkan performa terverifikasi dan kompartementasi yang jelas."></p></div></div>
+                  <div class="col-md-6" id="ais-non-type-tested"><div class="feature-card"><div class="icon-wrapper"><i class="bi bi-sliders"></i></div><h4>AIS — Non-Type-Tested</h4><p en="Flexible air-insulated configurations for retrofit, replacement, and non-standard project requirements." ind="Konfigurasi insulasi udara yang fleksibel untuk retrofit, penggantian, dan kebutuhan proyek non-standar."></p></div></div>
+                  <div class="col-md-6" id="fis-type-tested"><div class="feature-card"><div class="icon-wrapper"><i class="bi bi-box-seam"></i></div><h4 en="Fully Insulated — Type-Tested" ind="Insulasi Penuh — Type-Tested"></h4><p en="Compact and protected switchgear for installations requiring efficient use of space and reduced environmental exposure." ind="Switchgear ringkas dan terlindungi untuk instalasi yang membutuhkan efisiensi ruang dan pengurangan paparan lingkungan."></p></div></div>
+                  <div class="col-md-6" id="fis-non-type-tested"><div class="feature-card"><div class="icon-wrapper"><i class="bi bi-diagram-3"></i></div><h4 en="Fully Insulated — Non-Type-Tested" ind="Insulasi Penuh — Non-Type-Tested"></h4><p en="Project-specific compact configurations integrating feeder arrangements, protection, metering, and control." ind="Konfigurasi ringkas khusus proyek yang mengintegrasikan susunan feeder, proteksi, metering, dan kontrol."></p></div></div>
                 </div>
               </div>
 
               <div class="implementation-steps" data-aos="fade-up" data-aos-delay="400">
-                <div class="section-header">
-                  <h3>Implementation Process</h3>
-                  <div class="divider"></div>
-                </div>
+                <div class="section-header"><h3 en="Project Process" ind="Proses Proyek"></h3><div class="divider"></div></div>
                 <div class="step-container">
-                  <div class="step">
-                    <span class="step-number">01</span>
-                    <div class="step-content">
-                      <h4>Assessment &amp; Planning</h4>
-                      <p>We evaluate your current infrastructure and develop a tailored migration strategy.</p>
-                    </div>
-                  </div>
-                  <div class="step">
-                    <span class="step-number">02</span>
-                    <div class="step-content">
-                      <h4>Solution Design</h4>
-                      <p>Our team creates a custom cloud architecture optimized for your specific business needs.</p>
-                    </div>
-                  </div>
-                  <div class="step">
-                    <span class="step-number">03</span>
-                    <div class="step-content">
-                      <h4>Migration &amp; Implementation</h4>
-                      <p>Seamless transition with minimal disruption to your ongoing operations.</p>
-                    </div>
-                  </div>
-                  <div class="step">
-                    <span class="step-number">04</span>
-                    <div class="step-content">
-                      <h4>Support &amp; Optimization</h4>
-                      <p>Continuous monitoring, maintenance, and optimization to ensure peak performance.</p>
-                    </div>
-                  </div>
+                  <div class="step"><span class="step-number">01</span><div class="step-content"><h4 en="Requirement Review" ind="Tinjauan Kebutuhan"></h4><p en="Review of the single-line diagram, technical specification, site conditions, and applicable standards." ind="Peninjauan single-line diagram, spesifikasi teknis, kondisi lokasi, dan standar yang berlaku."></p></div></div>
+                  <div class="step"><span class="step-number">02</span><div class="step-content"><h4 en="Design &amp; Configuration" ind="Desain &amp; Konfigurasi"></h4><p en="Panel arrangement, component selection, protection, metering, control, and interlocking." ind="Susunan panel, pemilihan komponen, proteksi, metering, kontrol, dan interlocking."></p></div></div>
+                  <div class="step"><span class="step-number">03</span><div class="step-content"><h4 en="Manufacturing &amp; Testing" ind="Manufaktur &amp; Pengujian"></h4><p en="Controlled manufacturing followed by inspection and routine testing before delivery." ind="Manufaktur terkendali yang dilanjutkan inspeksi dan routine test sebelum pengiriman."></p></div></div>
+                  <div class="step"><span class="step-number">04</span><div class="step-content"><h4 en="Site &amp; After-Sales Support" ind="Dukungan Site &amp; Purna Jual"></h4><p en="Installation assistance, commissioning support, preventive maintenance, and troubleshooting." ind="Pendampingan instalasi, dukungan commissioning, preventive maintenance, dan troubleshooting."></p></div></div>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
-
       </div>
-
-    </section><!-- /Service Details Section -->
-
+    </section>
   </main>
 
   <footer id="footer" class="footer position-relative light-background">
-
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Scout</span>
-          </a>
-          <div class="footer-contact pt-3">
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
-          </div>
-          <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Hic solutasetp</h4>
-          <ul>
-            <li><a href="#">Molestiae accusamus iure</a></li>
-            <li><a href="#">Excepturi dignissimos</a></li>
-            <li><a href="#">Suscipit distinctio</a></li>
-            <li><a href="#">Dilecta</a></li>
-            <li><a href="#">Sit quas consectetur</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Nobis illum</h4>
-          <ul>
-            <li><a href="#">Ipsam</a></li>
-            <li><a href="#">Laudantium dolorum</a></li>
-            <li><a href="#">Dinera</a></li>
-            <li><a href="#">Trodelas</a></li>
-            <li><a href="#">Flexo</a></li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">MyWebsite</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
-
+    <div class="container footer-top"><div class="row gy-4">
+      <div class="col-lg-6 col-md-6 footer-about"><a href="index.html" class="logo d-flex align-items-center"><span class="sitename">EGA Tekelindo Prima</span></a><div class="footer-contact pt-3"><p>Jl. P. Jayakarta 141 Blok E/4</p><p>Jakarta Pusat, Indonesia</p><p class="mt-3"><strong en="Phone:" ind="Telepon:"></strong> <span>(+62) 21 6008082</span></p></div></div>
+      <div class="col-lg-3 col-md-3 footer-links"><h4 en="Company" ind="Perusahaan"></h4><ul><li><a href="index.html#hero" en="Home" ind="Beranda"></a></li><li><a href="index.html#about" en="About Us" ind="Tentang Kami"></a></li><li><a href="index.html#services" en="Services" ind="Layanan"></a></li><li><a href="index.html#contact" en="Contact" ind="Kontak"></a></li></ul></div>
+      <div class="col-lg-3 col-md-3 footer-links"><h4 en="Products" ind="Produk"></h4><ul><li><a href="#ais-type-tested">Air Insulated Switchgear</a></li><li><a href="#fis-type-tested">Fully Insulated Switchgear</a></li><li><a href="index.html#contact">Current Transformer</a></li><li><a href="index.html#contact">Voltage Transformer</a></li></ul></div>
+    </div></div>
+    <div class="container copyright text-center mt-4"><p>© 2026 <strong class="px-1 sitename">PT Ega Tekelindo Prima</strong> <span en="All Rights Reserved" ind="Seluruh Hak Cipta Dilindungi"></span></p></div>
   </footer>
 
-  <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script src="assets/JSON/id.js"></script>
+  <script src="assets/JSON/en.js"></script>
+  <script src="assets/js/bahasa.js"></script>
+  <script src="assets/js/tema.js"></script>
 </body>
-
 </html>
