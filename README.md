@@ -13,7 +13,7 @@ Repository baru berisi source-code front end pengembangan web PT Ega Tekelindo P
 * JavaScript
 
 ## NOTE Terkait map yang tidak muncul:
-Map indo dimuat dengan element <div> bukan <img>. Karena fleksibiltas untuk menimpa warna gambar
+Map indo dimuat dengan element div bukan img. Karena fleksibiltas untuk menimpa warna gambar
 Tapi ada kemungkinan map nya tidak akan tampil, jika halaman index.html di preview melalui "klik 2x di file explorer"
 
 Penyebabnya karena kebijakan keamanan browser terbaru dimana pemuatan file lokal melalui css atau js akan di block
