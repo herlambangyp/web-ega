@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -15,7 +15,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> -->
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -172,6 +172,12 @@
             </div>
           </div>
 
+          <!-- <div class="col-lg-7">
+            <div class="hero-image-wrapper" data-aos="fade-up" data-aos-delay="300">
+              <img src="assets/img/MapIndo.png" alt="Map Indonesia">
+            </div>
+          </div> -->
+
           <div class="col-lg-6">
             <div class="hero-image-wrapper" data-aos="fade-up" data-aos-delay="300">
               <img src="assets/img/about/about-square-13.webp" alt="" class="img-fluid hero-image">
@@ -191,15 +197,494 @@
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section><!-- /Hero Section -->
+    
 
+    <!-- Map Section -->
+      <!-- <div class="container map dark-background" data-aos="fade-up">
+        <div class="row align-items-center">
+          <div class="col-lg-12">
+            <div class="hero-image-wrapper " data-aos="fade-up" data-aos-delay="300">
+              <img style="max-height: 1000px;" src="assets/img/MapIndo.png" alt="Map Indonesia">
+            </div>
+          </div>
+        </div>
+      </div> -->
+    <!-- /Map Section -->
+    
     <!-- About Section -->
     <section id="about" class="about section">
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <!-- MAP INDONESIA -->
+      <div style="display: grid; justify-content:center;"
+          class="col-lg-12" data-aos="fade-up" data-aos-delay="100"
+          >
+          <!-- <h2 en="Temukan Kami DImana Saja" ind="Fouund us everywhere" class="section-heading"></h2> -->
+          <p en=''
+             ind='"EGA telah tersebar di seluruh wilayah lndonesia"'
+             class="lead text-center"
+            ></p>
+          <div style="position: relative; overflow-x: auto; overflow-y: hidden;">
+            <div class="mapKontener">
+              <div class="mapIndo"></div>
+            </div>
+            <!-- Point map sebaiknya di loop di backend -->
 
+             <!-- SUMATRA -->
+            <div class="pointMap">
+            <a style="top:-5px; left: 21px;" 
+            class="pinPoint position-absolute icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-geo-alt-fill"></i></a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+              
+              <li class="dropdown-header text-start"><h6>
+                <i class="bi bi-buildings-fill"></i> 
+                <span en='Aceh Factory' ind='Pabrik Aceh'></span>
+              </h6></li>
+
+              <li class="dropdown-header text-start">
+                <div en='Address:' ind='Alamat:'></div>
+                <a href="#"><i class="bi bi-geo-fill"></i> Jln. Toba Utara kerasidenan danau muara</a>
+              </li>
+
+              <li class="dropdown-header text-start">
+                <div en='Phone:' ind='Telepon:'></div>
+                <a href="#"><i class="bi bi-telephone-plus-fill"></i> 0812-3456-7890</a>
+              </li>
+            </ul>
+            </div>
+
+            <div class="pointMap">
+            <a style="top:75px; left: 90px;" 
+            class="pinPoint position-absolute icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-geo-alt-fill"></i></a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+              
+              <li class="dropdown-header text-start"><h6>
+                <i class="bi bi-buildings-fill"></i> 
+                <span en='Toba Factory' ind='Pabrik Toba'></span>
+              </h6></li>
+
+              <li class="dropdown-header text-start">
+                <div en='Address:' ind='Alamat:'></div>
+                <a href="#"><i class="bi bi-geo-fill"></i> Jln. Toba Utara kerasidenan danau muara</a>
+              </li>
+
+              <li class="dropdown-header text-start">
+                <div en='Phone:' ind='Telepon:'></div>
+                <a href="#"><i class="bi bi-telephone-plus-fill"></i> 0812-3456-7890</a>
+              </li>
+            </ul>
+            </div>
+            
+            <div class="pointMap">
+            <a style="top:138px; left: 200px;" 
+            class="pinPoint position-absolute icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-geo-alt-fill"></i></a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+              
+              <li class="dropdown-header text-start"><h6>
+                <i class="bi bi-buildings-fill"></i> 
+                <span en='Batam Factory' ind='Pabrik Batam'></span>
+              </h6></li>
+
+              <li class="dropdown-header text-start">
+                <div en='Address:' ind='Alamat:'></div>
+                <a href="#"><i class="bi bi-geo-fill"></i> Jln. Toba Utara kerasidenan danau muara</a>
+              </li>
+
+              <li class="dropdown-header text-start">
+                <div en='Phone:' ind='Telepon:'></div>
+                <a href="#"><i class="bi bi-telephone-plus-fill"></i> 0812-3456-7890</a>
+              </li>
+            </ul>
+            </div>
+            
+            <div class="pointMap">
+            <a style="top:190px; left: 175px;" 
+            class="pinPoint position-absolute icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-geo-alt-fill"></i></a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+              
+              <li class="dropdown-header text-start"><h6>
+                <i class="bi bi-buildings-fill"></i> 
+                <span en='Sumatra Factory' ind='Pabrik Sumatra'></span>
+              </h6></li>
+
+              <li class="dropdown-header text-start">
+                <div en='Address:' ind='Alamat:'></div>
+                <a href="#"><i class="bi bi-geo-fill"></i> Jln. Toba Utara kerasidenan danau muara</a>
+              </li>
+
+              <li class="dropdown-header text-start">
+                <div en='Phone:' ind='Telepon:'></div>
+                <a href="#"><i class="bi bi-telephone-plus-fill"></i> 0812-3456-7890</a>
+              </li>
+            </ul>
+            </div>
+            
+            <div class="pointMap">
+            <a style="top:216px; left: 225px;" 
+            class="pinPoint position-absolute icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-geo-alt-fill"></i></a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+              
+              <li class="dropdown-header text-start"><h6>
+                <i class="bi bi-buildings-fill"></i> 
+                <span en='Lampung Factory' ind='Pabrik Lampung'></span>
+              </h6></li>
+
+              <li class="dropdown-header text-start">
+                <div en='Address:' ind='Alamat:'></div>
+                <a href="#"><i class="bi bi-geo-fill"></i> Jln. Toba Utara kerasidenan danau muara</a>
+              </li>
+
+              <li class="dropdown-header text-start">
+                <div en='Phone:' ind='Telepon:'></div>
+                <a href="#"><i class="bi bi-telephone-plus-fill"></i> 0812-3456-7890</a>
+              </li>
+            </ul>
+            </div>
+
+            <!-- JAWA -->
+            <div class="pointMap">
+            <a style="top:239px; left: 263px;" 
+            class="pinPoint position-absolute icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-geo-alt-fill"></i></a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+              
+              <li class="dropdown-header text-start"><h6>
+                <i class="bi bi-buildings-fill"></i> 
+                <span en='Jakarta Factory' ind='Pabrik Jakarta'></span>
+              </h6></li>
+
+              <li class="dropdown-header text-start">
+                <div en='Address:' ind='Alamat:'></div>
+                <a href="#"><i class="bi bi-geo-fill"></i> Jln. Toba Utara kerasidenan danau muara</a>
+              </li>
+
+              <li class="dropdown-header text-start">
+                <div en='Phone:' ind='Telepon:'></div>
+                <a href="#"><i class="bi bi-telephone-plus-fill"></i> 0812-3456-7890</a>
+              </li>
+            </ul>
+            </div>
+
+            <div class="pointMap">
+            <a style="top:254px; left: 299px;" 
+            class="pinPoint position-absolute icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-geo-alt-fill"></i></a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+              
+              <li class="dropdown-header text-start"><h6>
+                <i class="bi bi-buildings-fill"></i> 
+                <span en='Cirebon Factory' ind='Pabrik Cirebon'></span>
+              </h6></li>
+
+              <li class="dropdown-header text-start">
+                <div en='Address:' ind='Alamat:'></div>
+                <a href="#"><i class="bi bi-geo-fill"></i> Jln. Toba Utara kerasidenan danau muara</a>
+              </li>
+
+              <li class="dropdown-header text-start">
+                <div en='Phone:' ind='Telepon:'></div>
+                <a href="#"><i class="bi bi-telephone-plus-fill"></i> 0812-3456-7890</a>
+              </li>
+            </ul>
+            </div>
+
+            <div class="pointMap">
+            <a style="top:264px; left: 376px;" 
+            class="pinPoint position-absolute icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-geo-alt-fill"></i></a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+              
+              <li class="dropdown-header text-start"><h6>
+                <i class="bi bi-buildings-fill"></i> 
+                <span en='Bojonegoro Factory' ind='Pabrik Bojonegoro'></span>
+              </h6></li>
+
+              <li class="dropdown-header text-start">
+                <div en='Address:' ind='Alamat:'></div>
+                <a href="#"><i class="bi bi-geo-fill"></i> Jln. Toba Utara kerasidenan danau muara</a>
+              </li>
+
+              <li class="dropdown-header text-start">
+                <div en='Phone:' ind='Telepon:'></div>
+                <a href="#"><i class="bi bi-telephone-plus-fill"></i> 0812-3456-7890</a>
+              </li>
+            </ul>
+            </div>
+
+            <!-- KALIMANTAN -->
+            <div class="pointMap">
+            <a style="top:160px; left: 364px;" 
+            class="pinPoint position-absolute icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-geo-alt-fill"></i></a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+              
+              <li class="dropdown-header text-start"><h6>
+                <i class="bi bi-buildings-fill"></i> 
+                <span en='Kalimantan Tengah Factory' ind='Pabrik Kalimantan Tengah'></span>
+              </h6></li>
+
+              <li class="dropdown-header text-start">
+                <div en='Address:' ind='Alamat:'></div>
+                <a href="#"><i class="bi bi-geo-fill"></i> Jln. Toba Utara kerasidenan danau muara</a>
+              </li>
+
+              <li class="dropdown-header text-start">
+                <div en='Phone:' ind='Telepon:'></div>
+                <a href="#"><i class="bi bi-telephone-plus-fill"></i> 0812-3456-7890</a>
+              </li>
+            </ul>
+            </div>
+
+            <div class="pointMap">
+            <a style="top:172px; left: 462px;" 
+            class="pinPoint position-absolute icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-geo-alt-fill"></i></a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+              
+              <li class="dropdown-header text-start"><h6>
+                <i class="bi bi-buildings-fill"></i> 
+                <span en='Balikpapan Factory' ind='Pabrik Balikpapan'></span>
+              </h6></li>
+
+              <li class="dropdown-header text-start">
+                <div en='Address:' ind='Alamat:'></div>
+                <a href="#"><i class="bi bi-geo-fill"></i> Jln. Toba Utara kerasidenan danau muara</a>
+              </li>
+
+              <li class="dropdown-header text-start">
+                <div en='Phone:' ind='Telepon:'></div>
+                <a href="#"><i class="bi bi-telephone-plus-fill"></i> 0812-3456-7890</a>
+              </li>
+            </ul>
+            </div>
+
+            <div class="pointMap">
+            <a style="top:82px; left: 504px;" 
+            class="pinPoint position-absolute icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-geo-alt-fill"></i></a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+              
+              <li class="dropdown-header text-start"><h6>
+                <i class="bi bi-buildings-fill"></i> 
+                <span en='Samarinda Factory' ind='Pabrik Samarinda'></span>
+              </h6></li>
+
+              <li class="dropdown-header text-start">
+                <div en='Address:' ind='Alamat:'></div>
+                <a href="#"><i class="bi bi-geo-fill"></i> Jln. Toba Utara kerasidenan danau muara</a>
+              </li>
+
+              <li class="dropdown-header text-start">
+                <div en='Phone:' ind='Telepon:'></div>
+                <a href="#"><i class="bi bi-telephone-plus-fill"></i> 0812-3456-7890</a>
+              </li>
+            </ul>
+            </div>
+
+            <!-- BALI & NTT -->
+            <div class="pointMap">
+            <a style="top:289px; left: 448px;" 
+            class="pinPoint position-absolute icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-geo-alt-fill"></i></a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+              
+              <li class="dropdown-header text-start"><h6>
+                <i class="bi bi-buildings-fill"></i> 
+                <span en='Bali Factory' ind='Pabrik Bali'></span>
+              </h6></li>
+
+              <li class="dropdown-header text-start">
+                <div en='Address:' ind='Alamat:'></div>
+                <a href="#"><i class="bi bi-geo-fill"></i> Jln. Toba Utara kerasidenan danau muara</a>
+              </li>
+
+              <li class="dropdown-header text-start">
+                <div en='Phone:' ind='Telepon:'></div>
+                <a href="#"><i class="bi bi-telephone-plus-fill"></i> 0812-3456-7890</a>
+              </li>
+            </ul>
+            </div>
+
+            <div class="pointMap">
+            <a style="top:293px; left: 558px;" 
+            class="pinPoint position-absolute icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-geo-alt-fill"></i></a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+              
+              <li class="dropdown-header text-start"><h6>
+                <i class="bi bi-buildings-fill"></i> 
+                <span en='Nusa Tenggara Timur Factory' ind='Pabrik Nusa Tenggara Timur'></span>
+              </h6></li>
+
+              <li class="dropdown-header text-start">
+                <div en='Address:' ind='Alamat:'></div>
+                <a href="#"><i class="bi bi-geo-fill"></i> Jln. Toba Utara kerasidenan danau muara</a>
+              </li>
+
+              <li class="dropdown-header text-start">
+                <div en='Phone:' ind='Telepon:'></div>
+                <a href="#"><i class="bi bi-telephone-plus-fill"></i> 0812-3456-7890</a>
+              </li>
+            </ul>
+            </div>
+
+            <!-- SULAWESI -->
+            <div class="pointMap">
+            <a style="top:216px; left: 542px;" 
+            class="pinPoint position-absolute icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-geo-alt-fill"></i></a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+              
+              <li class="dropdown-header text-start"><h6>
+                <i class="bi bi-buildings-fill"></i> 
+                <span en='Makasar Factory' ind='Pabrik Makasar'></span>
+              </h6></li>
+
+              <li class="dropdown-header text-start">
+                <div en='Address:' ind='Alamat:'></div>
+                <a href="#"><i class="bi bi-geo-fill"></i> Jln. Toba Utara kerasidenan danau muara</a>
+              </li>
+
+              <li class="dropdown-header text-start">
+                <div en='Phone:' ind='Telepon:'></div>
+                <a href="#"><i class="bi bi-telephone-plus-fill"></i> 0812-3456-7890</a>
+              </li>
+            </ul>
+            </div>
+
+            <div class="pointMap">
+            <a style="top:167px; left: 533px;" 
+            class="pinPoint position-absolute icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-geo-alt-fill"></i></a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+              
+              <li class="dropdown-header text-start"><h6>
+                <i class="bi bi-buildings-fill"></i> 
+                <span en='Palu Factory' ind='Pabrik Palu'></span>
+              </h6></li>
+
+              <li class="dropdown-header text-start">
+                <div en='Address:' ind='Alamat:'></div>
+                <a href="#"><i class="bi bi-geo-fill"></i> Jln. Toba Utara kerasidenan danau muara</a>
+              </li>
+
+              <li class="dropdown-header text-start">
+                <div en='Phone:' ind='Telepon:'></div>
+                <a href="#"><i class="bi bi-telephone-plus-fill"></i> 0812-3456-7890</a>
+              </li>
+            </ul>
+            </div>
+
+            <div class="pointMap">
+            <a style="top:88px; left: 630px;" 
+            class="pinPoint position-absolute icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-geo-alt-fill"></i></a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+              
+              <li class="dropdown-header text-start"><h6>
+                <i class="bi bi-buildings-fill"></i> 
+                <span en='Gorontalo Factory' ind='Pabrik Gorontalo'></span>
+              </h6></li>
+
+              <li class="dropdown-header text-start">
+                <div en='Address:' ind='Alamat:'></div>
+                <a href="#"><i class="bi bi-geo-fill"></i> Jln. Toba Utara kerasidenan danau muara</a>
+              </li>
+
+              <li class="dropdown-header text-start">
+                <div en='Phone:' ind='Telepon:'></div>
+                <a href="#"><i class="bi bi-telephone-plus-fill"></i> 0812-3456-7890</a>
+              </li>
+            </ul>
+            </div>
+          
+            <!-- MALUKU -->
+            <div class="pointMap">
+            <a style="top:173px; left: 737px;" 
+            class="pinPoint position-absolute icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-geo-alt-fill"></i></a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+              
+              <li class="dropdown-header text-start"><h6>
+                <i class="bi bi-buildings-fill"></i> 
+                <span en='Maluku Factory' ind='Pabrik Maluku'></span>
+              </h6></li>
+
+              <li class="dropdown-header text-start">
+                <div en='Address:' ind='Alamat:'></div>
+                <a href="#"><i class="bi bi-geo-fill"></i> Jln. Toba Utara kerasidenan danau muara</a>
+              </li>
+
+              <li class="dropdown-header text-start">
+                <div en='Phone:' ind='Telepon:'></div>
+                <a href="#"><i class="bi bi-telephone-plus-fill"></i> 0812-3456-7890</a>
+              </li>
+            </ul>
+            </div>
+
+            <!-- PAPUA -->
+            <div class="pointMap">
+            <a style="top:173px; left: 894px;" 
+            class="pinPoint position-absolute icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-geo-alt-fill"></i></a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+              
+              <li class="dropdown-header text-start"><h6>
+                <i class="bi bi-buildings-fill"></i> 
+                <span en='Papua I Factory' ind='Pabrik Papua I'></span>
+              </h6></li>
+
+              <li class="dropdown-header text-start">
+                <div en='Address:' ind='Alamat:'></div>
+                <a href="#"><i class="bi bi-geo-fill"></i> Jln. Toba Utara kerasidenan danau muara</a>
+              </li>
+
+              <li class="dropdown-header text-start">
+                <div en='Phone:' ind='Telepon:'></div>
+                <a href="#"><i class="bi bi-telephone-plus-fill"></i> 0812-3456-7890</a>
+              </li>
+            </ul>
+            </div>
+
+            <div class="pointMap">
+            <a style="top:215px; left: 923px;" 
+            class="pinPoint position-absolute icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-geo-alt-fill"></i></a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+              
+              <li class="dropdown-header text-start"><h6>
+                <i class="bi bi-buildings-fill"></i> 
+                <span en='Papua II Factory' ind='Pabrik Papua II'></span>
+              </h6></li>
+
+              <li class="dropdown-header text-start">
+                <div en='Address:' ind='Alamat:'></div>
+                <a href="#"><i class="bi bi-geo-fill"></i> Jln. Toba Utara kerasidenan danau muara</a>
+              </li>
+
+              <li class="dropdown-header text-start">
+                <div en='Phone:' ind='Telepon:'></div>
+                <a href="#"><i class="bi bi-telephone-plus-fill"></i> 0812-3456-7890</a>
+              </li>
+            </ul>
+            </div>
+
+            <div class="pointMap">
+            <a style="top:175px; left: 974px;" 
+            class="pinPoint position-absolute icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-geo-alt-fill"></i></a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+              
+              <li class="dropdown-header text-start"><h6>
+                <i class="bi bi-buildings-fill"></i> 
+                <span en='Jayapura Factory' ind='Pabrik Jayapura'></span>
+              </h6></li>
+
+              <li class="dropdown-header text-start">
+                <div en='Address:' ind='Alamat:'></div>
+                <a href="#"><i class="bi bi-geo-fill"></i> Jln. Toba Utara kerasidenan danau muara</a>
+              </li>
+
+              <li class="dropdown-header text-start">
+                <div en='Phone:' ind='Telepon:'></div>
+                <a href="#"><i class="bi bi-telephone-plus-fill"></i> 0812-3456-7890</a>
+              </li>
+            </ul>
+            </div>
+          
+          </div>
+      </div>
+      <!-- END MAP INDONESIA -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row justify-content-center mb-5">
           <div class="col-lg-8 text-center" data-aos="fade-up" data-aos-delay="200">
             <h2 en="Our Vision & Mission" ind="Visi & Misi Kami" class="section-heading"></h2>
@@ -1458,11 +1943,13 @@ Each number reflects our dedication to engineering excellence, reliability, and 
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
-</body>
-  <script src="assets/JSON/id.js"></script>
-  <script src="assets/JSON/en.js"></script>  
+  <script src="assets/js/utama.js"></script>
   <script src="assets/js/bahasa.js"></script>
   <script src="assets/js/tema.js"></script>
+
+</body>
+  <!-- <script src="assets/JSON/id.js"></script>
+  <script src="assets/JSON/en.js"></script>   -->
+
 
 </html>
