@@ -10,7 +10,7 @@ observeMap = new IntersectionObserver(o=>{
     pin.classList.add("is-visible")
   })
 
-  if (divMap) observeMap.unobserve(divMap)
+  observeMap.unobserve(divMap.target)
 }, {
   threshold: 0.3 // saat map 30% muncul di layar user, pinPoibt diberikna animasi muncul
 })
