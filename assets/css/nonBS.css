@@ -62,3 +62,39 @@
 .product-footer { padding: 34px 0; border-top: 1px solid color-mix(in srgb, var(--default-color) 12%, transparent); }
 .product-footer img { height: 42px; width: auto; }
 @media (max-width: 767px) { .product-hero { padding-top: 92px; } .product-card > p { min-height: auto; } .metric { margin-bottom: 1rem; } }
+
+
+/* CSS MAP */
+
+.mapIndo {
+  width: 1024px;
+  aspect-ratio: 1024 / 419;
+  background-color: var(--mapColor);
+  mask-image: url("../img/MapIndo.png");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+}
+.mapKontener{
+    filter: drop-shadow(2px 4px 3px color-mix(in srgb, var(--mapShadow), transparent 0%));
+  }
+
+.pinPoint{
+  --pin-delay: 0s;
+  color: var(--pinPoint)!important;
+  font-size: 35px; /* Rubah scale di animasi pin-show saja jika ingin mengubah ukuran pin */
+  transform: scale(0);
+}
+.pinPoint.is-visible{
+  animation: pin-show 1s ease-in-out var(--pin-delay) forwards;
+}
+
+@keyframes pin-show {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

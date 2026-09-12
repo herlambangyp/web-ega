@@ -37,11 +37,14 @@
   --lightbackground:#e8edf1;
   --darkbackground:#f6f1f1;
   --logoHeadBKG:#ffe69c;
+  --mapColor:#f85d238a;
+  --mapShadow:#656565;
+  --pinPoint:#568ab7;
 
 }
 
 [data-theme="dark"] {
-  --background-color: #090b10;
+  --background-color: radial-gradient(180deg, #0a0a0a 0%, #1c1c1c 100%);
   --default-color: #d1d5db;
   --heading-color: #568ab7;
   --accent-color: #ff6428;
@@ -57,6 +60,10 @@
   --lightbackground:#36220a;
   --darkbackground:#060606;
   --logoHeadBKG:#f1f1f1;
+  --mapColor:#e64f2cc9;
+  --mapShadow:#000;
+  --pinPoint:#fff;
+
 
 
 }
@@ -692,7 +699,7 @@ h6 {
 section,
 .section {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background: var(--background-color);
   padding: 60px 0;
   scroll-margin-top: 82px;
   overflow: clip;

@@ -4,8 +4,8 @@
 let basaDevice =navigator.language.split("-")[0] 
 
 function bahasa() {
-    const language = cekBahasa(),
-    translation = window.translations[language]
+    const language = cekBahasa()
+    // translation = window.translations[language]
 
     // translate untuk hardcode element. Seperti nama tema, tombol kembali/back, link navigasi, dll yang dianggap bukan konten
     document.querySelectorAll("[en]").forEach(e => {
@@ -19,17 +19,17 @@ function bahasa() {
     // SCRAPPED!!! 
     // translate konten web, seperti tentang kami, spesifikasi produk, dll. data text, disimpan di "pra"Json file
     // pra-json file disimpan di assets/JSON/"lang".js
-    document.querySelectorAll("[data-i18n]").forEach(element => {
-        const key = element.dataset.i18n,
-        elements = document.querySelectorAll(`[data-i18n="${key}"]`),
-        index = [...elements].indexOf(element),
-        text = ambilTranslation(translation, key, index)
+    // document.querySelectorAll("[data-i18n]").forEach(element => {
+    //     const key = element.dataset.i18n,
+    //     elements = document.querySelectorAll(`[data-i18n="${key}"]`),
+    //     index = [...elements].indexOf(element),
+    //     text = ambilTranslation(translation, key, index)
 
-        if (text !== undefined) {
-            element.innerHTML = text;
-        }
+    //     if (text !== undefined) {
+    //         element.innerHTML = text;
+    //     }
 
-    })
+    // })
 
     document.documentElement.lang = language
 }
