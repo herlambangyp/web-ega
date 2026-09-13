@@ -16,8 +16,8 @@ Repository baru berisi source-code front end pengembangan web PT Ega Tekelindo P
 * JavaScript
 
 ## Dev Guide
-Query Bahasa
--
+
+- Query Bahasa
 Data penulisan bahasa menggunakan tag element 
 "ind" untuk bahasa indonesia, "en" untuk bahasa inggris
 
@@ -36,8 +36,7 @@ Untuk menambahkan logika bahasa lain, cek assets/js/bahasa.js di fungsi bahasa()
 Cara diatas aku pakai untuk memeprcepat pengembangan inline-code di front-end
 (atau jika ingin preview data)
 
-Map tidak muncul saat preview file
--
+- Map tidak muncul saat preview file
 Map indo dimuat dengan element div bukan img. Agar warna gambar bisa ditimpa. Tetapi dengan cara ini map nya tidak akan tampil, jika halaman index.html di preview melalui "klik 2x di file explorer"
 
 Penyebabnya karena kebijakan keamanan browser terbaru. Pemuatan file lokal melalui css atau js akan di block
