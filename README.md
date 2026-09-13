@@ -31,13 +31,9 @@ Contoh:
 <div en='<p class="text">English text should be here</p>' ind='<p class="text">Text bahasa indonesia ditempatkan disini</p>'></div>
 ```
 
-Untuk menambahkan logika bahasa lain, cek assets/js/bahasa.js di fungsi bahasa() untuk lebih detilnya
-
-------------------------------------------------------------------------------
-Standardnya memang harus dibuat json sendiri untuk file bahasa...
+Untuk menambahkan logika bahasa lain, cek assets/js/bahasa.js di fungsi bahasa() untuk lebih detilnya. Standardnya memang harus dibuat file json sendiri untuk data bahasa.
 Cara diatas aku pakai untuk memeprcepat pengembangan inline-code di front-end
 (atau jika ingin preview data)
-------------------------------------------------------------------------------
 
 2. Map tidak muncul saat preview file
 Map indo dimuat dengan element div bukan img. Agar warna gambar bisa ditimpa. Tetapi dengan cara ini map nya tidak akan tampil, jika halaman index.html di preview melalui "klik 2x di file explorer"
