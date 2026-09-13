@@ -10,46 +10,105 @@
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet"> -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/nonBS.css" rel="stylesheet">
 </head>
 <body class="service-details-page">
 
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
       <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <img src="assets/img/logo EGA.webp" alt="EGA Tekelindo Prima">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="assets/img/logo EGA.webp" alt=""> 
         <div class="mobile-hidden d-flex text-body flex-column">
           <span class="fs-4 fw-bolder">EGA TEKELINDO</span>
           <span class="fs-6">PRIMA • EST. 1985</span>
         </div>
+       <!-- <h1 class="sitename">Scout</h1> -->
       </a>
+
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a en="Home" ind="Beranda" href="index.html#hero"></a></li>
-          <li><a en="About" ind="Tentang" href="index.html#about"></a></li>
+          <li><a en="Home" ind="Beranda" href="#hero" class="active"></a></li>
+       <!--   <li><a en="About" ind="Tentang" href="#about"></a></li> -->
           <li><a en="Services" ind="Layanan" href="service-details.html"></a></li>
-          <li class="dropdown"><a href="#" class="active"><span en="Product" ind="Produk"></span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li><a en="Team" ind="Tim" href="#team"></a></li>
+          <li class="dropdown"><a href="#"><span en="Product" ind="Produk"></span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a en="Air Insulated Switchgear - Type Test" ind="Switchgear Insulasi Udara - Type Test" href="#ais-type-tested"></a></li>
-              <li><a en="Air Insulated Switchgear - Non Type Test" ind="Switchgear Insulasi Udara - Non Type Test" href="#ais-non-type-tested"></a></li>
-              <li><a en="Fully Insulated Switchgear - Type Test" ind="Switchgear Insulasi Penuh - Type Test" href="#fis-type-tested"></a></li>
-              <li><a en="Fully Insulated Switchgear - Non Type Test" ind="Switchgear Insulasi Penuh - Non Type Test" href="#fis-non-type-tested"></a></li>
+
+              <li><a en="Metal Closed Switchgear"
+                     ind="Switchgear Penutup Besi" 
+                     href="#"></a></li>
+              <li class="dropdown">
+
+                <a href="#">    
+                 <span en="Metal Enclosed Switchgear "></span><i class="bi bi-chevron-down toggle-dropdown"></i>              
+                </a>
+
+                <ul>
+                  <li><a en="Air Insulated Switchgear - Type Test" 
+                         ind="Switchgear dg Insulasi Udara - Tipe Test" href="#"></a></li>
+                  <li><a en="Air Insulated Switchgear - Non Type Test" 
+                         ind="Switchgear dg Insulasi Udara - Non Tipe Test" href="#"></a></li>
+                  <li><a en="Fully Insulated Switchgear - Type Test" 
+                         ind="Switchgear dg Insulasi Penuh - Tipe Test" href="#"></a></li>
+                  <li><a en="Fully Insulated Switchgear - Non Type Test" 
+                         ind="Switchgear dg Insulasi Penuh - Non Tipe Test" href="#"></a></li>
+                </ul>
+
+              </li>
+
+              <li><a en='Current Transformer' ind='Trafo Arus' href="#"></a></li>
+              <li><a en='Voltage Transformer' ind='Trafo Tegangan' href="#"></a></li>
+              <li><a en='kWh Meter' ind='kWh Meter' href="#"></a></li>
+              
             </ul>
+
           </li>
-          <li><a en="Contact" ind="Kontak" href="index.html#contact"></a></li>
-          <li class="dropdown pointer"><a><span en="Theme" ind="Tema"></span> <i class="bi bi-chevron-down toggle-dropdown"></i></a><ul><li><a pilihTema data-isi="dark" en="Dark" ind="Gelap"></a></li><li><a pilihTema data-isi="light" en="Light" ind="Terang"></a></li></ul></li>
-          <li class="dropdown pointer"><a><span en="Language" ind="Bahasa"></span> <i class="bi bi-chevron-down toggle-dropdown"></i></a><ul><li><a bahasa data-isi="id">Indonesia</a></li><li><a bahasa data-isi="en">English</a></li></ul></li>
+          <li><a en="Contact" ind="Kontak" href="#contact"></a></li>
+        
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
+      <!-- <a class="btn-getstarted" href="index.html#about">Get Started</a> -->
+
+      <div class="navLain">
+        <div class="dropdown">
+          <a href="#" class="d-flex icon pointer" data-bs-toggle="dropdown">
+            <i class="bi bi-brightness-high"></i>&nbsp;
+            <span class="keterangan" en='Theme' ind=' Tema'></span>
+            <div class="panahBawah">
+              <i class="bi bi-chevron-down toggle-dropdown"></i>
+            </div>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+            <li><a class="pointer dropdown-item" pilihTema data-isi="dark" ind="Gelap" en="Dark"></a></li>
+            <li><a class="pointer dropdown-item" pilihTema data-isi="light" ind="Terang" en="Light"></a></li>
+          </ul>
+          </div>
+        <div class="dropdown">
+          <a href="#" class="d-flex icon pointer" data-bs-toggle="dropdown">
+            <i class="bi bi-globe"></i>&nbsp;
+            <span class="keterangan" en='Language' ind='Bahasa'></span>
+            <div class="panahBawah">
+              <i class="bi bi-chevron-down toggle-dropdown"></i>
+            </div>            
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+            <li><a class="pointer dropdown-item" bahasa data-isi="id">Indonesia</a></li>
+            <li><a class="pointer dropdown-item" bahasa data-isi="en">English</a></li>
+          </ul>
+          </div>
+      </div>
     </div>
   </header>
-
+  
   <main class="main">
     <div class="page-title light-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
@@ -154,8 +213,8 @@
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/js/main.js"></script>
-  <script src="assets/JSON/id.js"></script>
-  <script src="assets/JSON/en.js"></script>
+  <script src="assets/js/utama.js"></script>
+  <script src="assets/js/nonBS.js"></script>
   <script src="assets/js/bahasa.js"></script>
   <script src="assets/js/tema.js"></script>
 </body>
