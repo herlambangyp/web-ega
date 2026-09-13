@@ -65,7 +65,6 @@
 
 
 /* CSS MAP */
-
 .mapIndo {
   width: 1024px;
   aspect-ratio: 1024 / 419;
@@ -77,14 +76,25 @@
 }
 .mapKontener{
     filter: drop-shadow(2px 4px 3px color-mix(in srgb, var(--mapShadow), transparent 0%));
-  }
+}
 
+.pointMap .dropdown-menu {
+    background-color: var(--surface-color) !important;
+    /* box-shadow: 4px 4px 20px color-mix(in srgb, var(--mapShadow) 50%, transparent); */
+    border: 1px solid var(--borderColor);
+}
 .pinPoint{
   --pin-delay: 0s;
-  color: var(--pinPoint)!important;
+  color: var(--pinPoint);
   font-size: 35px; /* Rubah scale di animasi pin-show saja jika ingin mengubah ukuran pin */
   transform: scale(0);
 }
+.pinPoint:focus{
+    background-color: var(--surface-color);
+    color: var(--accent-color);
+    border-radius: 5px;
+    outline: solid 1px var(--borderColor);
+  }
 .pinPoint.is-visible{
   animation: pin-show 1s ease-in-out var(--pin-delay) forwards;
 }
