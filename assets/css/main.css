@@ -41,7 +41,8 @@
   --mapShadow:#656565;
   --pinPoint:#568ab7;
   --borderColor:var(--bs-border-color-translucent);
-
+  --gradientDown1:#fff3cd40;
+  --gradientDown2:#ffe69c6b;
 }
 
 [data-theme="dark"] {
@@ -65,6 +66,8 @@
   --mapShadow:#000;
   --pinPoint:#fff;
   --borderColor:var(--bs-gray-700);
+  --gradientDown1:var(--surface-color);
+  --gradientDown2:#00183b;
 
 
 
@@ -88,6 +91,33 @@
   scroll-behavior: smooth;
 }
 
+.desc{
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
+}
+.title{
+  color: var(--heading-color);
+}
+
+.card-title{
+  color: #f8f9fa;
+  font-weight: 700;
+}
+.text-muted{
+  --bs-text-opacity: 1;
+  color: #ffffffab!important;
+}
+.accent-icon{
+    background: var(--accent-color);
+    color: white;
+    padding: 5px;
+    border-radius: 9px;
+    display: flex;
+    max-height: 40px;
+    min-width: 32px;
+    margin-right: 6px;
+    align-items: center;
+    justify-content: center;
+}
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
