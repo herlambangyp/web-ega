@@ -10,7 +10,7 @@ function bahasa() {
             language,
             e.getAttribute("ind")||e.getAttribute("en"), // argumen text indo
             e.getAttribute("en")||e.getAttribute("ind")   // argumen text en
-                               // argumen text jpn, dutch, cina dll (perlu ditambahkan di tag html, dan parameter baru di setBahasa<--Cek bawah)
+                               // argumen bahasa jpn, dutch, cina dll (perlu ditambahkan di tag html, dan parameter baru di setBahasa<--Cek bawah)
                             )
     })
     document.documentElement.lang = language
