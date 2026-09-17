@@ -126,7 +126,7 @@
 .grid-layout{
   grid-template-columns: repeat(1,1fr);
 }
-@media (min-width:750px) {
+@media (min-width:768px) {
   .grid-layout{
   grid-template-columns: repeat(2,1fr);
 }
