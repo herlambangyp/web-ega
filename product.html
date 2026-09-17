@@ -101,15 +101,13 @@
 
     <!-- Faq Section -->
     <section id="faq" class="faq section">
-
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-     
-		  <h2 en="Frequently Asked Questions" ind="Pertanyaan Umum"></h2>
-  <p
-    en="Find answers about our products, project requirements, quotation process, and after-sales support."
-    ind="Temukan informasi mengenai produk, kebutuhan proyek, proses penawaran, dan layanan purnajual kami.">
-  </p>
+        <h2 ind="Produk & Solusi Listrik" en="Products & Electrical Solutions"></h2>
+        <p
+        en="Explore our product lineup, detailed specifications, quotation process, and dedicated after-sales support."
+        ind="Jelajahi lini produk kami, spesifikasi lengkap, proses penawaran, hingga dukungan purnajual yang terpercaya.">
+        </p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -121,20 +119,20 @@
               <ul class="nav nav-pills justify-content-center" id="faqTab" role="tablist">
 
                 <li class="nav-item" role="presentation">
-                  <button class="nav-link active" id="general-tab" data-bs-toggle="pill" data-bs-target="#faq-general" type="button" role="tab" aria-controls="general" aria-selected="true">
-                    <i class="bi bi-question-circle me-2"></i>Product
+                  <button class="nav-link active" id="general-tab" data-bs-toggle="pill" data-bs-target="#semua" type="button" role="tab" aria-controls="general" aria-selected="true">
+                    <i class="bi bi-box-seam-fill me-2"></i><span ind="Semua Product" en="All Products"></span>
                   </button>
                 </li>
 
                 <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="pricing-tab" data-bs-toggle="pill" data-bs-target="#faq-pricing" type="button" role="tab" aria-controls="pricing" aria-selected="false">
-                    <i class="bi bi-credit-card me-2"></i>Quotation
+                  <button class="nav-link" id="pricing-tab" data-bs-toggle="pill" data-bs-target="#metalClosed" type="button" role="tab" aria-controls="pricing" aria-selected="false">
+                    <i class="ri-ai-generate-3d-fill me-2"></i>Metal Closed
                   </button>
                 </li>
 
                 <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="support-tab" data-bs-toggle="pill" data-bs-target="#faq-support" type="button" role="tab" aria-controls="support" aria-selected="false">
-                    <i class="bi bi-headset me-2"></i>Support
+                  <button class="nav-link" id="support-tab" data-bs-toggle="pill" data-bs-target="#metalEnclosed" type="button" role="tab" aria-controls="support" aria-selected="false">
+                    <i class="ri-ai-generate-3d-line me-2"></i>Metal Enclosed
                   </button>
                 </li>
               </ul>
@@ -149,7 +147,11 @@
                   // sebenarnya bisa saja, tapi perlu logika semacam CSR (Client Side Rendering). Umum dipakai framework vue.js, react, next.js, dll (Aku gatau logika dibalik CSR dari vue.js atau react seperti apa. Membedah logikanya perlu reverse engineering yg super ribet)
                   // Konsep CSR kurang lebih seperti looping ini (Props/API > Render). Tapi aku gatau logika looping ini bisa dibaca robots crawler atau tidak. Kalo gabisa, bisa merusak SEO
                   let products =[]
-                  function loopProduk(kelas) {
+                  function loopProduk(kelas, kategori) {
+                    console.log('funngsi lop dipanggil. Target Loop = ', kelas)
+                    if(kategori){products = products.filter(product => product.kategori === kategori)
+                      console.log('data produk terfilter = ',products)
+                    }
                     document.querySelector(kelas).innerHTML = products.map(product => {
                       // Jika ingin mrubagh struktur html, pinahdkan hasil return ke html biasa
                       return `
@@ -234,8 +236,8 @@
                 `
               }).join('')}
               </script>
-               <div class="tab-pane fade show active" id="faq-general" role="tabpanel" aria-labelledby="general-tab">
-                <div class="faq-list d-grid gap-2 grid-layout loop-item-faq-general">
+               <div class="tab-pane fade show active" id="semua" role="tabpanel" aria-labelledby="general-tab">
+                <div class="faq-list d-grid gap-2 grid-layout loop-item-semua">
                 </div>
                 <script>
                 // Kesel aku copas wakeh... Ta loop ae
@@ -257,6 +259,7 @@
                     },
                     {
                       title: "Air-Insulated Switchgear",
+                      kategori :"Metal Closed",
                       image: "assets/img/product/PBF.webp",
                       altImage: "Air-insulated switchgear",
                       descInd: "Konfigurasi AIS type-tested dan khusus proyek untuk aplikasi utilitas serta industri.",
@@ -287,6 +290,7 @@
                     },
                     {
                       title: "Current Transformer",
+                      kategori :"Metal Enclosed",
                       image: "assets/img/product/CK-2000.webp",
                       altImage: "Current transformer",
                       descInd: "Trafo instrumen untuk pengukuran arus, metering, dan sistem proteksi.",
@@ -302,6 +306,7 @@
                     },
                     {
                       title: "Voltage Transformer",
+                      kategori :"Metal Enclosed",
                       image: "assets/img/product/PBIF.webp",
                       altImage: "Voltage transformer",
                       descInd: "Trafo instrumen untuk kebutuhan pengukuran tegangan, metering, dan proteksi.",
@@ -317,6 +322,7 @@
                     },
                     {
                       title: "kWh Meter",
+                      kategori :"Metal Enclosed",
                       image: "assets/img/product/PBVT.webp",
                       altImage: "kWh meter",
                       descInd: "Solusi metering untuk memantau dan mencatat konsumsi energi listrik.",
@@ -331,35 +337,23 @@
                       interface: "10 status LEDs"
                     }
                     ]
-                    // lokasi loop di loop-item-faq-general
-                  loopProduk(".loop-item-faq-general")
+                    // lokasi loop di loop-item-semua. Kategori tidak perlu didefinsikan jika diloop semua. 
+                    // Lihat contoh data products Metal-Clad Switchgear. Dia tidak memiliki kategori. 
+                    // Tetep bisa, karena fungsi loop dibawah ini tidak diberi parameter kategori. Jadi semua diloop
+                  loopProduk(".loop-item-semua")
                 </script>
 
               </div>
 
               <!-- General FAQs -->
-              <div class="tab-pane fade" id="faq-pricing" role="tabpanel" aria-labelledby="general-tab">
-                <div class="faq-list d-grid gap-2 grid-layout loop-item-faq-pricing">
+              <div class="tab-pane fade" id="metalClosed" role="tabpanel" aria-labelledby="general-tab">
+                <div class="faq-list d-grid gap-2 grid-layout loop-item-metalClosed">
                 <script>
                 // Kesel aku copas wakeh... Ta loop ae
                 products = [
                     {
-                      title: "Air-Insulated Switchgear",
-                      image: "assets/img/product/PBF.webp",
-                      altImage: "Air-insulated switchgear",
-                      descInd: "Konfigurasi AIS type-tested dan khusus proyek untuk aplikasi utilitas serta industri.",
-                      descEn: "Type-tested and project-specific AIS configurations for utility and industrial applications.",
-                      modalTarget: "#aisModal",
-                      height: "2160 mm",
-                      width: "750 mm",
-                      length: "2050 mm",
-                      certified: "SPLN D3.020-1:2019",
-                      psu: "60-240v AC/DC",
-                      io: "6 Inputs/Outputs",
-                      interface: "10 status LEDs"
-                    },
-                                        {
                       title: "Metal-Clad Switchgear",
+                      kategori :"Metal Closed",
                       image: "assets/img/product/BBVT.webp",
                       altImage: "Metal-clad switchgear",
                       descInd: "Switchgear berkompartemen untuk distribusi tegangan menengah yang terkendali dan andal.",
@@ -374,7 +368,40 @@
                       interface: "10 status LEDs"
                     },
                     {
+                      title: "Air-Insulated Switchgear",
+                      kategori :"Metal Closed",
+                      image: "assets/img/product/PBF.webp",
+                      altImage: "Air-insulated switchgear",
+                      descInd: "Konfigurasi AIS type-tested dan khusus proyek untuk aplikasi utilitas serta industri.",
+                      descEn: "Type-tested and project-specific AIS configurations for utility and industrial applications.",
+                      modalTarget: "#aisModal",
+                      height: "2160 mm",
+                      width: "750 mm",
+                      length: "2050 mm",
+                      certified: "SPLN D3.020-1:2019",
+                      psu: "60-240v AC/DC",
+                      io: "6 Inputs/Outputs",
+                      interface: "10 status LEDs"
+                    },
+                    {
+                      title: "Fully Insulated Switchgear",
+                      kategori :"Metal Closed",
+                      image: "assets/img/product/CAKRA.webp",
+                      altImage: "Fully insulated switchgear",
+                      descInd: "Switchgear ringkas dan terlindungi untuk instalasi yang membutuhkan efisiensi ruang.",
+                      descEn: "Compact protected switchgear for installations requiring efficient use of space.",
+                      modalTarget: "#fisModal",
+                      height: "2160 mm",
+                      width: "750 mm",
+                      length: "2050 mm",
+                      certified: "SPLN D3.020-1:2019",
+                      psu: "60-240v AC/DC",
+                      io: "6 Inputs/Outputs",
+                      interface: "10 status LEDs"
+                    },
+                    {
                       title: "Current Transformer",
+                      kategori :"Metal Enclosed",
                       image: "assets/img/product/CK-2000.webp",
                       altImage: "Current transformer",
                       descInd: "Trafo instrumen untuk pengukuran arus, metering, dan sistem proteksi.",
@@ -390,6 +417,7 @@
                     },
                     {
                       title: "Voltage Transformer",
+                      kategori :"Metal Enclosed",
                       image: "assets/img/product/PBIF.webp",
                       altImage: "Voltage transformer",
                       descInd: "Trafo instrumen untuk kebutuhan pengukuran tegangan, metering, dan proteksi.",
@@ -404,22 +432,8 @@
                       interface: "10 status LEDs"
                     },
                     {
-                      title: "Fully Insulated Switchgear",
-                      image: "assets/img/product/CAKRA.webp",
-                      altImage: "Fully insulated switchgear",
-                      descInd: "Switchgear ringkas dan terlindungi untuk instalasi yang membutuhkan efisiensi ruang.",
-                      descEn: "Compact protected switchgear for installations requiring efficient use of space.",
-                      modalTarget: "#fisModal",
-                      height: "2160 mm",
-                      width: "750 mm",
-                      length: "2050 mm",
-                      certified: "SPLN D3.020-1:2019",
-                      psu: "60-240v AC/DC",
-                      io: "6 Inputs/Outputs",
-                      interface: "10 status LEDs"
-                    },
-                    {
                       title: "kWh Meter",
+                      kategori :"Metal Enclosed",
                       image: "assets/img/product/PBVT.webp",
                       altImage: "kWh meter",
                       descInd: "Solusi metering untuk memantau dan mencatat konsumsi energi listrik.",
@@ -434,35 +448,22 @@
                       interface: "10 status LEDs"
                     }
                     ]
-                    // lokasi loop di loop-item-faq-general
-                  loopProduk(".loop-item-faq-pricing")
+                    // lokasi loop di loop-item-metalEnclosed dengan kategori Metal Closed
+                    // Sebenarnya bisa tanpa mendefiniskan kategori, dengan menghapus semua products yang bukan Metal Closed
+                  loopProduk(".loop-item-metalClosed", "Metal Closed")
                 </script>
                 </div>
               </div>
 
               <!-- General FAQs -->
-              <div class="tab-pane fade" id="faq-support" role="tabpanel" aria-labelledby="general-tab">
-                <div class="faq-list d-grid gap-2 grid-layout loop-item-faq-support">
+              <div class="tab-pane fade" id="metalEnclosed" role="tabpanel" aria-labelledby="general-tab">
+                <div class="faq-list d-grid gap-2 grid-layout loop-item-metalEnclosed">
                 <script>
                 // Kesel aku copas wakeh... Ta loop ae
                 products = [
                     {
-                      title: "Air-Insulated Switchgear",
-                      image: "assets/img/product/PBF.webp",
-                      altImage: "Air-insulated switchgear",
-                      descInd: "Konfigurasi AIS type-tested dan khusus proyek untuk aplikasi utilitas serta industri.",
-                      descEn: "Type-tested and project-specific AIS configurations for utility and industrial applications.",
-                      modalTarget: "#aisModal",
-                      height: "2160 mm",
-                      width: "750 mm",
-                      length: "2050 mm",
-                      certified: "SPLN D3.020-1:2019",
-                      psu: "60-240v AC/DC",
-                      io: "6 Inputs/Outputs",
-                      interface: "10 status LEDs"
-                    },
-                                        {
                       title: "Metal-Clad Switchgear",
+                      kategori :"Metal Closed",
                       image: "assets/img/product/BBVT.webp",
                       altImage: "Metal-clad switchgear",
                       descInd: "Switchgear berkompartemen untuk distribusi tegangan menengah yang terkendali dan andal.",
@@ -477,7 +478,40 @@
                       interface: "10 status LEDs"
                     },
                     {
+                      title: "Air-Insulated Switchgear",
+                      kategori :"Metal Closed",
+                      image: "assets/img/product/PBF.webp",
+                      altImage: "Air-insulated switchgear",
+                      descInd: "Konfigurasi AIS type-tested dan khusus proyek untuk aplikasi utilitas serta industri.",
+                      descEn: "Type-tested and project-specific AIS configurations for utility and industrial applications.",
+                      modalTarget: "#aisModal",
+                      height: "2160 mm",
+                      width: "750 mm",
+                      length: "2050 mm",
+                      certified: "SPLN D3.020-1:2019",
+                      psu: "60-240v AC/DC",
+                      io: "6 Inputs/Outputs",
+                      interface: "10 status LEDs"
+                    },
+                    {
+                      title: "Fully Insulated Switchgear",
+                      kategori :"Metal Closed",
+                      image: "assets/img/product/CAKRA.webp",
+                      altImage: "Fully insulated switchgear",
+                      descInd: "Switchgear ringkas dan terlindungi untuk instalasi yang membutuhkan efisiensi ruang.",
+                      descEn: "Compact protected switchgear for installations requiring efficient use of space.",
+                      modalTarget: "#fisModal",
+                      height: "2160 mm",
+                      width: "750 mm",
+                      length: "2050 mm",
+                      certified: "SPLN D3.020-1:2019",
+                      psu: "60-240v AC/DC",
+                      io: "6 Inputs/Outputs",
+                      interface: "10 status LEDs"
+                    },
+                    {
                       title: "Current Transformer",
+                      kategori :"Metal Enclosed",
                       image: "assets/img/product/CK-2000.webp",
                       altImage: "Current transformer",
                       descInd: "Trafo instrumen untuk pengukuran arus, metering, dan sistem proteksi.",
@@ -493,6 +527,7 @@
                     },
                     {
                       title: "Voltage Transformer",
+                      kategori :"Metal Enclosed",
                       image: "assets/img/product/PBIF.webp",
                       altImage: "Voltage transformer",
                       descInd: "Trafo instrumen untuk kebutuhan pengukuran tegangan, metering, dan proteksi.",
@@ -507,22 +542,8 @@
                       interface: "10 status LEDs"
                     },
                     {
-                      title: "Fully Insulated Switchgear",
-                      image: "assets/img/product/CAKRA.webp",
-                      altImage: "Fully insulated switchgear",
-                      descInd: "Switchgear ringkas dan terlindungi untuk instalasi yang membutuhkan efisiensi ruang.",
-                      descEn: "Compact protected switchgear for installations requiring efficient use of space.",
-                      modalTarget: "#fisModal",
-                      height: "2160 mm",
-                      width: "750 mm",
-                      length: "2050 mm",
-                      certified: "SPLN D3.020-1:2019",
-                      psu: "60-240v AC/DC",
-                      io: "6 Inputs/Outputs",
-                      interface: "10 status LEDs"
-                    },
-                    {
                       title: "kWh Meter",
+                      kategori :"Metal Enclosed",
                       image: "assets/img/product/PBVT.webp",
                       altImage: "kWh meter",
                       descInd: "Solusi metering untuk memantau dan mencatat konsumsi energi listrik.",
@@ -537,8 +558,9 @@
                       interface: "10 status LEDs"
                     }
                     ]
-                    // lokasi loop di loop-item-faq-general
-                  loopProduk(".loop-item-faq-support")
+                    // lokasi loop di loop-item-metalEnclosed dengan kategori Metal Enclosed
+                    // Sebenarnya bisa tanpa mendefiniskan kategori, dengan menghapus semua products yang bukan Metal Enclosed
+                  loopProduk(".loop-item-metalEnclosed", "Metal Enclosed")
                 </script>
                 </div>
               </div>
