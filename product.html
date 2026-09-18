@@ -142,7 +142,7 @@
 
               <!-- Template kartu produk -->
               <template id="productTemplate">
-                <div class="faq-item {{rounded}} card border-0 gradientBgDown aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+                <div class="faq-item rounded-5 card border-0 gradientBgDown aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
                   
                   <div class="{{gradient}}">
                     <div class="w-100 d-flex justify-content-between px-4 pt-4">
@@ -181,7 +181,7 @@
                       <p class="small mb-0 desc" en="{{descEn}}" ind="{{descInd}}"></p>
                     </div>
 
-                    <div class="col-12 d-flex flex-row flex-wrap">
+                    <div class="{{blueIcon}} col-12 d-flex flex-row flex-wrap">
 
                       <div class="col-6 p-2">
                         <div class="d-flex flex-row align-items-center">
@@ -249,7 +249,7 @@
                       descEn: "Compartmentalized switchgear designed for controlled and reliable medium-voltage distribution.",
                       modalTarget: "metalCladModal",
                       modalBody :`<p en="Metal-clad switchgear uses grounded metal barriers to separate major components and supports dependable operation, inspection, and maintenance." ind="Metal-clad switchgear menggunakan pembatas logam yang ditanahkan untuk memisahkan komponen utama serta mendukung operasi, inspeksi, dan pemeliharaan yang andal."></p><ul><li en="Medium-voltage distribution" ind="Distribusi tegangan menengah"></li><li en="Protection, metering, and control integration" ind="Integrasi proteksi, metering, dan kontrol"></li><li en="Project-specific feeder arrangement" ind="Susunan feeder sesuai kebutuhan proyek"></li></ul>`,
-                      theme : 1,
+                      sertif: true,
                       height: "2160 mm",
                       width: "750 mm",
                       length: "2050 mm",
@@ -267,7 +267,7 @@
                       descEn: "Type-tested and project-specific AIS configurations for utility and industrial applications.",
                       modalTarget: "aisModal",
                       modalBody: `<p en="AIS uses air as the primary insulation medium and is available in type-tested or project-specific configurations." ind="AIS menggunakan udara sebagai media insulasi utama dan tersedia dalam konfigurasi type-tested maupun khusus proyek.">AIS menggunakan udara sebagai media insulasi utama dan tersedia dalam konfigurasi type-tested maupun khusus proyek.</p><ul><li>20 kV application</li><li en="Type-tested option" ind="Opsi type-tested">Opsi type-tested</li><li en="Non-type-tested or retrofit configuration" ind="Konfigurasi non-type-tested atau retrofit">Konfigurasi non-type-tested atau retrofit</li></ul>`,
-                      theme : 1,
+                      sertif: true,
                       height: "2160 mm",
                       width: "750 mm",
                       length: "2050 mm",
@@ -285,7 +285,7 @@
                       descEn: "Compact protected switchgear for installations requiring efficient use of space.",
                       modalTarget: "fisModal",
                       modalBody:`<p en="Fully insulated switchgear provides a compact protected arrangement suited to installations with limited space or challenging environmental conditions." ind="Fully insulated switchgear memberikan susunan ringkas dan terlindungi untuk instalasi dengan keterbatasan ruang atau kondisi lingkungan yang menantang.">Fully insulated switchgear memberikan susunan ringkas dan terlindungi untuk instalasi dengan keterbatasan ruang atau kondisi lingkungan yang menantang.</p><ul><li en="Compact arrangement" ind="Susunan ringkas">Susunan ringkas</li><li en="Protected primary components" ind="Komponen primer terlindungi">Komponen primer terlindungi</li><li en="Type-tested and project-specific options" ind="Opsi type-tested dan khusus proyek">Opsi type-tested dan khusus proyek</li></ul>`,
-                      theme : 1,
+                      sertif: true,
                       height: "2160 mm",
                       width: "750 mm",
                       length: "2050 mm",
@@ -366,8 +366,8 @@
                     .replaceAll('{{descEn}}', product.descEn)
                     .replaceAll('{{modalTarget}}', product.modalTarget)
                     .replaceAll('{{modalBody}}', product.modalBody)
-                    .replaceAll('{{rounded}}', product.theme? "" : "rounded-5")
-                    .replaceAll('{{gradient}}', product.theme? "nonGradient" : "gradientBgUp")
+                    .replaceAll('{{blueIcon}}', product.sertif? "blueIcon" : "")
+                    .replaceAll('{{gradient}}', product.sertif? "blueGradient" : "orangeGradient")
                     .replaceAll('{{height}}', product.height)
                     .replaceAll('{{width}}', product.width)
                     .replaceAll('{{length}}', product.length)
@@ -416,265 +416,6 @@
 
     </section><!-- /Faq Section -->
 
-
-    <section id="products" class="services section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2 en="Electrical Power Solutions" ind="Solusi Peralatan Tenaga Listrik"></h2>
-        <p en="Select a product and press the plus button to view its overview and application." ind="Pilih produk dan tekan tombol tambah untuk melihat ringkasan dan aplikasinya."></p>
-      </div>
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="services-row">
-          <div class="services-grid">
-            <div class="row gy-4">
-
-              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                <article class="service-card h-100">
-                  <img src="assets/img/product/BBVT.webp" alt="Metal-clad switchgear"
-				    style="display: block; width: auto; height: 300px; object-fit: contain; margin: 0 auto;">
-                  <div class="service-content text-center">
-                    <div class="service-icon"><i class="bi bi-grid-3x3-gap"></i></div>
-                    <div class="service-info"><h3>Metal-Clad Switchgear</h3><p en="Compartmentalized switchgear designed for controlled and reliable medium-voltage distribution." ind="Switchgear berkompartemen untuk distribusi tegangan menengah yang terkendali dan andal."></p><div class="service-action">
-                      <button type="button" class="read-more-btn border-0 bg-transparent" data-bs-toggle="modal" data-bs-target="#metalCladModal" aria-label="View Metal-Clad Switchgear details"><i class="bi bi-plus-circle fs-3"></i></button></div></div>
-                  </div>
-                </article>
-              </div>
-
-              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
-                <article class="service-card h-100">
-                  <img src="assets/img/product/PBF.webp" alt="Air-insulated switchgear"
-				  style="display: block; width: auto; height: 300px; object-fit: contain; margin: 0 auto;">
-                  <div class="service-content text-center">
-                    <div class="service-icon"><i class="bi bi-wind"></i></div>
-                    <div class="service-info"><h3>Air-Insulated Switchgear</h3><p en="Type-tested and project-specific AIS configurations for utility and industrial applications." ind="Konfigurasi AIS type-tested dan khusus proyek untuk aplikasi utilitas serta industri."></p><div class="service-action">
-                      <button type="button" class="read-more-btn border-0 bg-transparent" data-bs-toggle="modal" data-bs-target="#aisModal" aria-label="View Air-Insulated Switchgear details"><i class="bi bi-plus-circle fs-3"></i></button></div></div>
-                  </div>
-                </article>
-              </div>
-
-              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                <article class="service-card h-100">
-                  <img src="assets/img/product/CAKRA.webp" alt="Fully insulated switchgear"
-				  style="display: block; width: auto; height: 300px; object-fit: contain; margin: 0 auto;">
-                  <div class="service-content text-center">
-                    <div class="service-icon"><i class="bi bi-shield-check"></i></div>
-                    <div class="service-info"><h3>Fully Insulated Switchgear</h3><p ]
-					en="Compact protected switchgear for installations requiring efficient use of space."
-					ind="Switchgear ringkas dan terlindungi untuk instalasi yang membutuhkan efisiensi ruang."></p>
-					<div class="service-action"><button type="button" class="read-more-btn border-0 bg-transparent" data-bs-toggle="modal" data-bs-target="#fisModal" aria-label="View Fully Insulated Switchgear details"><i class="bi bi-plus-circle fs-3"></i></button></div></div>
-                  </div>
-                </article>
-              </div>
-
-              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
-                <article class="service-card h-100">
-                  <img src="assets/img/product/CK-2000.webp" alt="Current transformer"
-				  style="display: block; width: auto; height: 300px; object-fit: contain; margin: 0 auto;">
-                  <div class="service-content text-center">
-                    <div class="service-icon"><i class="bi bi-arrow-repeat"></i></div>
-                    <div class="service-info"><h3>Current Transformer</h3>
-                      <p en="Instrument transformer for current measurement, metering, and protection systems." ind="Trafo instrumen untuk pengukuran arus, metering, dan sistem proteksi."></p><div class="service-action"><button type="button" class="read-more-btn border-0 bg-transparent" data-bs-toggle="modal" data-bs-target="#ctModal" aria-label="View Current Transformer details"><i class="bi bi-plus-circle fs-3"></i></button></div></div>
-                  </div>
-                </article>
-              </div>
-
-              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                <article class="service-card h-100">
-                  <img src="assets/img/product/PBIF.webp" alt="Voltage transformer"
-				  style="display: block; width: auto; height: 300px; object-fit: contain; margin: 0 auto;">
-                  <div class="service-content text-center">
-                    <div class="service-icon"><i class="bi bi-lightning"></i></div>
-                    <div class="service-info"><h3>Voltage Transformer</h3><p en="Instrument transformer for voltage measurement, metering, and protection requirements." ind="Trafo instrumen untuk kebutuhan pengukuran tegangan, metering, dan proteksi."></p><div class="service-action"><button type="button" class="read-more-btn border-0 bg-transparent" data-bs-toggle="modal" data-bs-target="#vtModal" aria-label="View Voltage Transformer details"><i class="bi bi-plus-circle fs-3"></i></button></div></div>
-                  </div>
-                </article>
-              </div>
-
-              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="350">
-                <article class="service-card h-100">
-                  <img src="assets/img/product/PBVT.webp" alt="kWh meter"
-				  style="display: block; width: auto; height: 300px; object-fit: contain; margin: 0 auto;">
-                  <div class="service-content text-center">
-                    <div class="service-icon"><i class="bi bi-speedometer2"></i></div>
-                    <div class="service-info"><h3>kWh Meter</h3><p en="Energy metering solution for monitoring and recording electrical energy consumption." ind="Solusi metering untuk memantau dan mencatat konsumsi energi listrik."></p><div class="service-action"><button type="button" class="read-more-btn border-0 bg-transparent" data-bs-toggle="modal" data-bs-target="#meterModal" aria-label="View kWh Meter details"><i class="bi bi-plus-circle fs-3"></i></button></div></div>
-                  </div>
-                </article>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-	   <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Portfolio</h2>
-          <p>In this section I'll try to desribe my project & my experience in beautiful picture.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Product</li>
-              <li data-filter=".filter-web">Test</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">	
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/product/CK-2000.webp" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Ganilla Apps</h4>
-                <p>App</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/bms0.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                  <a href="portfoliobms-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/product/CAKRA.webp" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Medium Panel</h4>
-                <p>Test</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/test/mv/mv0.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfoliomv-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/product/PBF.webp" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Trafo 150kV/h4>
-                <p>Test</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/test/trafo/trafo0.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfoliotrafo-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/product/PBIF.webp" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Smart Feeder Fish</h4>
-                <p>App</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/sff3.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfoliosff-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/product/BBVT.webp" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Ventilator</h4>
-                <p>Product</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/ventilator0.PNG" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio1-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/test/lv/lv0.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Low Voltage Panel Test</h4>
-                <p>Test</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/test/lv/lv0.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfoliolv-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/test/ngt/ngt0.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Netral Grounding Transformer Test</h4>
-                <p>Test</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/test/ngt/ngt0.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfoliongt-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/vawtdn0.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Wireless SD Card CR-VAWT</h4>
-                <p>App</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/vawtdn0.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfoliovawtdn-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/boxcontrol0.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>3D Design Test Bench CR-VAWT</h4>
-                <p>Product</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/boxcontrol0.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                  <a href="portfoliovawtdesign-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/VAWT0.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Test Bench CR-VAWT</h4>
-                <p>Product</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfoliovawt-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-        </div>
-
-      </div>
-    </section><!-- End Portfolio Section -->
-
-	  
-	  
-    </section>
   </main>
 
   <template id="modalProduk">
