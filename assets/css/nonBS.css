@@ -120,6 +120,9 @@
 .gradientBgUp{
   background-image: linear-gradient(176deg, #dc3584, var(--nav-hover-color));
 }
+.nonGradient{
+  background: var(--accent-color);
+}
 .gradientBgDown{
   background-image: linear-gradient(0deg, var(--gradientDown1), var(--gradientDown2));
 }
@@ -146,7 +149,7 @@
     box-shadow: 0px 15px 20px 0px rgb(0 0 0 / 22%);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-.product-image:hover{
+.faq-item:hover .product-image{
   transform: translateY(-10px);
   box-shadow: 0px 20px 25px 0px rgba(0, 0, 0, 0.3);  
 }
