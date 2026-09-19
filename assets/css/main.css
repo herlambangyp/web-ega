@@ -18,7 +18,7 @@
 }
 
 /* Logika Bahasa baru */
-.en, .ind, .ja, .cn /* bisa ditambahkan default state bahasa baru */ { display: none; transition: all 0.3s;} 
+.en, .ind, .ja, .cn /* bisa ditambahkan default state bahasa baru */ { display: none;} 
 
 /* Bahasa ditentukan oleh html atribut lang */
 html[lang="en"] .en { display: inline; }

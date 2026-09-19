@@ -47,12 +47,20 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a en="Home" ind="Beranda" href="index.html#hero"></a></li>
-       <!--   <li><a en="About" ind="Tentang" href="#about"></a></li> -->
-          <li><a en="Services" ind="Layanan" href="services.html"></a></li>
-          <li><a en="Teams" ind="Tim" href="teams.html" class="active"></a></li>
-          <li><a en="Products" ind="Produk" href="product.html"></a></li>
-          <li><a en="Contact" ind="Kontak" href="contact.html"></a></li>
+          <li><a href="index.html">
+            <span class="ind">Beranda</span><span class="en">Home</span></a></li>
+          <li><a href="services.html">
+            <span class="ind">Layanan</span><span class="en">Services</span>
+          </a></li>
+          <li><a href="teams.html" class="active">
+            <span class="ind">Tim</span><span class="en">Teams</span>
+          </a></li>
+          <li><a href="product.html">
+            <span class="ind">Produk</span><span class="en">Products</span>
+          </a></li>
+          <li><a href="contact.html">
+            <span class="ind">Kontak</span><span class="en">Contact</span>
+          </a></li>
         
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -68,8 +76,12 @@
             </div>
           </a>
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-            <li><a class="pointer dropdown-item" pilihTema data-isi="dark" ind="Gelap" en="Dark"></a></li>
-            <li><a class="pointer dropdown-item" pilihTema data-isi="light" ind="Terang" en="Light"></a></li>
+            <li><a class="pointer dropdown-item" pilihTema data-isi="dark">
+              <span class="ind">Gelap</span><span class="en">Dark</span>
+            </a></li>
+            <li><a class="pointer dropdown-item" pilihTema data-isi="light">
+              <span class="ind">Terang</span><span class="en">Light</span>
+            </a></li>
           </ul>
           </div>
         <div class="dropdown">
@@ -96,11 +108,11 @@
     <div class="page-title light-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
         <div>
-          <h1 en="Our Leadership Team" ind="Tim Manajemen Kami" class="mb-0"></h1>
-          <p
-          en="Meet the people leading our engineering, manufacturing, quality, and customer-focused operations."
-          ind="Kenali tim yang memimpin kegiatan engineering, manufaktur, kualitas, dan pelayanan pelanggan kami."
-          class="fst-italic"></p>
+          <h1 class="mb-0 en">Our Leadership Team</h1>
+          <h1 class="mb-0 ind">Tim Manajemen Kami</h1>
+          <br>
+          <p class="fst-italic en">Meet the people leading our engineering, manufacturing, quality, and customer-focused operations.</p>
+          <p class="fst-italic ind">Kenali tim yang memimpin kegiatan engineering, manufaktur, kualitas, dan pelayanan pelanggan kami.</p>
         </div>
         
         <nav class="breadcrumbs">
@@ -130,12 +142,16 @@
           <div class="col-lg-4 team-intro" data-aos="fade-right" data-aos-delay="200">
             <div class="team-intro-content">
 
-  <h2 en="Driven by Experience" ind="Dipimpin oleh Pengalaman"></h2>
+              <h2 class="en">Driven by Experience</h2>
+              <h2 class="ind">Dipimpin oleh Pengalaman</h2>
 
-<p
-  en="Our leadership team combines technical expertise, manufacturing experience, and customer insight to deliver reliable electrical solutions."
-  ind="Tim manajemen kami menggabungkan keahlian teknis, pengalaman manufaktur, dan pemahaman pelanggan untuk menghadirkan solusi kelistrikan yang andal.">
-</p>
+              <p class="en">
+                Our leadership team combines technical expertise, manufacturing experience, and customer insight to deliver reliable electrical solutions.
+              </p>  
+              <p class="ind">
+                Tim manajemen kami menggabungkan keahlian teknis, pengalaman manufaktur, dan pemahaman pelanggan untuk menghadirkan solusi kelistrikan yang andal.
+              </p>  
+  
 
 			  <div class="team-navigation">
                 <button class="team-nav-prev"><i class="bi bi-arrow-left"></i></button>
@@ -284,13 +300,74 @@
 
   </main>
 
-  <footer id="footer" class="footer position-relative light-background">
-    <div class="container footer-top"><div class="row gy-4">
-      <div class="col-lg-6 col-md-6 footer-about"><a href="index.html" class="logo d-flex align-items-center"><span class="sitename">EGA Tekelindo Prima</span></a><div class="footer-contact pt-3"><p>Jl. P. Jayakarta 141 Blok E/4</p><p>Jakarta Pusat, Indonesia</p><p class="mt-3"><strong en="Phone:" ind="Telepon:"></strong> <span>(+62) 21 6008082</span></p></div></div>
-      <div class="col-lg-3 col-md-3 footer-links"><h4 en="Company" ind="Perusahaan"></h4><ul><li><a href="index.html#hero" en="Home" ind="Beranda"></a></li><li><a href="index.html#about" en="About Us" ind="Tentang Kami"></a></li><li><a href="index.html#services" en="Services" ind="Layanan"></a></li><li><a href="index.html#contact" en="Contact" ind="Kontak"></a></li></ul></div>
-      <div class="col-lg-3 col-md-3 footer-links"><h4 en="Products" ind="Produk"></h4><ul><li><a href="#ais-type-tested">Air Insulated Switchgear</a></li><li><a href="#fis-type-tested">Fully Insulated Switchgear</a></li><li><a href="index.html#contact">Current Transformer</a></li><li><a href="index.html#contact">Voltage Transformer</a></li></ul></div>
-    </div></div>
-    <div class="container copyright text-center mt-4"><p>© 2026 <strong class="px-1 sitename">PT Ega Tekelindo Prima</strong> <span en="All Rights Reserved" ind="Seluruh Hak Cipta Dilindungi"></span></p></div>
+   <footer id="footer" class="footer position-relative light-background">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-6 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">EGA Tekelindo Prima</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Jl. P. Jayakarta 141 Blok E/4</p><p>Jakarta Pusat, Indonesia</p>
+            <p class="mt-3"><strong><span class="ind">Telepon</span><span class="en">Phone</span></strong> <span>(+62) 21 6008082</span>
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3 footer-links">
+          <h4>
+            <span class="ind">Perusahaan</span><span class="en">Company</span>
+          </h4>
+          <ul>
+            <li>
+              <a href="index.html">
+                <span class="ind">Beranda</span><span class="en">Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="services.html">
+                <span class="ind">Layanan</span><span class="en">Services</span>
+              </a>
+            </li>
+            <li>
+              <a href="teams.html">
+                <span class="ind">Tim</span><span class="en">Teams</span>
+              </a>
+            </li>
+            <li>
+              <a href="product.html">
+                <span class="ind">Produk</span><span class="en">Products</span>
+              </a>
+            </li>
+            <li>
+              <a href="contact.html">
+                <span class="ind">Kontak</span><span class="en">Contact</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-3 footer-links">
+          <h4>
+            <span class="ind">Produk</span><span class="en">Products</span>
+          </h4>
+          <ul>
+            <li>
+              <a href="#ais-type-tested">Air Insulated Switchgear</a>
+            </li>
+            <li>
+              <a href="#fis-type-tested">Fully Insulated Switchgear</a>
+            </li>
+            <li>
+              <a href="index.html#contact">Current Transformer</a>
+            </li>
+            <li>
+              <a href="index.html#contact">Voltage Transformer</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4"><p>© 2026 <strong class="px-1 sitename">PT Ega Tekelindo Prima</strong> <span class="en">All Rights Reserved</span><span class="ind">Seluruh Hak Cipta Dilindungi</span></p></div>
   </footer>
 
   <!-- Scroll Top -->
