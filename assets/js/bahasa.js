@@ -1,44 +1,13 @@
 // Fungsi disini sebaiknya di scrap jika logika bahasa ditentukan oleh server/backend
 
-// sebenarnya cukup cuma "navigator.language" tapi beberapa device lama kadang me return "ID-id", device modern cuma "id". Jadi aku bungkus jadi variabel, biar support keduanya
-let basaDevice =navigator.language.split("-")[0] 
+let basaDevice =navigator.language.split("-")[0],
+basa 
 
 function bahasa() {
-    const language = cekBahasa()
-    document.querySelectorAll("[en]").forEach(e => {
-        e.innerHTML = setBahasa(
-            language,
-            e.getAttribute("ind")||e.getAttribute("en"), // argumen text indo
-            e.getAttribute("en")||e.getAttribute("ind")   // argumen text en
-                               // argumen bahasa jpn, dutch, cina dll (perlu ditambahkan di tag html, dan parameter baru di setBahasa<--Cek bawah)
-                            )
-    })
-    document.documentElement.lang = language
+    basa = cekBahasa()
+    document.documentElement.lang = basa
 }
 
-function setBahasa(lang, indo='', en=''){
-    switch (lang) {
-
-        case 'id':
-        return indo
-
-        default:
-        return en
-    }
-
-}
-
-function ambilTranslation(data, path, index = null) {
-
-    return path
-        .split(".")
-        .reduce((result, key) => {
-            if (Array.isArray(result)) {
-                result = result[index];
-            }
-            return result?.[key];
-        }, data);
-}
 function tombolBahasa() {
     // buat button dengan tag "bahasa" di html, jika ingin menambahkan button bahasa baru
     // actually, ga harus button sih. Element input, option, select, textarea jg bisa 

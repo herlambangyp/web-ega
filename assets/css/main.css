@@ -17,6 +17,14 @@
   --nav-font: "Montserrat",  sans-serif;
 }
 
+/* Logika Bahasa baru */
+.en, .ind, .ja, .cn /* bisa ditambahkan default state bahasa baru */ { display: none; transition: all 0.3s;} 
+
+/* Bahasa ditentukan oleh html atribut lang */
+html[lang="en"] .en { display: inline; }
+html[lang="id"] .ind { display: inline; }
+/* Tambahkan atribut bahasa lain disni */
+
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
@@ -36,6 +44,7 @@
   --nav-dropdown-hover-color: #f85d23; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
   --lightbackground:#e8edf1;
   --darkbackground:#f6f1f1;
+  --darkContent:black;
   --logoHeadBKG:#ffe69c;
   --mapColor:#f85d238a;
   --mapShadow:#656565;
@@ -46,7 +55,7 @@
 }
 
 [data-theme="dark"] {
-  --background-color: radial-gradient(180deg, #0a0a0a 0%, #1c1c1c 100%);
+  --background-color: #1a1a1a;
   --default-color: #d1d5db;
   --heading-color: #568ab7;
   --accent-color: #ff6428;
@@ -61,6 +70,7 @@
   --nav-dropdown-hover-color: #ff6428;
   --lightbackground:#36220a;
   --darkbackground:#060606;
+  --darkContent:#e0e0e0;
   --logoHeadBKG:#f1f1f1;
   --mapColor:#e64f2cc9;
   --mapShadow:#000;
@@ -85,6 +95,8 @@
   --surface-color: #343333;
 
 }
+
+.bg-transparent{background: transparent!important;}
 
 /* Smooth scroll */
 :root {
@@ -2579,7 +2591,7 @@ section,
 # Contact Section
 --------------------------------------------------------------*/
 .contact {
-  background-color: color-mix(in srgb, var(--background-color), #f5f8fd 30%);
+  background-color: transparent;
 }
 
 .contact .container {

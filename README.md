@@ -14,23 +14,26 @@ Repository source-code front end web PT Ega Tekelindo Prima
 * JavaScript
 
 ## Dev Guide
-### 1. Query Bahasa
-Data penulisan bahasa menggunakan atribut element 
-"ind" untuk bahasa indonesia, "en" untuk bahasa inggris
+### 1. Query Bahasa !! MOHON BACA ULANG LOGIKA DIPERBARUI !!
+Data penulisan bahasa menggunakan element span class="bahasaYgDituju"
+class "ind" untuk bahasa indonesia, class "en" untuk bahasa inggris
 
 Contoh:
 ```html
-<div en="English text should be here" ind="Text bahasa indonesia ditempatkan disini"></div>
+<span class="ind">Tulisan Bahasa Indonesia Disini</span><span class="en">English Text Here</span>
 ```
 
-Atribut en maupun ind juga support kode html. Untuk menulisnya, wajib gunakan petik 1 (')
+Semisal belum ingin mengisi bahasa, maka sah-sah saja tidak harus menulis element span
 
 Contoh:
 ```html
-<div en='<p class="text">English text should be here</p>' ind='<p class="text">Text bahasa indonesia ditempatkan disini</p>'></div>
+<p>Tidak ada logika bahasa disini. Tidak masalah</p>
+<p> Disini baru ada logika bahasa
+    <span class="ind">Ini berisi Logika <b>Bahasa Indonesia</b></span>
+    <span class="en">This contain <b>English</b> language logic</span>
+</p>
 ```
-
-Untuk menambahkan logika bahasa lain, cek `assets/js/bahasa.js` di fungsi bahasa(). Standardnya memang harus dibuat file json sendiri untuk data bahasa.
+Logika bahasa sekarang ditangani CSS bukan js lagi (agar lebih ringan peforma dan SEO Friendly). Untuk menambahkan logika bahasa lain, cek `assets/css/main.css` (Cek komen css tentang bahasa). Standardnya memang harus dibuat file json sendiri untuk data bahasa.
 Cara diatas aku pakai untuk memeprcepat pengembangan inline-code di front-end
 
 ### 2. Map Indo tidak muncul saat preview file

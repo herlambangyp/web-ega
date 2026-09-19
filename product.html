@@ -47,12 +47,20 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a en="Home" ind="Beranda" href="index.html#hero"></a></li>
-       <!--   <li><a en="About" ind="Tentang" href="#about"></a></li> -->
-          <li><a en="Services" ind="Layanan" href="services.html"></a></li>
-          <li><a en="Teams" ind="Tim" href="teams.html"></a></li>
-          <li><a en="Products" ind="Produk" href="product.html" class="active"></a></li>
-          <li><a en="Contact" ind="Kontak" href="contact.html"></a></li>
+          <li><a href="index.html#hero">
+            <span class="ind">Beranda</span><span class="en">Home</span></a></li>
+          <li><a href="services.html">
+            <span class="ind">Layanan</span><span class="en">Services</span>
+          </a></li>
+          <li><a href="teams.html">
+            <span class="ind">Tim</span><span class="en">Teams</span>
+          </a></li>
+          <li><a href="product.html" class="active">
+            <span class="ind">Produk</span><span class="en">Products</span>
+          </a></li>
+          <li><a href="contact.html">
+            <span class="ind">Kontak</span><span class="en">Contact</span>
+          </a></li>
         
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -68,8 +76,12 @@
             </div>
           </a>
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-            <li><a class="pointer dropdown-item" pilihTema data-isi="dark" ind="Gelap" en="Dark"></a></li>
-            <li><a class="pointer dropdown-item" pilihTema data-isi="light" ind="Terang" en="Light"></a></li>
+            <li><a class="pointer dropdown-item" pilihTema data-isi="dark">
+              <span class="ind">Gelap</span><span class="en">Dark</span>
+            </a></li>
+            <li><a class="pointer dropdown-item" pilihTema data-isi="light">
+              <span class="ind">Terang</span><span class="en">Light</span>
+            </a></li>
           </ul>
           </div>
         <div class="dropdown">
@@ -103,10 +115,13 @@
     <section id="faq" class="faq section">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2 ind="Produk & Solusi Listrik" en="Products & Electrical Solutions"></h2>
-        <p
-        en="Explore our product lineup, detailed specifications, quotation process, and dedicated after-sales support."
-        ind="Jelajahi lini produk kami, spesifikasi lengkap, proses penawaran, hingga dukungan purnajual yang terpercaya.">
+        <h2>
+          <span class="ind">Produk & Solusi Listrik</span>
+          <span class="en">Products & Electrical Solutions</span>
+        </h2>
+        <p>
+          <span class="en">Explore our product lineup, detailed specifications, quotation process, and dedicated after-sales support.</span>
+          <span class="ind">Jelajahi lini produk kami, spesifikasi lengkap, proses penawaran, hingga dukungan purnajual yang terpercaya.</span>
         </p>
       </div><!-- End Section Title -->
 
@@ -178,7 +193,10 @@
 
                     <div class="product-spec-container">
                       <h4 class="title mb-1 fw-bold">{{title}}</h4>
-                      <p class="small mb-0 desc" en="{{descEn}}" ind="{{descInd}}"></p>
+                      <p class="small mb-0 desc">
+                        <span class="ind">{{descInd}}</span>
+                        <span class="en">{{descEn}}</span>
+                      </p>
                     </div>
 
                     <div class="{{blueIcon}} col-12 d-flex flex-row flex-wrap">
@@ -187,7 +205,9 @@
                         <div class="d-flex flex-row align-items-center">
                           <span class="accent-icon"><i class="ri-award-fill"></i></span>
                           <div>
-                            <h4 class="title mb-0 fw-bold tinySmall" en="Certified" ind="Sertifikat">Sertifikat</h4>
+                            <h4 class="title mb-0 fw-bold tinySmall">
+                              <span class="ind">Sertifikasi:</span><span class="en">Certified</span>
+                            </h4>
                             <p class="mb-0 desc superSmall">{{certified}}</p>
                           </div>
                         </div>
@@ -217,7 +237,9 @@
                         <div class="d-flex flex-row align-items-center">
                           <span class="accent-icon"><i class="ri-alarm-warning-fill"></i></span>
                           <div>
-                            <h4 class="title mb-0 fw-bold tinySmall" en="Interface" ind="Indikator">Indikator</h4>
+                            <h4 class="title mb-0 fw-bold tinySmall">
+                              <span class="ind">Indikator</span><span class="en">Interface</span>
+                            </h4>
                             <p class="mb-0 desc superSmall">{{interface}}</p>
                           </div>
                         </div>
@@ -238,120 +260,218 @@
                <!-- Fungsi Loop JS untuk kertu produk -->
               <script>
                 // Jika ada backend, sebaiknya fungsi "loop" ini diserahkan backend.
-                let products = 
-                  [
-                    {
-                      title: "Metal-Clad Switchgear",
-                      kategori :"Metal Closed",
-                      image: "assets/img/product/BBVT.webp",
-                      altImage: "Metal-clad switchgear", // Hmmm kebnayakan sama dengan title, Jadi tidak harus ada data altImage. Dan jika tidak ada altImage, datanya diisi title
-                      descInd: "Switchgear berkompartemen untuk distribusi tegangan menengah yang terkendali dan andal.",
-                      descEn: "Compartmentalized switchgear designed for controlled and reliable medium-voltage distribution.",
-                      modalTarget: "metalCladModal",
-                      modalBody :`<p en="Metal-clad switchgear uses grounded metal barriers to separate major components and supports dependable operation, inspection, and maintenance." ind="Metal-clad switchgear menggunakan pembatas logam yang ditanahkan untuk memisahkan komponen utama serta mendukung operasi, inspeksi, dan pemeliharaan yang andal."></p><ul><li en="Medium-voltage distribution" ind="Distribusi tegangan menengah"></li><li en="Protection, metering, and control integration" ind="Integrasi proteksi, metering, dan kontrol"></li><li en="Project-specific feeder arrangement" ind="Susunan feeder sesuai kebutuhan proyek"></li></ul>`,
-                      sertif: true,
-                      height: "2160 mm",
-                      width: "750 mm",
-                      length: "2050 mm",
-                      certified: "SPLN D3.020-1:2019",
-                      psu: "60-240v AC/DC",
-                      io: "6 Inputs/Outputs",
-                      interface: "10 status LEDs"
-                    },
-                    {
-                      title: "Air-Insulated Switchgear",
-                      kategori :"Metal Closed",
-                      image: "assets/img/product/PBF.webp",
-                      altImage: "Air-insulated switchgear",
-                      descInd: "Konfigurasi AIS type-tested dan khusus proyek untuk aplikasi utilitas serta industri.",
-                      descEn: "Type-tested and project-specific AIS configurations for utility and industrial applications.",
-                      modalTarget: "aisModal",
-                      modalBody: `<p en="AIS uses air as the primary insulation medium and is available in type-tested or project-specific configurations." ind="AIS menggunakan udara sebagai media insulasi utama dan tersedia dalam konfigurasi type-tested maupun khusus proyek.">AIS menggunakan udara sebagai media insulasi utama dan tersedia dalam konfigurasi type-tested maupun khusus proyek.</p><ul><li>20 kV application</li><li en="Type-tested option" ind="Opsi type-tested">Opsi type-tested</li><li en="Non-type-tested or retrofit configuration" ind="Konfigurasi non-type-tested atau retrofit">Konfigurasi non-type-tested atau retrofit</li></ul>`,
-                      sertif: true,
-                      height: "2160 mm",
-                      width: "750 mm",
-                      length: "2050 mm",
-                      certified: "SPLN D3.020-1:2019",
-                      psu: "60-240v AC/DC",
-                      io: "6 Inputs/Outputs",
-                      interface: "10 status LEDs"
-                    },
-                    {
-                      title: "Fully Insulated Switchgear",
-                      kategori :"Metal Closed",
-                      image: "assets/img/product/CAKRA.webp",
-                      altImage: "Fully insulated switchgear",
-                      descInd: "Switchgear ringkas dan terlindungi untuk instalasi yang membutuhkan efisiensi ruang.",
-                      descEn: "Compact protected switchgear for installations requiring efficient use of space.",
-                      modalTarget: "fisModal",
-                      modalBody:`<p en="Fully insulated switchgear provides a compact protected arrangement suited to installations with limited space or challenging environmental conditions." ind="Fully insulated switchgear memberikan susunan ringkas dan terlindungi untuk instalasi dengan keterbatasan ruang atau kondisi lingkungan yang menantang.">Fully insulated switchgear memberikan susunan ringkas dan terlindungi untuk instalasi dengan keterbatasan ruang atau kondisi lingkungan yang menantang.</p><ul><li en="Compact arrangement" ind="Susunan ringkas">Susunan ringkas</li><li en="Protected primary components" ind="Komponen primer terlindungi">Komponen primer terlindungi</li><li en="Type-tested and project-specific options" ind="Opsi type-tested dan khusus proyek">Opsi type-tested dan khusus proyek</li></ul>`,
-                      sertif: true,
-                      height: "2160 mm",
-                      width: "750 mm",
-                      length: "2050 mm",
-                      certified: "SPLN D3.020-1:2019",
-                      psu: "60-240v AC/DC",
-                      io: "6 Inputs/Outputs",
-                      interface: "10 status LEDs"
-                    },
-                    {
-                      title: "Current Transformer",
-                      kategori :"Metal Enclosed",
-                      image: "assets/img/product/CK-2000.webp",
-                      altImage: "Current transformer",
-                      descInd: "Trafo instrumen untuk pengukuran arus, metering, dan sistem proteksi.",
-                      descEn: "Instrument transformer for current measurement, metering, and protection systems.",
-                      modalTarget: "ctModal",
-                      modalBody:`<p en="Current transformers convert primary current into a proportional secondary value for measurement, metering, and protection devices." ind="Current transformer mengubah arus primer menjadi nilai sekunder yang proporsional untuk perangkat pengukuran, metering, dan proteksi.">Current transformer mengubah arus primer menjadi nilai sekunder yang proporsional untuk perangkat pengukuran, metering, dan proteksi.</p><ul><li en="Metering application" ind="Aplikasi metering">Aplikasi metering</li><li en="Protection application" ind="Aplikasi proteksi">Aplikasi proteksi</li><li en="Ratio and class selected according to project requirements" ind="Rasio dan kelas dipilih sesuai kebutuhan proyek">Rasio dan kelas dipilih sesuai kebutuhan proyek</li></ul>`,
-                      height: "2160 mm",
-                      width: "750 mm",
-                      length: "2050 mm",
-                      certified: "SPLN D3.020-1:2019",
-                      psu: "60-240v AC/DC",
-                      io: "6 Inputs/Outputs",
-                      interface: "10 status LEDs"
-                    },
-                    {
-                      title: "Voltage Transformer",
-                      kategori :"Metal Enclosed",
-                      image: "assets/img/product/PBIF.webp",
-                      altImage: "Voltage transformer",
-                      descInd: "Trafo instrumen untuk kebutuhan pengukuran tegangan, metering, dan proteksi.",
-                      descEn: "Instrument transformer for voltage measurement, metering, and protection requirements.",
-                      modalTarget: "vtModal",
-                      modalBody:`<p en="Voltage transformers provide a proportional secondary voltage for metering, indication, and protection equipment." ind="Voltage transformer menyediakan tegangan sekunder yang proporsional untuk peralatan metering, indikasi, dan proteksi.">Voltage transformer menyediakan tegangan sekunder yang proporsional untuk peralatan metering, indikasi, dan proteksi.</p><ul><li en="Voltage measurement" ind="Pengukuran tegangan">Pengukuran tegangan</li><li en="Metering and protection application" ind="Aplikasi metering dan proteksi">Aplikasi metering dan proteksi</li><li en="Configuration selected according to the system" ind="Konfigurasi dipilih sesuai sistem">Konfigurasi dipilih sesuai sistem</li></ul>`,
-                      height: "2160 mm",
-                      width: "750 mm",
-                      length: "2050 mm",
-                      certified: "SPLN D3.020-1:2019",
-                      psu: "60-240v AC/DC",
-                      io: "6 Inputs/Outputs",
-                      interface: "10 status LEDs"
-                    },
-                    {
-                      title: "kWh Meter",
-                      kategori :"Metal Enclosed",
-                      image: "assets/img/product/PBVT.webp",
-                      altImage: "kWh meter",
-                      descInd: "Solusi metering untuk memantau dan mencatat konsumsi energi listrik.",
-                      descEn: "Energy metering solution for monitoring and recording electrical energy consumption.",
-                      modalTarget: "meterModal",
-                      modalBody:`<p en="The kWh meter records electrical energy usage for monitoring, billing, and energy management applications." ind="kWh meter mencatat pemakaian energi listrik untuk aplikasi pemantauan, penagihan, dan pengelolaan energi.">kWh meter mencatat pemakaian energi listrik untuk aplikasi pemantauan, penagihan, dan pengelolaan energi.</p><ul><li en="Energy consumption recording" ind="Pencatatan konsumsi energi">Pencatatan konsumsi energi</li><li en="Panel and system integration" ind="Integrasi panel dan sistem">Integrasi panel dan sistem</li><li en="Configuration according to project requirements" ind="Konfigurasi sesuai kebutuhan proyek">Konfigurasi sesuai kebutuhan proyek</li></ul>`,
-                      height: "2160 mm",
-                      width: "750 mm",
-                      length: "2050 mm",
-                      certified: "SPLN D3.020-1:2019",
-                      psu: "60-240v AC/DC",
-                      io: "6 Inputs/Outputs",
-                      interface: "10 status LEDs"
-                    }
-                  ]
-                function loopProduk(kelas, kategori, template="productTemplate") {
-                  let htmlTemplate = document.getElementById(template).innerHTML,
-                  produkTerfilter=[]
-                  console.log('funngsi lop dipanggil. Target Loop = ', kelas)
-                  if(!kategori || kategori === "all"){produkTerfilter = products}
-                  else{
+                    let products = [
+                      {
+                        title: "Metal-Clad Switchgear",
+                        kategori: "Metal Closed",
+                        image: "assets/img/product/BBVT.webp",
+                        altImage: "Metal-clad switchgear",
+                        descInd: "Switchgear berkompartemen untuk distribusi tegangan menengah yang terkendali dan andal.",
+                        descEn: "Compartmentalized switchgear designed for controlled and reliable medium-voltage distribution.",
+                        modalTarget: "metalCladModal",
+                        modalBody: `<p>
+                          <span class="ind">Metal-clad switchgear menggunakan pembatas logam yang ditanahkan untuk memisahkan komponen utama serta mendukung operasi, inspeksi, dan pemeliharaan yang andal.</span>
+                          <span class="en">Metal-clad switchgear uses grounded metal barriers to separate major components and supports dependable operation, inspection, and maintenance.</span>
+                        </p>
+                        <ul>
+                          <li>
+                            <span class="ind">Distribusi tegangan menengah</span>
+                            <span class="en">Medium-voltage distribution</span>
+                          </li>
+                          <li>
+                            <span class="ind">Integrasi proteksi, metering, dan kontrol</span>
+                            <span class="en">Protection, metering, and control integration</span>
+                          </li>
+                          <li>
+                            <span class="ind">Susunan feeder sesuai kebutuhan proyek</span>
+                            <span class="en">Project-specific feeder arrangement</span>
+                          </li>
+                        </ul>`,
+                        sertif: true,
+                        height: "2160 mm",
+                        width: "750 mm",
+                        length: "2050 mm",
+                        certified: "SPLN D3.020-1:2019",
+                        psu: "60-240v AC/DC",
+                        io: "6 Inputs/Outputs",
+                        interface: "10 status LEDs"
+                      },
+                      {
+                        title: "Air-Insulated Switchgear",
+                        kategori: "Metal Closed",
+                        image: "assets/img/product/PBF.webp",
+                        altImage: "Air-insulated switchgear",
+                        descInd: "Konfigurasi AIS type-tested dan khusus proyek untuk aplikasi utilitas serta industri.",
+                        descEn: "Type-tested and project-specific AIS configurations for utility and industrial applications.",
+                        modalTarget: "aisModal",
+                        modalBody: `<p>
+                          <span class="ind">AIS menggunakan udara sebagai media insulasi utama dan tersedia dalam konfigurasi type-tested maupun khusus proyek.</span>
+                          <span class="en">AIS uses air as the primary insulation medium and is available in type-tested or project-specific configurations.</span>
+                        </p>
+                        <ul>
+                          <li>20 kV application</li>
+                          <li>
+                            <span class="ind">Opsi type-tested</span>
+                            <span class="en">Type-tested option</span>
+                          </li>
+                          <li>
+                            <span class="ind">Konfigurasi non-type-tested atau retrofit</span>
+                            <span class="en">Non-type-tested or retrofit configuration</span>
+                          </li>
+                        </ul>`,
+                        sertif: true,
+                        height: "2160 mm",
+                        width: "750 mm",
+                        length: "2050 mm",
+                        certified: "SPLN D3.020-1:2019",
+                        psu: "60-240v AC/DC",
+                        io: "6 Inputs/Outputs",
+                        interface: "10 status LEDs"
+                      },
+                      {
+                        title: "Fully Insulated Switchgear",
+                        kategori: "Metal Closed",
+                        image: "assets/img/product/CAKRA.webp",
+                        altImage: "Fully insulated switchgear",
+                        descInd: "Switchgear ringkas dan terlindungi untuk instalasi yang membutuhkan efisiensi ruang.",
+                        descEn: "Compact protected switchgear for installations requiring efficient use of space.",
+                        modalTarget: "fisModal",
+                        modalBody: `<p>
+                          <span class="ind">Fully insulated switchgear memberikan susunan ringkas dan terlindungi untuk instalasi dengan keterbatasan ruang atau kondisi lingkungan yang menantang.</span>
+                          <span class="en">Fully insulated switchgear provides a compact protected arrangement suited to installations with limited space or challenging environmental conditions.</span>
+                        </p>
+                        <ul>
+                          <li>
+                            <span class="ind">Susunan ringkas</span>
+                            <span class="en">Compact arrangement</span>
+                          </li>
+                          <li>
+                            <span class="ind">Komponen primer terlindungi</span>
+                            <span class="en">Protected primary components</span>
+                          </li>
+                          <li>
+                            <span class="ind">Opsi type-tested dan khusus proyek</span>
+                            <span class="en">Type-tested and project-specific options</span>
+                          </li>
+                        </ul>`,
+                        sertif: true,
+                        height: "2160 mm",
+                        width: "750 mm",
+                        length: "2050 mm",
+                        certified: "SPLN D3.020-1:2019",
+                        psu: "60-240v AC/DC",
+                        io: "6 Inputs/Outputs",
+                        interface: "10 status LEDs"
+                      },
+                      {
+                        title: "Current Transformer",
+                        kategori: "Metal Enclosed",
+                        image: "assets/img/product/CK-2000.webp",
+                        altImage: "Current transformer",
+                        descInd: "Trafo instrumen untuk pengukuran arus, metering, dan sistem proteksi.",
+                        descEn: "Instrument transformer for current measurement, metering, and protection systems.",
+                        modalTarget: "ctModal",
+                        modalBody: `<p>
+                          <span class="ind">Current transformer mengubah arus primer menjadi nilai sekunder yang proporsional untuk perangkat pengukuran, metering, dan proteksi.</span>
+                          <span class="en">Current transformers convert primary current into a proportional secondary value for measurement, metering, and protection devices.</span>
+                        </p>
+                        <ul>
+                          <li>
+                            <span class="ind">Aplikasi metering</span>
+                            <span class="en">Metering application</span>
+                          </li>
+                          <li>
+                            <span class="ind">Aplikasi proteksi</span>
+                            <span class="en">Protection application</span>
+                          </li>
+                          <li>
+                            <span class="ind">Rasio dan kelas dipilih sesuai kebutuhan proyek</span>
+                            <span class="en">Ratio and class selected according to project requirements</span>
+                          </li>
+                        </ul>`,
+                        height: "2160 mm",
+                        width: "750 mm",
+                        length: "2050 mm",
+                        certified: "SPLN D3.020-1:2019",
+                        psu: "60-240v AC/DC",
+                        io: "6 Inputs/Outputs",
+                        interface: "10 status LEDs"
+                      },
+                      {
+                        title: "Voltage Transformer",
+                        kategori: "Metal Enclosed",
+                        image: "assets/img/product/PBIF.webp",
+                        altImage: "Voltage transformer",
+                        descInd: "Trafo instrumen untuk kebutuhan pengukuran tegangan, metering, dan proteksi.",
+                        descEn: "Instrument transformer for voltage measurement, metering, and protection requirements.",
+                        modalTarget: "vtModal",
+                        modalBody: `<p>
+                          <span class="ind">Voltage transformer menyediakan tegangan sekunder yang proporsional untuk peralatan metering, indikasi, dan proteksi.</span>
+                          <span class="en">Voltage transformers provide a proportional secondary voltage for metering, indication, and protection equipment.</span>
+                        </p>
+                        <ul>
+                          <li>
+                            <span class="ind">Pengukuran tegangan</span>
+                            <span class="en">Voltage measurement</span>
+                          </li>
+                          <li>
+                            <span class="ind">Aplikasi metering dan proteksi</span>
+                            <span class="en">Metering and protection application</span>
+                          </li>
+                          <li>
+                            <span class="ind">Konfigurasi dipilih sesuai sistem</span>
+                            <span class="en">Configuration selected according to the system</span>
+                          </li>
+                        </ul>`,
+                        height: "2160 mm",
+                        width: "750 mm",
+                        length: "2050 mm",
+                        certified: "SPLN D3.020-1:2019",
+                        psu: "60-240v AC/DC",
+                        io: "6 Inputs/Outputs",
+                        interface: "10 status LEDs"
+                      },
+                      {
+                        title: "kWh Meter",
+                        kategori: "Metal Enclosed",
+                        image: "assets/img/product/PBVT.webp",
+                        altImage: "kWh meter",
+                        descInd: "Solusi metering untuk memantau dan mencatat konsumsi energi listrik.",
+                        descEn: "Energy metering solution for monitoring and recording electrical energy consumption.",
+                        modalTarget: "meterModal",
+                        modalBody: `<p>
+                          <span class="ind">kWh meter mencatat pemakaian energi listrik untuk aplikasi pemantauan, penagihan, dan pengelolaan energi.</span>
+                          <span class="en">The kWh meter records electrical energy usage for monitoring, billing, and energy management applications.</span>
+                        </p>
+                        <ul>
+                          <li>
+                            <span class="ind">Pencatatan konsumsi energi</span>
+                            <span class="en">Energy consumption recording</span>
+                          </li>
+                          <li>
+                            <span class="ind">Integrasi panel dan sistem</span>
+                            <span class="en">Panel and system integration</span>
+                          </li>
+                          <li>
+                            <span class="ind">Konfigurasi sesuai kebutuhan proyek</span>
+                            <span class="en">Configuration according to project requirements</span>
+                          </li>
+                        </ul>`,
+                        height: "2160 mm",
+                        width: "750 mm",
+                        length: "2050 mm",
+                        certified: "SPLN D3.020-1:2019",
+                        psu: "60-240v AC/DC",
+                        io: "6 Inputs/Outputs",
+                        interface: "10 status LEDs"
+                      }
+                    ]                
+                    function loopProduk(kelas, kategori, template="productTemplate") {
+                    let htmlTemplate = document.getElementById(template).innerHTML,
+                    produkTerfilter=[]
+                    console.log('funngsi lop dipanggil. Target Loop = ', kelas)
+                    if(!kategori || kategori === "all"){produkTerfilter = products}
+                    else{
                     produkTerfilter = products.filter(product => product.kategori === kategori)
                     console.log('data produk terfilter = ',produkTerfilter)
                   }
@@ -428,7 +548,7 @@
           </div>
           <div class="modal-body">{{modalBody}}</div>
           <div class="modal-footer">
-            <a href="index.html#contact" class="btn btn-primary" en="Discuss Your Requirement" ind="Diskusikan Kebutuhan"></a>
+            <a href="contact.html" class="btn btn-primary" en="Discuss Your Requirement" ind="Diskusikan Kebutuhan"></a>
           </div>
         </div>
       </div>
@@ -438,11 +558,72 @@
   <div class="contModal"><script>loopProduk(".contModal", "all", "modalProduk")</script></div>
 
   <footer id="footer" class="footer position-relative light-background">
-    <div class="container footer-top"><div class="row gy-4">
-      <div class="col-lg-6 col-md-6 footer-about"><a href="index.html" class="logo d-flex align-items-center"><span class="sitename">EGA Tekelindo Prima</span></a><div class="footer-contact pt-3"><p>Jl. P. Jayakarta 141 Blok E/4</p><p>Jakarta Pusat, Indonesia</p><p class="mt-3"><strong en="Phone:" ind="Telepon:"></strong> <span>(+62) 21 6008082</span></p></div></div>
-      <div class="col-lg-3 col-md-3 footer-links"><h4 en="Company" ind="Perusahaan"></h4><ul><li><a href="index.html#hero" en="Home" ind="Beranda"></a></li><li><a href="index.html#about" en="About Us" ind="Tentang Kami"></a></li><li><a href="index.html#services" en="Services" ind="Layanan"></a></li><li><a href="index.html#contact" en="Contact" ind="Kontak"></a></li></ul></div>
-      <div class="col-lg-3 col-md-3 footer-links"><h4 en="Products" ind="Produk"></h4><ul><li><a href="#ais-type-tested">Air Insulated Switchgear</a></li><li><a href="#fis-type-tested">Fully Insulated Switchgear</a></li><li><a href="index.html#contact">Current Transformer</a></li><li><a href="index.html#contact">Voltage Transformer</a></li></ul></div>
-    </div></div>
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-6 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">EGA Tekelindo Prima</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Jl. P. Jayakarta 141 Blok E/4</p><p>Jakarta Pusat, Indonesia</p>
+            <p class="mt-3"><strong><span class="ind">Telepon</span><span class="en">Phone</span></strong> <span>(+62) 21 6008082</span>
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3 footer-links">
+          <h4>
+            <span class="ind">Perusahaan</span><span class="en">Company</span>
+          </h4>
+          <ul>
+            <li>
+              <a href="index.html">
+                <span class="ind">Beranda</span><span class="en">Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="services.html">
+                <span class="ind">Layanan</span><span class="en">Services</span>
+              </a>
+            </li>
+            <li>
+              <a href="teams.html">
+                <span class="ind">Tim</span><span class="en">Teams</span>
+              </a>
+            </li>
+            <li>
+              <a href="product.html">
+                <span class="ind">Produk</span><span class="en">Products</span>
+              </a>
+            </li>
+            <li>
+              <a href="contact.html">
+                <span class="ind">Kontak</span><span class="en">Contact</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-3 footer-links">
+          <h4>
+            <span class="ind">Produk</span><span class="en">Products</span>
+          </h4>
+          <ul>
+            <li>
+              <a href="#ais-type-tested">Air Insulated Switchgear</a>
+            </li>
+            <li>
+              <a href="#fis-type-tested">Fully Insulated Switchgear</a>
+            </li>
+            <li>
+              <a href="index.html#contact">Current Transformer</a>
+            </li>
+            <li>
+              <a href="index.html#contact">Voltage Transformer</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
     <div class="container copyright text-center mt-4"><p>© 2026 <strong class="px-1 sitename">PT Ega Tekelindo Prima</strong> <span en="All Rights Reserved" ind="Seluruh Hak Cipta Dilindungi"></span></p></div>
   </footer>
   
