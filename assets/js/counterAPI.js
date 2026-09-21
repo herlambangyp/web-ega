@@ -1,3 +1,5 @@
+// Dokumentasi counterAPI : https://docs.counterapi.dev/javascript/quick-start/
+
 async function counterAPI() {
   // Jangan ubah jadi sinkronus function. Buffer counterAPI bisa sangat lambat
   // pertahankan async, dan biarkan html menghandle "loading"
