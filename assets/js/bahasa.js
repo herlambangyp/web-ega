@@ -1,7 +1,6 @@
 // Fungsi disini sebaiknya di scrap jika logika bahasa ditentukan oleh server/backend
 
-let basaDevice =navigator.language.split("-")[0],
-basa 
+let basaDevice =navigator.language.split("-")[0], basa 
 
 function bahasa() {
     basa = cekBahasa()
@@ -29,7 +28,7 @@ function tombolBahasa() {
 
 
 function cekBahasa() {
-    // fungsi ini sebaiknya diganti dengan logika get locale di backend (atau tergantung apakah basa ditentukan oleh js atau server)
+    // fungsi ini sebaiknya diganti dengan logika get locale di backend (atau tergantung apakah bahasa dicek oleh js atau server)
 
     let params = new URLSearchParams(window.location.search),
     langURL = params.get("lang")||localStorage.getItem('bahasaTersimpan')
