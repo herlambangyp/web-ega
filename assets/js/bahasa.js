@@ -8,9 +8,9 @@ function bahasa() {
 }
 
 function tombolBahasa() {
-    // buat button dengan tag "bahasa" di html, jika ingin menambahkan button bahasa baru
+    // buat button dengan atribut "bahasa" di html, jika ingin menambahkan button bahasa baru
     // actually, ga harus button sih. Element input, option, select, textarea jg bisa 
-    // Element lain yang tidak support tag "value". isi valuenya bisa disimpan di tag "data-isi"
+    // Element lain yang tidak support atribut "value". isi valuenya bisa disimpan di atribut "data-isi"
 
     document.querySelectorAll('[bahasa]').forEach(btn => {
 
