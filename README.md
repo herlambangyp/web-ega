@@ -16,6 +16,7 @@ Repository source-code front end web PT Ega Tekelindo Prima
 ## Dev Guide
 ### 1. Query Bahasa 
 > MOHON BACA ULANG LOGIKA DIPERBARUI !!
+
 Data penulisan bahasa menggunakan atribut class="bahasaYgDituju"
 class "ind" untuk bahasa indonesia, class "en" untuk bahasa inggris
 
