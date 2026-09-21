@@ -1922,7 +1922,7 @@ section,
   padding: 20px 0;
 }
 
-.how-we-work .steps-wrapper::before {
+/* .how-we-work .steps-wrapper::before {
   content: "";
   position: absolute;
   width: 2px;
@@ -1931,7 +1931,7 @@ section,
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-}
+} */
 
 .how-we-work .step-item {
   margin-bottom: 50px;
