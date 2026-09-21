@@ -35,13 +35,12 @@
 </head>
 
 <body class="index-page bg-resend-grid">
-
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/logo EGA.webp" alt=""> 
+        <img src="assets/img/logo EGA.webp" alt="Logo Ega"> 
         <div class="mobile-hidden d-flex text-body flex-column">
           <span class="fs-4 fw-bolder">EGA TEKELINDO</span>
           <span class="fs-6">PRIMA • EST. 1985</span>
@@ -72,33 +71,33 @@
 
       <div class="navLain">
         <div class="dropdown">
-          <a href="#" class="d-flex icon pointer" data-bs-toggle="dropdown">
+          <button class="border-0 bg-transparent d-flex icon pointer" data-bs-toggle="dropdown">
             <i class="bi bi-brightness-high"></i>
             <!-- &nbsp;<span class="keterangan" en='Theme' ind=' Tema'></span> -->
             <div class="panahBawah">
               <i class="bi bi-chevron-down toggle-dropdown"></i>
             </div>
-          </a>
+          </button>
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-            <li><a class="pointer dropdown-item" pilihTema data-isi="dark">
+            <li><button class="border-0 dropdown-item" pilihTema data-isi="dark">
               <span class="ind">Gelap</span><span class="en">Dark</span>
-            </a></li>
-            <li><a class="pointer dropdown-item" pilihTema data-isi="light">
+            </button></li>
+            <li><button class="border-0 dropdown-item" pilihTema data-isi="light">
               <span class="ind">Terang</span><span class="en">Light</span>
-            </a></li>
+            </button></li>
           </ul>
           </div>
         <div class="dropdown">
-          <a href="#" class="d-flex icon pointer" data-bs-toggle="dropdown">
+          <button class="bg-transparent border-0 d-flex icon pointer" data-bs-toggle="dropdown">
             <i class="bi bi-globe"></i>
             <!-- &nbsp;<span class="keterangan" en='Language' ind='Bahasa'></span> -->
             <div class="panahBawah">
               <i class="bi bi-chevron-down toggle-dropdown"></i>
             </div>            
-          </a>
+          </button>
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-            <li><a class="pointer dropdown-item" bahasa data-isi="id">Indonesia</a></li>
-            <li><a class="pointer dropdown-item" bahasa data-isi="en">English</a></li>
+            <li><button class="border-0 dropdown-item" bahasa data-isi="id">Indonesia</button></li>
+            <li><button class="border-0 dropdown-item" bahasa data-isi="en">English</button></li>
           </ul>
           </div>
       </div>
@@ -150,7 +149,7 @@
                   <span class="ind">Lihat Produk dan Layanan Kami</span><span class="en">Explore Our Products and Services</span>
                 </a>
 
-                <a href="tel:+62 (21) 600-8082" class="btn btn-link"><i class="bi bi-telephone"></i>(+62)21 6008082</a>
+                <a href="tel:+62 (21) 600-8082" class="btn btn-link"><i class="bi bi-telephone"></i>(+62)21 6008082</a>                  
               </div>
             </div>
           </div>
@@ -1244,10 +1243,10 @@ Each number reflects our dedication to engineering excellence, reliability, and 
               <a href="#fis-type-tested">Fully Insulated Switchgear</a>
             </li>
             <li>
-              <a href="index.html#contact">Current Transformer</a>
+              <a href="index.html">Current Transformer</a>
             </li>
             <li>
-              <a href="index.html#contact">Voltage Transformer</a>
+              <a href="index.html">Voltage Transformer</a>
             </li>
           </ul>
         </div>
@@ -1258,7 +1257,26 @@ Each number reflects our dedication to engineering excellence, reliability, and 
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <button id="scroll-top" class="border-0 scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></button>
+
+  <!-- Data Kunjungan -->
+  <div class="position-fixed bottom-0 end-0 p-3 z-1">
+      <div class="stats-card">
+        <div class="stats-icon">
+          <i class="bi bi-people-fill"></i>
+        </div>
+        <div class="stats-content">
+          <div class="stats-number loading">
+            <span class="jumKunjungan">
+              <div class="spinner-border spinner-border-sm text-accent" role="status"></div>
+              Memuat data kunjungan..
+            </span>
+            <span class="textKunjungan" style="display: none;">Pengunjung</span>
+          </div>
+          <p>Data kunjungan di web ini</p>
+        </div>
+      </div>
+  </div>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -1272,10 +1290,8 @@ Each number reflects our dedication to engineering excellence, reliability, and 
   <script src="assets/js/utama.js"></script>
   <script src="assets/js/bahasa.js"></script>
   <script src="assets/js/tema.js"></script>
-
+  <script src="assets/js/counterAPI.js"></script>
 </body>
-  <!-- <script src="assets/JSON/id.js"></script>
-  <script src="assets/JSON/en.js"></script>   -->
 
 
 </html>
