@@ -289,8 +289,11 @@ h6 {
     font-size: 19px;
     gap: 9px;
   }
-    .header .navLain .keterangan{
+.hideMobile{
     display: none;
+  }
+.showMobile{
+    display: inline;
   }
 }
 

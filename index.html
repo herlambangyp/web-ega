@@ -1260,7 +1260,7 @@ Each number reflects our dedication to engineering excellence, reliability, and 
   <button id="scroll-top" class="border-0 scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></button>
 
   <!-- Data Kunjungan -->
-  <div class="position-fixed bottom-0 end-0 p-3 z-1">
+  <!-- <div class="position-fixed bottom-0 end-0 p-3 z-1">
       <div class="stats-card">
         <div class="stats-icon">
           <i class="bi bi-people-fill"></i>
@@ -1268,16 +1268,18 @@ Each number reflects our dedication to engineering excellence, reliability, and 
         <div class="stats-content">
           <div class="stats-number loading">
             <span class="jumKunjungan">
-              <div class="spinner-border spinner-border-sm text-accent" role="status"></div>
+              <div class="spinner-border spinner-border-sm text-light" role="status"></div>
               Memuat data kunjungan..
             </span>
             <span class="textKunjungan" style="display: none;">Pengunjung</span>
           </div>
           <p>Data kunjungan di web ini</p>
+          <button onclick="showToast({pesanId:'Pesan Terkirim', pesanEn:'Delivered', jenis:'success'})">Uji toast</button>
         </div>
       </div>
-  </div>
+  </div> -->
 
+  <!-- Toast Bootsrap -->
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
@@ -1290,7 +1292,12 @@ Each number reflects our dedication to engineering excellence, reliability, and 
   <script src="assets/js/utama.js"></script>
   <script src="assets/js/bahasa.js"></script>
   <script src="assets/js/tema.js"></script>
-  <script src="assets/js/counterAPI.js"></script>
+
+  <!-- JS Module -->
+  <!-- <script src="assets/js/counterAPI.js"></script> -->
+  <div id="toastContainer" class="toast-container position-fixed top-0 end-0 py-5 my-5 px-3" style="z-index: 1090;"></div>
+  <script src="assets/js/toast.js"></script>
+  
 </body>
 
 

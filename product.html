@@ -594,8 +594,12 @@
           <div class="col-lg-7 p-4 gradientBgDown d-flex flex-column justify-content-between">
             
             <!-- Grid untuk Konten Card + Navigasi Vertikal -->
-            <div class="row g-3 h-100">
-              
+            <div class="row h-100">
+              <!-- <div class="col-12">
+                <a href="service-details.html" class="btn btn-neutral text-start py-2 px-3 small fw-semibold">
+                  Lihat Penawaran Barang
+                </a>              
+              </div> -->
               <!-- Konten Utama Card (Sebelah Kiri dari Navigasi) -->
               <div class="col-9 pe-3">
                 <div class="tab-content h-100" id="productTabContent">
@@ -603,11 +607,9 @@
                   <!-- Tab Main -->
                   <div class="tab-pane fade show active" id="{{modalTarget}}-main" role="tabpanel">
                     <h5 class="fw-bold text-primary mb-3"><span class="en">Main Description</span><span class="ind">Deskripsi Utama</span></h5>
-                    <p class="desc small ind">
-                    {{modalDescInd}}  
-                    </p>
-                    <p class="desc small en">
-                    {{modalDescEn}}  
+                    <p class="desc small">
+                      <span class="ind">{{modalDescInd}}</span>
+                      <span class="en">{{modalDescEn}}</span>
                     </p>
                     <ul class="list-unstyled small desc d-flex flex-column mt-1">
                       {{modalListEn}}
@@ -621,8 +623,16 @@
                     <table class="table table-sm table-borderless small text-secondary">
                       <tbody>
                         <tr>
-                          <td class="fw-semibold">Tegangan Pengenal:</td>
-                          <td>12 kV - 24 kV</td>
+                          <td class="fw-semibold">Tinggi:</td>
+                          <td>{{height}}</td>
+                        </tr>
+                        <tr>
+                          <td class="fw-semibold">Tebal:</td>
+                          <td>{{width}}</td>
+                        </tr>
+                        <tr>
+                          <td class="fw-semibold">Lebar:</td>
+                          <td>{{length}}</td>
                         </tr>
                         <tr>
                           <td class="fw-semibold">Arus Pengenal:</td>
@@ -671,7 +681,7 @@
               </div>
 
               <!-- Navigasi Vertikal (Paling Kanan Card) -->
-              <div class="col-3 border-start ps-3 d-flex flex-column justify-content-center">
+              <div class="col-3 p-0 d-flex flex-column justify-content-center">
                 <div class="nav flex-column nav-pills gap-2" id="productTab" role="tablist" aria-orientation="vertical">
                   
                   <button class="nav-link active text-start py-2 px-3 small fw-semibold" 

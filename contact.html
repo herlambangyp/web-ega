@@ -4,6 +4,9 @@
   <!-- Google Analystic -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-D9FKP1WWQ8"></script>
   <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-D9FKP1WWQ8');</script>
+ 
+  <!-- reChapta Google  -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -30,7 +33,7 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/nonBS.css" rel="stylesheet">
-
+  
 </head>
 
 <body class="starter-page-page">
@@ -232,13 +235,12 @@
                 </div>
 
                 <div class="my-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                  <!-- data-sidekey WAJIB DIISI DENGAN SITE KEY CHAPTA GOOGLE. Saat ini masih memakai akun pribadiku. BUKAN AKUN PERUSAHAAN -->
+                  <div class="g-recaptcha" data-sitekey="6LdN1tEtAAAAAD_QbzVFVnZ_Me_-zwfnJSk3ZWqm"></div> 
                 </div>
 
                 <div class="form-submit">
-                  <button type="submit">Send Message</button>
+                  <button onclick="kirim()" id="submitContact"><span class="en">Send Massage</span><span class="ind">Kirim Pesan</span></button>
                   <div class="social-links">
                     <a href="#"><i class="bi bi-twitter"></i></a>
                     <a href="#"><i class="bi bi-facebook"></i></a>
@@ -341,6 +343,14 @@
   <script src="assets/js/bahasa.js"></script>
   <script src="assets/js/tema.js"></script>
 
+
+  <!-- JS Module (Bukan esLint Module) -->
+    <!-- Module toast/Notifiksai -->
+    <div id="toastContainer" class="toast-container position-fixed top-0 end-0 py-5 my-5 px-3" style="z-index: 1090;"></div>
+    <script src="assets/js/toast.js"></script>
+
+    <!-- Module Email -->
+    <script src="assets/js/emailJs.js"></script>
 </body>
 
 </html>

@@ -164,3 +164,43 @@
     max-height: 800px;
   }
 }
+
+/* Toast CSS */
+
+/* Posisi awal container toast di pojok kanan atas */
+#toastContainer {
+  overflow: hidden; /* Mencegah munculnya scrollbar horizontal saat animasi berjalan */
+}
+
+/* Animasi Masuk: Dari kanan ke posisi normal */
+@keyframes slideRightIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Animasi Keluar: Dari posisi normal balik ke kanan */
+@keyframes slideRightOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* Class Animasi */
+.toast-slide-in {
+  animation: slideRightIn 0.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.toast-slide-out {
+  animation: slideRightOut 0.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
