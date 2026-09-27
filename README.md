@@ -40,7 +40,17 @@ Contoh:
 Logika bahasa sekarang ditangani CSS bukan js lagi (agar lebih ringan peforma dan SEO Friendly). Untuk menambahkan logika bahasa lain, cek `assets/css/main.css` (Cek komen css tentang bahasa). Standardnya memang harus dibuat file json sendiri untuk data bahasa.
 Cara diatas aku pakai untuk memeprcepat pengembangan inline-code di front-end
 
-### 2. Map Indo tidak muncul saat preview file
+---
+
+### 2. Bahan komponen bootsrap
+Link Komponen:
+
+[https://bootstrapmade.com/content/demo/NiceAdmin/widgets-cards.html](https://bootstrapmade.com/content/demo/NiceAdmin/widgets-cards.html)
+
+Cukup banyak komponen atau berbagai template element yang bisa dicopas dari link diatas. Perlu digaris bawahi, CSS atau JS nya tidak sepenuhnya sama. tetapi secara "pondasi" baik project ini maupun link komponen memiliki pondasi framework yang sama yaitu `Bootstrap 5`. Jadi seharusnya 90% komponen di link komponen bisa bekerja sempurna di project ini
+
+---
+### 3. Map Indo tidak muncul saat preview file
 Map indo dimuat dengan element div bukan img. Agar warna gambar bisa ditimpa. Tetapi dengan cara ini map tidak akan tampil, jika halaman index.html di preview melalui "klik 2x di file explorer"
 
 Kebijakan keamanan browser terbaru memblokir pemuatan file lokal melalui css atau js (mungkin untuk mencegah web nakal yang berusaha mengakses file lokal di komputer user)
