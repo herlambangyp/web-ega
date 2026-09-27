@@ -4,6 +4,18 @@ let basaDevice =navigator.language.split("-")[0], basa
 
 function bahasa() {
     basa = cekBahasa()
+    const selector = '[placeholderInd], [placeholderEn]'
+    document.querySelectorAll(selector).forEach(input => {
+        switch (basa) {
+            case 'id':
+            input.setAttribute('placeholder', input.getAttribute('placeholderInd')||input.getAttribute('placeholder') || '')
+            break
+
+            default:
+            input.setAttribute('placeholder', input.getAttribute('placeholderEn')||input.getAttribute('placeholder') || '')
+            break
+        }
+    })
     document.documentElement.lang = basa
 }
 

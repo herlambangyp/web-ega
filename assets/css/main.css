@@ -2745,7 +2745,6 @@ section,
   padding: 14px 20px;
   border-radius: 10px;
   background-color: color-mix(in srgb, var(--background-color), #f5f8fd 30%);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
   color: var(--default-color);
   transition: all 0.3s ease;
 }
