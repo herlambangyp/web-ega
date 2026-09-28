@@ -75,7 +75,6 @@ async function kirim() {
       name: name,
       email: email,
       pesan: pesan,
-      emailPenerima: "alvidpebi@gmail.com", // ganti dengan penerima email yang sesuai
       'g-recaptcha-response': captchaResponse // Dihapuspun tidak berpengaruh. EmailJs tetap akan meinta validasi reCAPTHA. Jika tidak ada respon validasi, email sepenuhnya gagal
     })
 
