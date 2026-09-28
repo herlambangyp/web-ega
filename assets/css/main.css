@@ -2744,9 +2744,16 @@ section,
   height: auto;
   padding: 14px 20px;
   border-radius: 10px;
-  background-color: color-mix(in srgb, var(--background-color), #f5f8fd 30%);
+  background-color: color-mix(in srgb, var(--surface-color), var(--borderColor) 30%);
+  border-color: var(--borderColor);
   color: var(--default-color);
   transition: all 0.3s ease;
+}
+.contact .contact-form-container .was-validated .form-control:invalid {
+  border-color: var(--bs-form-invalid-border-color);
+}
+.contact .contact-form-container .php-email-form .form-control:valid {
+  border-color: var(--bs-form-valid-border-color);
 }
 
 .contact .contact-form-container .php-email-form .form-control:focus {
