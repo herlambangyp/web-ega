@@ -51,10 +51,9 @@ Cukup banyak komponen atau berbagai template element yang bisa dicopas dari link
 
 ---
 ### 3. Map Indo tidak muncul saat preview file
-Map indo dimuat dengan element div bukan img. Agar warna gambar bisa ditimpa. Tetapi dengan cara ini map tidak akan tampil, jika halaman index.html di preview melalui "klik 2x di file explorer"
+Jalankan `preview.exe` untuk membuat mini server. Penyebab Map indo tidak muncul karena map dimuat dengan element div bukan img. Agar warna gambar bisa ditimpa. 
 
-Kebijakan keamanan browser terbaru memblokir pemuatan file lokal melalui css atau js (mungkin untuk mencegah web nakal yang berusaha mengakses file lokal di komputer user)
+Kebijakan keamanan browser memblokir pemuatan file lokal tanpa server melalui css atau js. `preview.exe` memberikan alamat server yang jelas, sehingga browser berprilaku "percaya" jika pemuatan file aman
 
-Solusi saat ini adalah menginstal aplikasi `laragon` lalu membuat blank project, maka laragon akan memberikan `url untuk testing`. 
-Setelahnya letakan semua file web-ega di direktori blank project yang baru dibuat. Lalu akses `url testing` yang diberikan laragon.
-Maka di url tersebut, map indo bisa tampil (tidak di block browser)
+Terkait `preview.exe` adalah aplikasi yang sepenuhnya aku buat sendiri. Berbasis python. Source-codenya bisa dicek disini:
+https://github.com/herlambangyp/python/tree/main/miniServer
