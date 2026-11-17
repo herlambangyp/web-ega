@@ -1,168 +1,49 @@
-/**
-* Template Name: Scout
-* Template URL: https://bootstrapmade.com/scout-bootstrap-multipurpose-template/
-* Updated: May 05 2025 with Bootstrap v5.3.5
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+import { render } from './render.js'
+import { bahasa, tombolBahasa } from './bahasa.js'
+import { mainBootstrap } from './mainBootsrap.js'
+import { initTheme } from './tema.js'
+import { showToast } from './toast.js'
 
-  /**
-   * Apply .scrolled class to the body as the page is scrolled down
-   */
-  function toggleScrolled() {
-    const selectBody = document.querySelector('body');
-    const selectHeader = document.querySelector('#header');
-    if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
-    window.scrollY > 10 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
-  }
 
-  document.addEventListener('scroll', toggleScrolled);
-  window.addEventListener('load', toggleScrolled);
 
-  /**
-   * Mobile nav toggle
-   */
-  const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
 
-  function mobileNavToogle() {
-    document.querySelector('body').classList.toggle('mobile-nav-active');
-    mobileNavToggleBtn.classList.toggle('bi-list');
-    mobileNavToggleBtn.classList.toggle('bi-x');
-  }
-  if (mobileNavToggleBtn) {
-    mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
-  }
+await Promise.all([
+  // Render komponen induk
+  render('#header', './assets/komponen/header.html', true),
+  render('#footer', './assets/komponen/footer.html'),
+])
+// Setup Bootsrap bawaan
+mainBootstrap()
+// render komponen nested (komponen didalam induk)
+// await render('[selectFileUmum]', './component/general/optionFile.html', true)
 
-  /**
-   * Hide mobile nav on same-page/hash links
-   */
-  document.querySelectorAll('#navmenu a').forEach(navmenu => {
-    navmenu.addEventListener('click', () => {
-      if (document.querySelector('.mobile-nav-active')) {
-        mobileNavToogle();
-      }
-    });
+// Bagian animasi pinPoint ketika map indonesia muncul di layar user
+const $ = (selector) => document.querySelector(selector)
 
-  });
+let mapKontener = $(".mapKontener"),
+observeMap = new IntersectionObserver(o=>{
+  let divMap = o[0]
+  if (!divMap.isIntersecting) return
 
-  /**
-   * Toggle mobile nav dropdowns
-   */
-  document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
-      e.preventDefault();
-      this.parentNode.classList.toggle('active');
-      this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
-      e.stopImmediatePropagation();
-    });
-  });
+  document.querySelectorAll(".pinPoint").forEach((pin, i) => {
+    pin.style.setProperty("--pin-delay", `${i * 0.1}s`) // set jrak kemunculan antar pinPoint
+    pin.classList.add("is-visible")
+  })
 
-  /**
-   * Scroll top button
-   */
-  let scrollTop = document.querySelector('.scroll-top');
+  observeMap.unobserve(divMap.target)
+}, {
+  threshold: 0.3 // saat map 30% muncul di layar user, pinPoibt diberikna animasi muncul
+})
 
-  function toggleScrollTop() {
-    if (scrollTop) {
-      window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
-    }
-  }
-  scrollTop.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  });
+if (mapKontener) {
+  observeMap.observe(mapKontener)
+}
+// end Bagian animasi pinPoint ketika map indonesia muncul di layar user
 
-  window.addEventListener('load', toggleScrollTop);
-  document.addEventListener('scroll', toggleScrollTop);
+// Setup Bahasa
+tombolBahasa()
+bahasa()
 
-  /**
-   * Animation on scroll function and init
-   */
-  function aosInit() {
-    AOS.init({
-      duration: 600,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
-    });
-  }
-  window.addEventListener('load', aosInit);
-
-  /**
-   * Initiate Pure Counter
-   */
-  new PureCounter();
-
-  /**
-   * Frequently Asked Questions Toggle
-   */
-  document.querySelectorAll('.faq-item h3, .faq-item .faq-toggle').forEach((faqItem) => {
-    faqItem.addEventListener('click', () => {
-      faqItem.parentNode.classList.toggle('faq-active');
-    });
-  });
-
-  /**
-   * Init swiper sliders
-   */
-  function initSwiper() {
-    document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
-      let config = JSON.parse(
-        swiperElement.querySelector(".swiper-config").innerHTML.trim()
-      );
-
-      if (swiperElement.classList.contains("swiper-tab")) {
-        initSwiperWithCustomPagination(swiperElement, config);
-      } else {
-        new Swiper(swiperElement, config);
-      }
-    });
-  }
-
-  window.addEventListener("load", initSwiper);
-
-  /**
-   * Correct scrolling position upon page load for URLs containing hash links.
-   */
-  window.addEventListener('load', function(e) {
-    if (window.location.hash) {
-      if (document.querySelector(window.location.hash)) {
-        setTimeout(() => {
-          let section = document.querySelector(window.location.hash);
-          let scrollMarginTop = getComputedStyle(section).scrollMarginTop;
-          window.scrollTo({
-            top: section.offsetTop - parseInt(scrollMarginTop),
-            behavior: 'smooth'
-          });
-        }, 100);
-      }
-    }
-  });
-
-  /**
-   * Navmenu Scrollspy
-   */
-  let navmenulinks = document.querySelectorAll('.navmenu a');
-
-//SAAT INI DI SCRAPP, Fungsi dibawah ini untuk memberi garis oranye dibawah navigasi, sesuai section yang tampil (class active)
-
-  // function navmenuScrollspy() {
-  //   navmenulinks.forEach(navmenulink => {
-  //     if (!navmenulink.hash) return;
-  //     let section = document.querySelector(navmenulink.hash);
-  //     if (!section) return;
-  //     let position = window.scrollY + 200;
-  //     if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
-  //       document.querySelectorAll('.navmenu a.active').forEach(link => link.classList.remove('active'));
-  //       navmenulink.classList.add('active');
-  //     } else {
-  //       navmenulink.classList.remove('active');
-  //     }
-  //   })
-  // }
-  // window.addEventListener('load', navmenuScrollspy);
-  // document.addEventListener('scroll', navmenuScrollspy);
+// Setup tema
+initTheme()
 

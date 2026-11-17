@@ -1,4 +1,4 @@
-function initTheme() {
+export function initTheme() {
 
     let savedTheme=localStorage.getItem('selected-theme')
     if (savedTheme) {
@@ -16,6 +16,3 @@ function initTheme() {
         }
     })
 }
-
-// Setup tema
-initTheme()

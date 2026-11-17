@@ -1,4 +1,4 @@
-function showToast({pesanEn = '', pesanId = pesanEn, durasi = 3000, jenis = 'neutral',}) {
+export function showToast({pesanEn = '', pesanId = pesanEn, durasi = 3000, jenis = 'neutral',}) {
   let container = document.getElementById('toastContainer'),
   config = {
     success: { bgClass: 'bg-success text-bg-success', icon: '<i class="bi bi-check-circle-fill  me-2 fs-5"></i>' },
