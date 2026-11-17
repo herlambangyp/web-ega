@@ -2,7 +2,7 @@
 
 let basaDevice =navigator.language.split("-")[0], basa 
 
-function bahasa() {
+export function bahasa() {
     basa = cekBahasa()
     const selector = '[placeholderInd], [placeholderEn]'
     document.querySelectorAll(selector).forEach(input => {
@@ -19,7 +19,7 @@ function bahasa() {
     document.documentElement.lang = basa
 }
 
-function tombolBahasa() {
+export function tombolBahasa() {
     // buat button dengan atribut "bahasa" di html, jika ingin menambahkan button bahasa baru
     // actually, ga harus button sih. Element input, option, select, textarea jg bisa 
     // Element lain yang tidak support atribut "value". isi valuenya bisa disimpan di atribut "data-isi"
@@ -58,7 +58,3 @@ function cekBahasa() {
     // device user berbahasa lain, dn gada lang di url atau lang di url berisi bahasa lain
     return "en"
 }
-
-// Setup Bahasa
-tombolBahasa()
-bahasa()

@@ -14,8 +14,17 @@ Repository source-code front end web PT Ega Tekelindo Prima
 * JavaScript
 
 ## Dev Guide
-### 1. Query Bahasa 
-> MOHON BACA ULANG LOGIKA DIPERBARUI !!
+### 1. Gunakan `preview.exe` untuk preview 
+Jalankan `preview.exe` jika ingin preview web ini. Fungsi intinya, **meniru github-pages** tetapi di komputer lokal. Aku buat `preview.exe` sangat spesifik untuk membangun environment front-end, tanpa perlu setup Node, localserver, laragon atau hal ribet lain. Tinggal klik dan web langsung tampil
+
+Web ini memakai module javascript, yang tidak bisa diload dg preview `file:\\...` atau klik 2x di file explorer. Load module, perlu environment yang benar. Disinilah peran `preview.exe`
+
+**JANGAN UPLOAD `preview.exe` KE HOSTING.** 
+
+`preview.exe` bukan program yang wajib ada, itu hanyalah alat untuk "preview web" dan **Sangat opsional**. Seluruh kode web ini tetap native html, dan bisa diupload ke hosting manapun tanpa perlu `preview.exe`
+
+---
+### 2. Query Bahasa 
 
 Data penulisan bahasa menggunakan atribut class="bahasaYgDituju"
 class "ind" untuk bahasa indonesia, class "en" untuk bahasa inggris
@@ -42,18 +51,9 @@ Cara diatas aku pakai untuk memeprcepat pengembangan inline-code di front-end
 
 ---
 
-### 2. Bahan komponen bootsrap
+### 3. Bahan komponen bootsrap
 Link Komponen:
 
 [https://bootstrapmade.com/content/demo/NiceAdmin/widgets-cards.html](https://bootstrapmade.com/content/demo/NiceAdmin/widgets-cards.html)
 
 Cukup banyak komponen atau berbagai template element yang bisa dicopas dari link diatas. Perlu digaris bawahi, CSS atau JS nya tidak sepenuhnya sama. tetapi secara "pondasi" baik project ini maupun link komponen memiliki pondasi framework yang sama yaitu `Bootstrap 5`. Jadi seharusnya 90% komponen di link komponen bisa bekerja sempurna di project ini
-
----
-### 3. Map Indo tidak muncul saat preview file
-Jalankan `preview.exe` untuk membuat mini server. Penyebab Map indo tidak muncul karena map dimuat dengan element div bukan img. Agar warna gambar bisa ditimpa. 
-
-Kebijakan keamanan browser memblokir pemuatan file lokal tanpa server melalui css atau js. `preview.exe` memberikan alamat server yang jelas, sehingga browser berprilaku "percaya" jika pemuatan file aman
-
-Terkait `preview.exe` adalah aplikasi yang sepenuhnya aku buat sendiri. Berbasis python. Source-codenya bisa dicek disini:
-https://github.com/herlambangyp/python/tree/main/miniServer
