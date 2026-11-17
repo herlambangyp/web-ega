@@ -23,6 +23,8 @@ Web ini memakai module javascript, yang tidak bisa diload dg preview `file:\\...
 
 `preview.exe` bukan program yang wajib ada, itu hanyalah alat untuk "preview web" dan **Sangat opsional**. Seluruh kode web ini tetap native html, dan bisa diupload ke hosting manapun tanpa perlu `preview.exe`
 
+Source-code dari `preview.exe`: https://github.com/herlambangyp/python/tree/main/miniServer
+
 ---
 ### 2. Query Bahasa 
 
@@ -51,9 +53,43 @@ Cara diatas aku pakai untuk memeprcepat pengembangan inline-code di front-end
 
 ---
 
-### 3. Bahan komponen bootsrap
-Link Komponen:
+### 3. Bahan template bootsrap
+Link Template:
 
 [https://bootstrapmade.com/content/demo/NiceAdmin/widgets-cards.html](https://bootstrapmade.com/content/demo/NiceAdmin/widgets-cards.html)
 
-Cukup banyak komponen atau berbagai template element yang bisa dicopas dari link diatas. Perlu digaris bawahi, CSS atau JS nya tidak sepenuhnya sama. tetapi secara "pondasi" baik project ini maupun link komponen memiliki pondasi framework yang sama yaitu `Bootstrap 5`. Jadi seharusnya 90% komponen di link komponen bisa bekerja sempurna di project ini
+Cukup banyak template html yang bisa dicopas dari link diatas. Perlu digaris bawahi, CSS atau JS nya tidak sepenuhnya sama. tetapi secara "pondasi" baik project ini maupun link template memiliki pondasi framework yang sama yaitu `Bootstrap 5`. Jadi seharusnya 90% template di link template bisa bekerja sempurna di project ini
+
+---
+
+### 4. Membuat komponen
+Dengan adanya `preview.exe`, sekarang pengembangan web berbasis komponen bisa lebih "propper"
+
+Untuk mulai membuat komponen tempatkan komponen di:
+
+```text
+assets/komponen/ <--- Disini
+```
+
+**Komponen tetap berbasis .html** bukan .php, .tsx, .vue, atau yg lain. 
+
+Load komponen di:
+```text
+assets/js/main.js
+```
+Komponen wajib dipanggil di *Promise.all()* di `main.js`. Untuk komponen spesifik seperti komponen nested (komponen yang dipanggil didalam komponen), panggil diluar *Promise.all()*. Dan gunakan *await* agar tidak terjadi refrence error
+
+Fungsi `render()` bersifat asyncronous, dan menerima 3 parameter: (`element`, `lokasi komponen`, `data Tambahan lain (opsional)`)
+
+```js
+// Contoh load komponen di main.js
+await Promise.all([
+  // Render komponen umum atau non-nested
+  render('#header', './assets/komponen/header.html', 'navPerluBeda'),
+  render('#footer', './assets/komponen/footer.html'),
+  render('#mapIndo', './assets/komponen/index/mapIndo.html'),
+])
+
+// Render komponen nested (misalnya id="tombolTema" berada di komponen header.html)
+await render('#tombolTema', './assets/komponen/tombolTema.html')
+```

@@ -8,12 +8,10 @@ const $ = (selector) => document.querySelector(selector)
 
 await Promise.all([
   // Render komponen non-nested
-  render('#header', './assets/komponen/header.html', true),
+  render('#header', './assets/komponen/header.html', 'navPerluBeda'),
   render('#footer', './assets/komponen/footer.html'),
   render('#mapIndo', './assets/komponen/index/mapIndo.html'),
 ])
-// render komponen nested (komponen didalam komponen)
-// await render('[selectFileUmum]', './component/general/optionFile.html', true)
 
 // Bagian animasi pinPoint ketika map indonesia muncul di layar user
 let mapKontener = $(".mapKontener"),

@@ -1,13 +1,15 @@
-export async function render(element, path, headerLink=false) {
+export async function render(element, path, dataLainya='') {
   try {
     let response = await fetch(path),
         responText = await response.text()
 
     document.querySelector(element).innerHTML = responText
-    if (headerLink) aktifkanHeaderLink()
+
+    // tindakan untuk data lainya
+    if (dataLainya==='navPerluBeda') aktifkanHeaderLink()
   }
   catch (e) {
-    console.warn(`Gagal mencari element `,element,' atau file: ', path, '\n\nDetail Eror:\n\n', e)
+    // console.warn(`Gagal mencari element `,element,' atau file: ', path, '\n\nDetail Eror:\n\n', e)
   }
 }
 
