@@ -48,10 +48,10 @@ async function kirim() {
   buttonKirim.innerHTML=`
   <div class="spinner-border spinner-border-sm text-light" role="status"></div>
   <span class="en">Sending...</span><span class="ind">Mengirim...</span>
-  `,
+  `
 
   // cek hasil chapta google. Cek bagian form contact. Fungsi reCaptha perlu diperbarui sesuai akun
-  captchaResponse = grecaptcha.getResponse() // Dihapuspun tidak berpengaruh. EmailJs tetap akan meinta validasi reCAPTHA. Jika tidak ada respon validasi, email sepenuhnya gagal
+  let captchaResponse = grecaptcha.getResponse() // Dihapuspun tidak berpengaruh. EmailJs tetap akan meinta validasi reCAPTHA. Jika tidak ada respon validasi, email sepenuhnya gagal
   if (!captchaResponse || captchaResponse.length === 0) {
     showToast({
       pesanId: 'Silakan centang reCAPTCHA terlebih dahulu!',

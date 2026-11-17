@@ -4,22 +4,18 @@ import { mainBootstrap } from './mainBootsrap.js'
 import { initTheme } from './tema.js'
 import { showToast } from './toast.js'
 
-
-
+const $ = (selector) => document.querySelector(selector)
 
 await Promise.all([
-  // Render komponen induk
+  // Render komponen non-nested
   render('#header', './assets/komponen/header.html', true),
   render('#footer', './assets/komponen/footer.html'),
+  render('#mapIndo', './assets/komponen/index/mapIndo.html'),
 ])
-// Setup Bootsrap bawaan
-mainBootstrap()
-// render komponen nested (komponen didalam induk)
+// render komponen nested (komponen didalam komponen)
 // await render('[selectFileUmum]', './component/general/optionFile.html', true)
 
 // Bagian animasi pinPoint ketika map indonesia muncul di layar user
-const $ = (selector) => document.querySelector(selector)
-
 let mapKontener = $(".mapKontener"),
 observeMap = new IntersectionObserver(o=>{
   let divMap = o[0]
@@ -47,3 +43,5 @@ bahasa()
 // Setup tema
 initTheme()
 
+// Setup Bootsrap bawaan
+mainBootstrap()

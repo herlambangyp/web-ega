@@ -20,7 +20,7 @@ export function mainBootstrap() {
   }
 
   document.addEventListener('scroll', toggleScrolled);
-  window.addEventListener('load', toggleScrolled);
+  toggleScrolled()
 
   /**
    * Mobile nav toggle
@@ -78,7 +78,7 @@ export function mainBootstrap() {
     });
   });
 
-  window.addEventListener('load', toggleScrollTop);
+  toggleScrollTop()
   document.addEventListener('scroll', toggleScrollTop);
 
   /**
@@ -92,8 +92,7 @@ export function mainBootstrap() {
       mirror: false
     });
   }
-  window.addEventListener('load', aosInit);
-
+  aosInit()
   /**
    * Initiate Pure Counter
    */
@@ -125,12 +124,11 @@ export function mainBootstrap() {
     });
   }
 
-  window.addEventListener("load", initSwiper);
+  initSwiper()
 
   /**
    * Correct scrolling position upon page load for URLs containing hash links.
    */
-  window.addEventListener('load', function(e) {
     if (window.location.hash) {
       if (document.querySelector(window.location.hash)) {
         setTimeout(() => {
@@ -143,8 +141,7 @@ export function mainBootstrap() {
         }, 100);
       }
     }
-  });
-
+    
   /**
    * Navmenu Scrollspy
    */

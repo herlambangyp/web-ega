@@ -245,7 +245,7 @@ h6 {
 }
 .header .navLain{
     display: flex;
-    gap: 20px;
+    gap: 5px;
     margin: 0px 5px 0px 20px;
 }
 .header .navLain .icon{
