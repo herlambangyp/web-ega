@@ -137,25 +137,20 @@
 /* CSS Sertifikat */
 
 .sertifImg{
-  max-height: 125px;
   width: auto;
   filter: drop-shadow(5px 5px 5px color-mix(in srgb, var(--mapShadow), transparent 50%));
   transition: all 0.6s;
 }
-.sertifImg:focus{
-  max-height: 250px;
-}
+
 .sertifImg:hover{
   transform: scale(1.05);
 }
-@media (min-width:768px) {
   .sertifImg{
     max-height: 200px;
   }
   .sertifImg:focus{
     max-height: 500px;
   }
-}
 @media (min-width:1200px) {
   .sertifImg{
     max-height: 320px;
