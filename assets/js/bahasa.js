@@ -4,9 +4,8 @@ let basaDevice = navigator.language.split("-")[0],
     basa = cekBahasa(),
     url = new URL(window.location.href)
 
-
 // deklarasikan awal bahasa web di url    
-url.searchParams.set("lang", basa)
+url.searchParams.set("lang", localStorage.getItem('bahasaTersimpan')||basa)
 history.replaceState({}, "", url) // Jgn digatni pushstate. User bisa stuk
 
 // Hapus meta description yg ngga sesuai bahasa. (tidak perlu di "restore" saat berganti bahasa. Karena yg butuh meta itu bot crawler, bukan pengunjung web)
@@ -36,6 +35,7 @@ export function tombolBahasa() {
         btn.onclick = o => {
             url = new URL(window.location.href)
             url.searchParams.set("lang", btn.value || btn.dataset.isi)
+            localStorage.setItem('bahasaTersimpan', btn.value||btn.dataset.isi)
             history.replaceState({}, "", url)
             bahasa()
         }
