@@ -5,16 +5,16 @@ let basaDevice = navigator.language.split("-")[0],
     url = new URL(window.location.href)
 
 // deklarasikan awal bahasa web di url    
-url.searchParams.set("lang", localStorage.getItem('bahasaTersimpan')||basa)
+url.searchParams.set("lang", basa)
 history.replaceState({}, "", url) // Jgn digatni pushstate. User bisa stuk
 
 // Hapus meta description yg ngga sesuai bahasa. (tidak perlu di "restore" saat berganti bahasa. Karena yg butuh meta itu bot crawler, bukan pengunjung web)
 document.querySelectorAll(`meta[name="description"]:not([data-lang="${basa}"])`).forEach(e => e.remove())
 
 export function bahasa() {
-    basa = cekBahasa()
+    let basa = cekBahasa(),
     // ubaha basa placeholder input
-    const selector = '[placeholderInd], [placeholderEn]'
+    selector = '[placeholderInd], [placeholderEn]'
     document.querySelectorAll(selector).forEach(input => {
         switch (basa) {
             case 'id':
@@ -48,9 +48,10 @@ function cekBahasa() {
     // fungsi ini sebaiknya diganti dengan logika get locale di backend (atau tergantung apakah bahasa dicek oleh js atau server)
 
     let params = new URLSearchParams(window.location.search),
-        langURL = params.get("lang")
+        langURL = params.get("lang")||localStorage.getItem('bahasaTersimpan')
+        localStorage.setItem('bahasaTersimpan', langURL)
 
-    // console.log('bahsa web = ', langURL || 'sesuai perangkat')
+    console.log('bahsa web = ', langURL || 'sesuai perangkat')
 
     // bahasa berdasakran url ?lang=
     if (langURL === "id") return "id"
