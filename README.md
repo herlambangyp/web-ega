@@ -51,6 +51,11 @@ Contoh:
 Logika bahasa sekarang ditangani CSS bukan js lagi (agar lebih ringan peforma dan SEO Friendly). Untuk menambahkan logika bahasa lain, cek `assets/css/main.css` (Cek komen css tentang bahasa). Standardnya memang harus dibuat file json sendiri untuk data bahasa.
 Cara diatas aku pakai untuk memeprcepat pengembangan inline-code di front-end
 
+**Terkait 2 meta description:**
+
+Tidak seharusnya ada 2 meta description. Meta description ini akan dimanipulasi js untuk diremove salah satu berdasarkan bahasa yang digunakan saat ini.
+**ini memang bukan praktik yang benar**. Praktik yang benar memang harus membuat banyak halaman untuk tiap bahasa. Atau tetap 1 halaman template, lalu digenerate server (php misalnya). **Tetapi ini cara "barely fit"** untuk mempertahankan SEO bagus, dengan 1 halaman dinamis **tanpa pemrosesan server**
+
 ---
 
 ### 3. Bahan template bootsrap
@@ -79,7 +84,7 @@ assets/js/main.js
 ```
 Komponen wajib dipanggil di *Promise.all()* di `main.js`. Untuk komponen spesifik seperti komponen nested (komponen yang dipanggil didalam komponen), panggil diluar *Promise.all()*. Dan gunakan *await* agar tidak terjadi refrence error
 
-Fungsi `render()` bersifat asyncronous, dan menerima 3 parameter: (`element`, `lokasi komponen`, `data Tambahan lain (opsional)`)
+Fungsi `render()` bersifat asyncronous, dan menerima 3 parameter: (`element`, `lokasi komponen`, `dataLain (opsional)`)
 
 ```js
 // Contoh load komponen di main.js

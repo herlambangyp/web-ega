@@ -4,9 +4,13 @@ let basaDevice = navigator.language.split("-")[0],
     basa = cekBahasa(),
     url = new URL(window.location.href)
 
-// deklarasikan bahasa awl web    
+
+// deklarasikan awal bahasa web di url    
 url.searchParams.set("lang", basa)
 history.replaceState({}, "", url) // Jgn digatni pushstate. User bisa stuk
+
+// Hapus meta description yg ngga sesuai bahasa. (tidak perlu di "restore" saat berganti bahasa. Karena yg butuh meta itu bot crawler, bukan pengunjung web)
+document.querySelectorAll(`meta[name="description"]:not([data-lang="${basa}"])`).forEach(e => e.remove())
 
 export function bahasa() {
     basa = cekBahasa()
@@ -23,7 +27,6 @@ export function bahasa() {
                 break
         }
     })
-
     // lang att html
     document.documentElement.lang = basa
 }
