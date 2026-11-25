@@ -8,9 +8,9 @@ const $ = (selector) => document.querySelector(selector)
 
 await Promise.all([
   // Render komponen non-nested
-  render('#header', './assets/komponen/header.html', 'navPerluBeda'),
-  render('#footer', './assets/komponen/footer.html'),
-  render('#mapIndo', './assets/komponen/index/mapIndo.html'),
+  render('header', './assets/komponen/header.html', 'navPerluBeda'),
+  render('footer'),
+  render('mapIndo', './assets/komponen/index/mapIndo.html'),
 ])
 
 // Bagian animasi pinPoint ketika map indonesia muncul di layar user

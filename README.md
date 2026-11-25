@@ -23,7 +23,7 @@ Web ini memakai module javascript, yang tidak bisa diload dg preview `file:\\...
 
 `preview.exe` bukan program yang wajib ada, itu hanyalah alat untuk "preview web" dan **Sangat opsional**. Seluruh kode web ini tetap native html, dan bisa diupload ke hosting manapun tanpa perlu `preview.exe`
 
-Source-code dari `preview.exe`: https://github.com/herlambangyp/python/tree/main/miniServer
+Source-code dari `preview.exe`: https://github.com/herlambangyp/miniserver
 
 ---
 ### 2. Query Bahasa 
@@ -87,14 +87,22 @@ Komponen wajib dipanggil di *Promise.all()* di `main.js`. Untuk komponen spesifi
 Fungsi `render()` bersifat asyncronous, dan menerima 3 parameter: (`element`, `lokasi komponen`, `dataLain (opsional)`)
 
 ```js
-// Contoh load komponen di main.js
+// Contoh cara load komponen di main.js
 await Promise.all([
   // Render komponen umum atau non-nested
-  render('#header', './assets/komponen/header.html', 'navPerluBeda'),
-  render('#footer', './assets/komponen/footer.html'),
-  render('#mapIndo', './assets/komponen/index/mapIndo.html'),
+  render('header', './assets/komponen/header.html', 'navPerluBeda'),
+  render('footer', './assets/komponen/footer.html'),
+  render('mapIndo', './assets/komponen/index/mapIndo.html'),
 ])
 
 // Render komponen nested (misalnya id="tombolTema" berada di komponen header.html)
-await render('#tombolTema', './assets/komponen/tombolTema.html')
+await render('tombolTema', './assets/komponen/tombolTema.html')
+
+// Load bisa simpel dg syarat: 
+//  - Lokasi komponen berada di assets/komponen/ <---- Disini
+//  - Nama id target, sama dengan nama file html
+//  - Contoh:
+await render('renderSimpel')
+// ini akan load file assets/komponen/renderSimpel.html ke id="renderSimpel"
+
 ```

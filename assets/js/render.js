@@ -1,9 +1,12 @@
-export async function render(element, path, dataLainya='') {
+export async function render(element, path = '', dataLainya = '') {
+  let namaBersih = String(element ?? '').replace(/^[.#]+/, '').trim(),
+  targetPath = path || `./assets/komponen/${namaBersih}.html`
+
   try {
-    let response = await fetch(path),
+    let response = await fetch(targetPath),
         responText = await response.text()
 
-    document.querySelector(element).innerHTML = responText
+    document.getElementById(element).innerHTML = responText
 
     // tindakan untuk data lainya
     if (dataLainya==='navPerluBeda') aktifkanHeaderLink()
