@@ -1,39 +1,41 @@
 // Fungsi disini sebaiknya di scrap jika logika bahasa ditentukan oleh server/backend
 
-let basaDevice =navigator.language.split("-")[0], basa 
+let basaDevice = navigator.language.split("-")[0],
+    basa = cekBahasa(),
+    url = new URL(window.location.href)
+
+// deklarasikan bahasa awl web    
+url.searchParams.set("lang", basa)
+history.replaceState({}, "", url) // Jgn digatni pushstate. User bisa stuk
 
 export function bahasa() {
     basa = cekBahasa()
+    // ubaha basa placeholder input
     const selector = '[placeholderInd], [placeholderEn]'
     document.querySelectorAll(selector).forEach(input => {
         switch (basa) {
             case 'id':
-            input.setAttribute('placeholder', input.getAttribute('placeholderInd')||input.getAttribute('placeholder') || '')
-            break
+                input.setAttribute('placeholder', input.getAttribute('placeholderInd') || input.getAttribute('placeholder') || '')
+                break
 
             default:
-            input.setAttribute('placeholder', input.getAttribute('placeholderEn')||input.getAttribute('placeholder') || '')
-            break
+                input.setAttribute('placeholder', input.getAttribute('placeholderEn') || input.getAttribute('placeholder') || '')
+                break
         }
     })
+
+    // lang att html
     document.documentElement.lang = basa
 }
 
 export function tombolBahasa() {
-    // buat button dengan atribut "bahasa" di html, jika ingin menambahkan button bahasa baru
-    // actually, ga harus button sih. Element input, option, select, textarea jg bisa 
-    // Element lain yang tidak support atribut "value". isi valuenya bisa disimpan di atribut "data-isi"
-
     document.querySelectorAll('[bahasa]').forEach(btn => {
-
-        btn.onclick=o=> {
-            let url = new URL(window.location.href)
-            url.searchParams.set("lang", btn.value||btn.dataset.isi)
-            localStorage.setItem('bahasaTersimpan', btn.value||btn.dataset.isi)
-            history.replaceState({}, "", url) // Jgn digatni pushstate. User bisa stuk
+        btn.onclick = o => {
+            url = new URL(window.location.href)
+            url.searchParams.set("lang", btn.value || btn.dataset.isi)
+            history.replaceState({}, "", url)
             bahasa()
         }
-
     })
 
 }
@@ -43,18 +45,20 @@ function cekBahasa() {
     // fungsi ini sebaiknya diganti dengan logika get locale di backend (atau tergantung apakah bahasa dicek oleh js atau server)
 
     let params = new URLSearchParams(window.location.search),
-    langURL = params.get("lang")||localStorage.getItem('bahasaTersimpan')
-    console.log('bahsa web = ', langURL||'sesuai perangkat')
+        langURL = params.get("lang")
+
+    // console.log('bahsa web = ', langURL || 'sesuai perangkat')
 
     // bahasa berdasakran url ?lang=
     if (langURL === "id") return "id"
     if (langURL === "en") return "en"
 
-    // di url gada lang, cek apakah device user berbahasa indo
+    // di url gada lang, atau url di lang berbahasa yang belum dideklarasikan (ja misalnya), 
+    // cek apakah device user berbahasa indo
     if (basaDevice === "id") {
         return basaDevice
     }
 
-    // device user berbahasa lain, dn gada lang di url atau lang di url berisi bahasa lain
+    // device user berbahasa lain, dn gada lang di url
     return "en"
 }
